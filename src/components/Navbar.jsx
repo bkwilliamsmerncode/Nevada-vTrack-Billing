@@ -80,18 +80,18 @@ function Navbar() {
           </NavLink>
 
           <NavLink
-            to="/contact"
+            to="/contact#contact-form"
             className={({ isActive }) =>
               isActive
                 ? "navbar__link navbar__link--active"
                 : "navbar__link"
             }
           >
-            Contact
+            Contact Us
           </NavLink>
 
           <Link
-            to="/contact"
+            to="/contact#contact-form"
             className="navbar__cta"
           >
             Claim Your Spot

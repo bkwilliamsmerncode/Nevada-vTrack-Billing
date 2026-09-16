@@ -81,7 +81,7 @@ function LegacyPromo() {
 
           <div className="legacy-promo__actions">
             <Link
-              to="/contact"
+              to="/contact#contact-form"
               className="legacy-promo__button legacy-promo__button--primary"
             >
               Claim a Legacy Spot

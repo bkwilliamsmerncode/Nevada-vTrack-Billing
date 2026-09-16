@@ -37,7 +37,7 @@ function Footer() {
             <Link to="/">Home</Link>
             <Link to="/platform">Platform</Link>
             <Link to="/about">About</Link>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact#contact-form">Contact Us</Link>
           </div>
 
           <div className="footer__column">

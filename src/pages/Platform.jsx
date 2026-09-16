@@ -148,7 +148,7 @@ function Platform() {
 
             <div className="platform-hero__actions">
               <Link
-                to="/contact"
+                to="/contact#contact-form"
                 className="platform-hero__button platform-hero__button--primary"
               >
                 Claim Your Legacy Spot
@@ -391,7 +391,7 @@ function Platform() {
           </div>
 
           <Link
-            to="/contact"
+            to="/contact#contact-form"
             className="platform-cta__button"
           >
             Talk With Our Team

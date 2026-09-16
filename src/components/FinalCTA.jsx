@@ -42,7 +42,7 @@ function FinalCTA() {
 
           <div className="final-cta__actions">
             <Link
-              to="/contact"
+              to="/contact#contact-form"
               className="final-cta__button final-cta__button--primary"
             >
               Claim Your Legacy Spot

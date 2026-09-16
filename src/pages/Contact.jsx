@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import {
   ArrowRight,
   BadgeCheck,
@@ -33,6 +33,18 @@ function Contact() {
   const [submitted, setSubmitted] = useState(false);
 const [isSending, setIsSending] = useState(false);
 const [submitError, setSubmitError] = useState("");
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash === "#contact-form") {
+      requestAnimationFrame(() => {
+        document.getElementById("contact-form")?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      });
+    }
+  }, [hash]);
 
   const handleChange = (event) => {
     const { name, value, type, checked } = event.target;
@@ -193,6 +205,7 @@ const handleSubmit = async (event) => {
             </div>
 
             <form
+              id="contact-form"
               className="contact-form"
               onSubmit={handleSubmit}
             >

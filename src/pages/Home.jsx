@@ -65,7 +65,7 @@ function Home() {
 
             <div className="hero__actions">
               <Link
-                to="/contact"
+                to="/contact#contact-form"
                 className="hero__button hero__button--primary"
               >
                 Claim Your Free 6 Months

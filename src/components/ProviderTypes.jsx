@@ -105,7 +105,7 @@ function ProviderTypes() {
           </div>
 
           <Link
-            to="/contact"
+            to="/contact#contact-form"
             className="provider-types__link"
           >
             Talk With Our Team

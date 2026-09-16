@@ -70,7 +70,7 @@ function About() {
 
             <div className="about-hero__actions">
               <Link
-                to="/contact"
+                to="/contact#contact-form"
                 className="about-hero__button about-hero__button--primary"
               >
                 Talk With Our Team
@@ -285,7 +285,7 @@ function About() {
               vTrack.
             </p>
 
-            <Link to="/contact">
+            <Link to="/contact#contact-form">
               Learn About the Offer
               <ArrowRight size={18} />
             </Link>
