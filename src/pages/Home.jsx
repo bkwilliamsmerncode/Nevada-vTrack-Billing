@@ -21,7 +21,9 @@ import "./Home.css";
 
 function Home() {
   return (
+    
     <div className="home">
+      <LegacyPromo />
       <SEO
         title="vTrack Nevada | EVV, Billing & Provider Management"
         description="vTrack by Vichra helps Nevada provider agencies manage EVV, billing, claims, payroll, authorizations, scheduling, recipient tracking and agency operations."
@@ -226,6 +228,7 @@ function Home() {
         </div>
       </section>
 
+
       <EVVComplianceStrip />
 
       <PlatformFeatures />
@@ -236,7 +239,7 @@ function Home() {
 
       <NevadaEVV />
 
-      <LegacyPromo />
+      
 
       <FinalCTA />
     </div>
