@@ -9,24 +9,24 @@ function FinalCTA() {
       <div className="final-cta__container">
         <div className="final-cta__content">
           <span className="final-cta__eyebrow">
-            READY TO SEE VTRACK?
+            READY TO GET THE WORK OFF YOUR PLATE?
           </span>
 
           <h2>
-            Give Your Nevada Agency
-            <span> a Better Way to Work.</span>
+            Put Your Back Office
+            <span> in Experienced Hands.</span>
           </h2>
 
           <p>
-            See how vTrack can bring EVV, billing, scheduling,
-            authorizations, payroll, member tracking, and provider
-            operations together in one platform.
+            vTrack's implementation team offers the Nevada Legacy Promotion
+            and helps get your agency started. After onboarding,
+            your dedicated account manager handles billing and payroll.
           </p>
 
           <div className="final-cta__benefits">
             <div>
               <CheckCircle2 size={18} />
-              Nevada-ready EVV and billing
+              Billing and payroll handled by your account manager
             </div>
 
             <div>
@@ -45,7 +45,7 @@ function FinalCTA() {
               to="/contact"
               className="final-cta__button final-cta__button--primary"
             >
-              Request Your Demo
+              Claim Your Legacy Spot
               <ArrowRight size={19} />
             </Link>
 

@@ -42,15 +42,15 @@ function Home() {
             </div>
 
             <h1 className="hero__title">
-              EVV, Billing & Provider Operations
-              <span> for Nevada Agencies.</span>
+              Your Agency's Back Office,
+              <span> Handled.</span>
             </h1>
 
             <p className="hero__description">
-              Meet 21st Century Cures Act EVV requirements while bringing
-              scheduling, billing, claims, payroll, authorizations, recipient
-              tracking, and provider operations together in one connected
-              platform.
+              Through the Nevada Legacy Promotion, vTrack's implementation
+              team helps your agency get started. Once you're onboarded,
+              your dedicated account manager handles billing and payroll—so
+              your team can focus on the people you serve.
             </p>
 
             <div className="hero__official">
@@ -68,7 +68,7 @@ function Home() {
                 to="/contact"
                 className="hero__button hero__button--primary"
               >
-                Request a Demo
+                Claim Your Free 6 Months
                 <ArrowRight size={19} />
               </Link>
 

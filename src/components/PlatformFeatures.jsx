@@ -68,18 +68,19 @@ function PlatformFeatures() {
       <div className="platform-features__container">
         <div className="platform-features__heading">
           <span className="platform-features__eyebrow">
-            ONE CONNECTED PLATFORM
+            MORE THAN SOFTWARE
           </span>
 
           <h2>
-            Everything Your Agency Needs
-            <span> in One Platform.</span>
+            Everything Gets Handled.
+            <span> Not Just Organized.</span>
           </h2>
 
           <p>
-            vTrack brings the pieces of provider operations together so your
-            staff can spend less time moving between systems and more time
-            supporting the people you serve.
+            The Nevada Legacy Promotion is offered through vTrack's
+            implementation team. After onboarding, your dedicated account
+            manager handles billing and payroll while your team spends more
+            time supporting the people you serve.
           </p>
         </div>
 

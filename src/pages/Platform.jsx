@@ -135,14 +135,15 @@ function Platform() {
             </span>
 
             <h1>
-              One Platform for the Work Behind
-              <span> Your Entire Agency.</span>
+              The Work Behind Your Agency,
+              <span> Handled.</span>
             </h1>
 
             <p>
-              vTrack brings EVV, scheduling, billing, authorizations,
-              payroll, member tracking, approvals, collections, and provider
-              operations together in one connected system.
+              The Nevada Legacy Promotion is offered through vTrack's
+              implementation team. Once you're onboarded, your dedicated
+              account manager handles billing and payroll while vTrack keeps
+              your agency's workflows connected.
             </p>
 
             <div className="platform-hero__actions">
@@ -150,7 +151,7 @@ function Platform() {
                 to="/contact"
                 className="platform-hero__button platform-hero__button--primary"
               >
-                Request a Demo
+                Claim Your Legacy Spot
                 <ArrowRight size={19} />
               </Link>
 
@@ -246,13 +247,14 @@ function Platform() {
 
             <h2>
               Powerful Tools.
-              <strong> One Connected Workflow.</strong>
+              <strong> An Account Manager Behind Them.</strong>
             </h2>
 
             <p>
-              Instead of forcing your staff to maintain separate processes
-              for scheduling, service verification, billing, and payroll,
-              vTrack helps connect the work together.
+              Instead of leaving your staff to manage separate processes for
+              scheduling, service verification, billing, and payroll, vTrack
+              pairs the platform with an account manager who handles billing
+              and payroll for your agency.
             </p>
           </div>
 
@@ -376,15 +378,15 @@ function Platform() {
       <section className="platform-cta">
         <div className="platform-cta__container">
           <div>
-            <span>SEE VTRACK IN ACTION</span>
+            <span>START WITH A CONVERSATION</span>
 
             <h2>
-              Ready to Simplify Your Nevada Agency?
+              Ready to Put the Work in Better Hands?
             </h2>
 
             <p>
-              Let our team show you how vTrack can fit your provider
-              operations.
+              Tell us about your agency, and we'll explain how dedicated
+              vTrack support can take operational work off your team's plate.
             </p>
           </div>
 
@@ -392,7 +394,7 @@ function Platform() {
             to="/contact"
             className="platform-cta__button"
           >
-            Schedule a Demo
+            Talk With Our Team
             <ArrowRight size={19} />
           </Link>
         </div>

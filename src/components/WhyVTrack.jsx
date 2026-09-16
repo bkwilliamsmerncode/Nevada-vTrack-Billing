@@ -12,10 +12,10 @@ import { Link } from "react-router-dom";
 import "./WhyVTrack.css";
 
 const benefits = [
-  "Reduce repetitive administrative work",
-  "Keep EVV, billing, payroll, and authorizations connected",
-  "Catch issues before they become billing problems",
-  "Give staff one central place to manage operations",
+  "A Nevada Legacy Promotion offered through vTrack's implementation team",
+  "A dedicated account manager to handle billing and payroll",
+  "Issues addressed before they become billing problems",
+  "More time for your staff to focus on services—not administration",
 ];
 
 function WhyVTrack() {
@@ -85,15 +85,17 @@ function WhyVTrack() {
           </span>
 
           <h2>
-            Your Team Has Better Things to Do Than
-            <span> Fight With Software.</span>
+            You Shouldn't Have to Run Your Agency's
+            <span> Back Office Alone.</span>
           </h2>
 
           <p className="why-vtrack__description">
-            Provider agencies already manage complex schedules,
-            documentation, authorizations, billing, payroll, staff, and
-            member services. vTrack is designed to make those workflows
-            easier to manage from one connected system.
+            Provider agencies already carry complex schedules, documentation,
+            authorizations, billing, payroll, staff, and member services.
+            Through the Nevada Legacy Promotion, vTrack's Implementation
+            Manager helps your agency get started. After onboarding, your
+            dedicated account manager handles billing and payroll while the
+            platform keeps every workflow connected.
           </p>
 
           <div className="why-vtrack__benefits">
@@ -113,9 +115,9 @@ function WhyVTrack() {
             <div className="why-vtrack__quote-line"></div>
 
             <p>
-              vTrack isn't just another piece of software. It's a provider
-              management platform built to help your agency operate more
-              efficiently.
+              vTrack isn't just another piece of software. It's a dedicated
+              partner and platform built to help run the operational work
+              behind your agency.
             </p>
           </div>
 

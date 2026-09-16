@@ -94,7 +94,7 @@ function Navbar() {
             to="/contact"
             className="navbar__cta"
           >
-            Request a Demo
+            Claim Your Spot
           </Link>
         </nav>
 

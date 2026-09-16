@@ -19,28 +19,26 @@ function LegacyPromo() {
             <Sparkles size={17} />
             <span>NEVADA LEGACY PROMOTION</span>
           </div>
+<h2>
+  Only <span>10 Nevada Agencies</span> Will Qualify.
+</h2>
 
-          <h2>
-            Be One of the First
-            <span> 10 Nevada Agencies.</span>
-          </h2>
+<p className="legacy-promo__intro">
+  Don’t miss your chance to be among the first 10 Nevada provider agencies
+  to partner with vTrack.
+</p>
 
-          <p className="legacy-promo__intro">
-            As vTrack expands into Nevada, we are offering a special Legacy
-            Promotion to the first 10 provider agencies that partner with us.
-          </p>
+<div className="legacy-promo__offer">
+  <span className="legacy-promo__offer-small">
+    LIMITED-TIME LEGACY PROMOTION
+  </span>
 
-          <div className="legacy-promo__offer">
-            <span className="legacy-promo__offer-small">
-              GET EVERYTHING VTRACK HAS TO OFFER
-            </span>
+  <strong>GET 6 MONTHS FREE</strong>
 
-            <strong>FREE FOR 6 MONTHS</strong>
-
-            <p>
-              Experience the full vTrack platform with no software cost during
-              your first six months.
-            </p>
+  <p>
+    Get full access to everything vTrack has to offer—with no software cost
+    for your first six months. Once all 10 spots are claimed, this offer ends.
+  </p>
           </div>
 
           <div className="legacy-promo__points">

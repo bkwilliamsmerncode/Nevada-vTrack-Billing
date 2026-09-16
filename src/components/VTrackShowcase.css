@@ -134,183 +134,155 @@
   letter-spacing: 1.6px;
 }
 
-.vtrack-showcase__content h3 {
-  margin: 9px 0 0;
+.vtrack-showcase {
+  padding: 110px 0;
+  background: linear-gradient(180deg, #f7faff 0%, #fff 38%, #fff 100%);
+}
 
+.vtrack-showcase__container {
+  width: min(1240px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.vtrack-showcase__header {
+  max-width: 780px;
+  margin: 0 auto 85px;
+  text-align: center;
+}
+
+.vtrack-showcase__eyebrow {
+  display: block;
+  color: #4b8bb4;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.vtrack-showcase__title {
+  margin: 14px 0 0;
   color: #183664;
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  line-height: 1.06;
+  letter-spacing: -2px;
+}
 
+.vtrack-showcase__subtitle {
+  margin: 22px auto 0;
+  color: #6d798a;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.vtrack-showcase__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 110px;
+}
+
+.vtrack-showcase__feature {
+  display: grid;
+  grid-template-columns: 0.78fr 1.22fr;
+  align-items: center;
+  gap: 72px;
+}
+
+.vtrack-showcase__feature--reverse {
+  grid-template-columns: 1.22fr 0.78fr;
+}
+
+.vtrack-showcase__feature--reverse .vtrack-showcase__content {
+  order: 2;
+}
+
+.vtrack-showcase__feature--reverse .vtrack-showcase__image-wrapper {
+  order: 1;
+}
+
+.vtrack-showcase__content {
+  max-width: 470px;
+}
+
+.vtrack-showcase__icon {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 20px;
+  place-items: center;
+  border-radius: 13px;
+  background: #e4eff6;
+  color: #397da7;
+}
+
+.vtrack-showcase__feature-title {
+  margin: 0;
+  color: #183664;
   font-size: clamp(2rem, 4vw, 2.8rem);
-
   line-height: 1.1;
   letter-spacing: -1px;
 }
 
-.vtrack-showcase__content p {
+.vtrack-showcase__feature-description {
   margin: 18px 0 0;
-
   color: #6f7d8e;
-
   font-size: 15px;
   line-height: 1.8;
 }
 
-/* =========================
-   BROWSER WINDOW
-========================= */
-
-.vtrack-showcase__visual {
-  min-width: 0;
-}
-
-.vtrack-window {
-  width: 100%;
-
+.vtrack-showcase__image-wrapper {
   overflow: hidden;
-
   border: 1px solid #d3dde6;
   border-radius: 16px;
-
-  background: #ffffff;
-
-  box-shadow:
-    0 28px 70px rgba(24, 54, 100, 0.14),
-    0 5px 18px rgba(24, 54, 100, 0.06);
+  background: #fff;
+  box-shadow: 0 28px 70px rgba(24, 54, 100, 0.14);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.vtrack-window__bar {
-  height: 44px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  padding: 0 17px;
-
-  border-bottom: 1px solid #dce4ea;
-
-  background:
-    linear-gradient(
-      180deg,
-      #f9fbfc,
-      #eef3f6
-    );
+.vtrack-showcase__image-wrapper:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 34px 80px rgba(24, 54, 100, 0.18);
 }
 
-.vtrack-window__dots {
-  display: flex;
-  align-items: center;
-
-  gap: 6px;
-}
-
-.vtrack-window__dots span {
-  width: 8px;
-  height: 8px;
-
-  border-radius: 50%;
-
-  background: #aebbc6;
-}
-
-.vtrack-window__label {
-  color: #8794a1;
-
-  font-size: 10px;
-  font-weight: 700;
-
-  letter-spacing: 0.8px;
-}
-
-.vtrack-window__image {
-  position: relative;
-
-  width: 100%;
-  max-height: 520px;
-
-  overflow: hidden;
-
-  background: #f2f4f6;
-}
-
-.vtrack-window__image img {
+.vtrack-showcase__image {
+  display: block;
   width: 100%;
   height: auto;
-
-  display: block;
 }
-
-/* =========================
-   HOVER
-========================= */
-
-.vtrack-window {
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.vtrack-window:hover {
-  transform: translateY(-4px);
-
-  box-shadow:
-    0 34px 80px rgba(24, 54, 100, 0.18),
-    0 7px 20px rgba(24, 54, 100, 0.08);
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
 
 @media (max-width: 1000px) {
-  .vtrack-showcase__item,
-  .vtrack-showcase__item--reverse {
+  .vtrack-showcase__feature,
+  .vtrack-showcase__feature--reverse {
     grid-template-columns: 1fr;
-
-    gap: 40px;
+    gap: 38px;
   }
 
-  .vtrack-showcase__item--reverse
-    .vtrack-showcase__content,
-  .vtrack-showcase__item--reverse
-    .vtrack-showcase__visual {
+  .vtrack-showcase__feature--reverse .vtrack-showcase__content,
+  .vtrack-showcase__feature--reverse .vtrack-showcase__image-wrapper {
     order: initial;
   }
 
   .vtrack-showcase__content {
     max-width: 700px;
   }
-
-  .vtrack-window__image {
-    max-height: none;
-  }
 }
 
 @media (max-width: 650px) {
   .vtrack-showcase {
-    padding: 80px 0;
+    padding: 78px 0;
   }
 
   .vtrack-showcase__container {
     width: calc(100% - 28px);
   }
 
-  .vtrack-showcase__heading {
-    margin-bottom: 55px;
+  .vtrack-showcase__header {
+    margin-bottom: 58px;
   }
 
-  .vtrack-showcase__list {
+  .vtrack-showcase__grid {
     gap: 75px;
   }
 
-  .vtrack-showcase__item {
-    gap: 28px;
-  }
-
-  .vtrack-window {
-    border-radius: 11px;
-  }
-
-  .vtrack-window__bar {
-    height: 36px;
+  .vtrack-showcase__image-wrapper {
+    border-radius: 12px;
   }
 }

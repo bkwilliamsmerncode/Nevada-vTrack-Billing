@@ -91,8 +91,8 @@ const handleSubmit = async (event) => {
   return (
     <div className="contact-page">
   <SEO
-    title="Request a vTrack Demo | Nevada Provider Agencies"
-    description="Request a personalized vTrack demo for your Nevada provider agency and learn about EVV, billing, payroll, scheduling, authorizations and the Nevada Legacy Promotion."
+    title="Claim Your vTrack Legacy Spot | Nevada Provider Agencies"
+    description="Talk with vTrack's implementation and business development team about the Nevada Legacy Promotion, then learn how your dedicated account manager handles billing and payroll."
     path="/contact"
   />
       <section className="contact-hero">
@@ -102,30 +102,31 @@ const handleSubmit = async (event) => {
           <div className="contact-hero__content">
             <div className="contact-hero__eyebrow">
               <CalendarDays size={18} />
-              REQUEST A DEMO
+              CLAIM YOUR LEGACY SPOT
             </div>
 
             <h1>
-              See What vTrack Can Do for
-              <span> Your Nevada Agency.</span>
+              Put Your Back Office in
+              <span> Better Hands.</span>
             </h1>
 
             <p>
-              Tell us a little about your organization and the challenges
-              you're trying to solve. Our team can walk you through how
-              vTrack supports EVV, billing, payroll, authorizations,
-              scheduling, member tracking, and provider operations.
+              Tell us about your organization and the work weighing on your
+              team. A member of vTrack's implementation or business
+              development team will explain the Nevada Legacy Promotion and
+              how, after onboarding, your dedicated
+              account manager handles billing and payroll.
             </p>
 
             <div className="contact-hero__points">
               <div>
                 <CheckCircle2 size={19} />
-                Personalized vTrack walkthrough
+                A conversation about your agency's needs
               </div>
 
               <div>
                 <CheckCircle2 size={19} />
-                Nevada EVV and billing discussion
+                Billing and payroll handled by your account manager
               </div>
 
               <div>
@@ -165,7 +166,7 @@ const handleSubmit = async (event) => {
     <CheckCircle2 size={24} />
 
     <div>
-      <strong>Thank you! Your demo request was sent.</strong>
+      <strong>Thank you! Your Legacy Spot request was sent.</strong>
 
       <p>
         A member of the vTrack team will follow up with you about
@@ -183,7 +184,7 @@ const handleSubmit = async (event) => {
             <div className="contact-form-heading">
               <span>TELL US ABOUT YOUR AGENCY</span>
 
-              <h2>Request Your vTrack Demo</h2>
+              <h2>Claim Your vTrack Legacy Spot</h2>
 
               <p>
                 Complete the form below and we'll use this information to
@@ -387,7 +388,7 @@ const handleSubmit = async (event) => {
     "Sending..."
   ) : (
     <>
-      Request My Demo
+      Claim My Legacy Spot
       <Send size={18} />
     </>
   )}
@@ -444,8 +445,9 @@ const handleSubmit = async (event) => {
               <h3>A Real Conversation</h3>
 
               <p>
-                We'll learn about how your agency operates and focus the demo
-                around the areas most relevant to your team.
+                We'll learn about how your agency operates and explain how a
+                implementation or business development team can help you
+                claim the Legacy Promotion and get your agency started.
               </p>
             </div>
 
@@ -455,12 +457,12 @@ const handleSubmit = async (event) => {
               <span>THE VTRACK DIFFERENCE</span>
 
               <h3>
-                One Platform Instead of Disconnected Processes.
+                One Partner for the Work Behind Your Agency.
               </h3>
 
               <p>
                 EVV. Billing. Payroll. Scheduling. Authorizations. Members.
-                Approvals. Collections.
+                Billing and payroll handled by your account manager.
               </p>
             </div>
           </aside>
