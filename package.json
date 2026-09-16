@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "lucide-react": "^1.46.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
@@ -27,9 +28,9 @@
     "vite": "^8.3.0"
   },
   "browserslist": [
-  "> 0.5%",
-  "last 2 versions",
-  "Firefox ESR",
-  "not dead"
-]
+    "> 0.5%",
+    "last 2 versions",
+    "Firefox ESR",
+    "not dead"
+  ]
 }
