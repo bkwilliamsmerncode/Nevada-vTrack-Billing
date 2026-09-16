@@ -1,0 +1,170 @@
+.legal-page {
+  width: 100%;
+  background: #ffffff;
+}
+
+.legal-hero {
+  padding: 90px 0;
+
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(75, 139, 180, 0.15),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #f6faff,
+      #eef5fa
+    );
+}
+
+.legal-hero__container,
+.legal-content__container {
+  width: min(900px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.legal-hero span {
+  display: block;
+
+  color: #4b8bb4;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1.7px;
+}
+
+.legal-hero h1 {
+  margin: 12px 0 0;
+
+  color: #183664;
+
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 800;
+
+  line-height: 1.05;
+  letter-spacing: -2px;
+}
+
+.legal-hero p {
+  margin: 18px 0 0;
+
+  color: #687689;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.legal-content {
+  padding: 90px 0 110px;
+}
+
+.legal-content__container {
+  color: #516176;
+}
+
+.legal-content h2 {
+  margin: 45px 0 14px;
+
+  color: #183664;
+
+  font-size: 1.55rem;
+  line-height: 1.25;
+}
+
+.legal-content p {
+  margin: 14px 0 0;
+
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.legal-content ul {
+  margin: 16px 0 0;
+
+  padding-left: 24px;
+}
+
+.legal-content li {
+  margin: 8px 0;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.legal-content a {
+  color: #347da8;
+
+  text-decoration: none;
+
+  font-weight: 650;
+}
+
+.legal-content a:hover {
+  text-decoration: underline;
+}
+
+.legal-content address {
+  margin-top: 18px;
+
+  padding: 22px;
+
+  border: 1px solid #dce5ed;
+  border-radius: 12px;
+
+  background: #f7fafc;
+
+  color: #536478;
+
+  font-size: 14px;
+  font-style: normal;
+
+  line-height: 1.8;
+}
+
+.legal-warning {
+  margin-top: 24px;
+
+  padding: 20px;
+
+  border-left: 4px solid #4b8bb4;
+  border-radius: 8px;
+
+  background: #f0f6fa;
+}
+
+.legal-warning strong {
+  color: #183664;
+}
+
+.legal-warning p {
+  margin-top: 5px;
+}
+
+.legal-uppercase {
+  font-size: 12px !important;
+  font-weight: 700;
+
+  line-height: 1.8 !important;
+}
+
+@media (max-width: 600px) {
+  .legal-hero {
+    padding: 70px 0;
+  }
+
+  .legal-content {
+    padding: 65px 0 80px;
+  }
+
+  .legal-hero__container,
+  .legal-content__container {
+    width: calc(100% - 28px);
+  }
+
+  .legal-content h2 {
+    margin-top: 36px;
+  }
+}

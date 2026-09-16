@@ -1,0 +1,506 @@
+.nevada-evv {
+  width: 100%;
+
+  padding: 110px 0;
+
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(75, 139, 180, 0.1),
+      transparent 28%
+    ),
+    linear-gradient(
+      180deg,
+      #f7fafd 0%,
+      #eef5fa 100%
+    );
+}
+
+.nevada-evv__container {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+
+  align-items: center;
+
+  gap: 80px;
+}
+
+/* LEFT */
+
+.nevada-evv__content {
+  max-width: 640px;
+}
+
+.nevada-evv__eyebrow {
+  width: fit-content;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 17px;
+
+  color: #397da7;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 1.7px;
+}
+
+.nevada-evv__content h2 {
+  margin: 0;
+
+  color: #183664;
+
+  font-size: clamp(2.6rem, 5vw, 4.1rem);
+  font-weight: 800;
+
+  line-height: 1.05;
+  letter-spacing: -2.5px;
+}
+
+.nevada-evv__content h2 span {
+  color: #4b8bb4;
+}
+
+.nevada-evv__intro {
+  margin: 24px 0 0;
+
+  color: #687689;
+
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+/* BENEFITS */
+
+.nevada-evv__benefits {
+  margin-top: 32px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 19px;
+}
+
+.nevada-evv__benefit {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 15px;
+}
+
+.nevada-evv__benefit-icon {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 11px;
+
+  background: #dcebf5;
+  color: #367aa4;
+}
+
+.nevada-evv__benefit strong {
+  display: block;
+
+  color: #203b62;
+
+  font-size: 15px;
+}
+
+.nevada-evv__benefit p {
+  margin: 5px 0 0;
+
+  color: #758192;
+
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+/* BUTTON */
+
+.nevada-evv__button {
+  width: fit-content;
+
+  min-height: 52px;
+
+  margin-top: 32px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 0 23px;
+
+  border-radius: 8px;
+
+  background: #183664;
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  box-shadow: 0 10px 25px rgba(24, 54, 100, 0.18);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.nevada-evv__button:hover {
+  transform: translateY(-2px);
+
+  background: #244c7d;
+}
+
+/* RIGHT CARD */
+
+.nevada-evv__visual {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+}
+
+.nevada-evv__card {
+  width: 100%;
+  max-width: 500px;
+
+  padding: 30px;
+
+  border: 1px solid #d9e4ec;
+  border-radius: 20px;
+
+  background: #ffffff;
+
+  box-shadow: 0 28px 65px rgba(24, 54, 100, 0.13);
+}
+
+.nevada-evv__card-top {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding-bottom: 22px;
+
+  border-bottom: 1px solid #e8edf2;
+}
+
+.nevada-evv__shield {
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: #183664;
+  color: #ffffff;
+}
+
+.nevada-evv__card-top span {
+  color: #5f8bab;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.nevada-evv__card-top h3 {
+  margin: 3px 0 0;
+
+  color: #203b62;
+
+  font-size: 22px;
+}
+
+/* STATUS */
+
+.nevada-evv__status {
+  display: grid;
+
+  grid-template-columns: auto 1fr auto;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 16px;
+
+  padding: 15px 16px;
+
+  border: 1px solid #e0e7ed;
+  border-radius: 11px;
+
+  background: #f9fbfd;
+}
+
+.nevada-evv__status-dot {
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: #4aa576;
+
+  box-shadow: 0 0 0 5px rgba(74, 165, 118, 0.1);
+}
+
+.nevada-evv__status strong {
+  display: block;
+
+  color: #284463;
+
+  font-size: 13px;
+}
+
+.nevada-evv__status small {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #8995a3;
+
+  font-size: 10px;
+}
+
+.nevada-evv__status svg {
+  color: #489b71;
+}
+
+/* GAINWELL */
+
+.nevada-evv__gainwell {
+  margin-top: 18px;
+
+  padding: 20px;
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #17355f,
+      #285882
+    );
+
+  color: #ffffff;
+}
+
+.nevada-evv__gainwell span {
+  display: block;
+
+  color: #a8cee6;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 1.4px;
+}
+
+.nevada-evv__gainwell strong {
+  display: block;
+
+  margin-top: 5px;
+
+  font-size: 20px;
+}
+
+.nevada-evv__gainwell p {
+  margin: 7px 0 0;
+
+  color: #cfdeea;
+
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+/* WORKFLOW */
+
+.nevada-evv__workflow {
+  margin-top: 24px;
+}
+
+.nevada-evv__workflow-label {
+  display: block;
+
+  margin-bottom: 15px;
+
+  color: #7890a4;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 1.4px;
+}
+
+.nevada-evv__workflow-steps {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nevada-evv__workflow-steps div:not(.nevada-evv__line) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 6px;
+
+  color: #667588;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.nevada-evv__workflow-steps div span {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #e5f0f7;
+  color: #3376a1;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.nevada-evv__line {
+  height: 1px;
+
+  flex: 1;
+
+  margin: 0 8px 20px;
+
+  background: #cfdae3;
+}
+
+/* FLOATING CARD */
+
+.nevada-evv__floating {
+  position: absolute;
+
+  right: -35px;
+  bottom: 55px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 13px 15px;
+
+  border: 1px solid #dce5ed;
+  border-radius: 11px;
+
+  background: #ffffff;
+
+  box-shadow: 0 14px 35px rgba(24, 54, 100, 0.14);
+}
+
+.nevada-evv__floating svg {
+  color: #438cad;
+}
+
+.nevada-evv__floating strong {
+  display: block;
+
+  color: #284463;
+
+  font-size: 12px;
+}
+
+.nevada-evv__floating span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #8b96a4;
+
+  font-size: 10px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 950px) {
+  .nevada-evv__container {
+    grid-template-columns: 1fr;
+
+    gap: 65px;
+  }
+
+  .nevada-evv__content {
+    max-width: 700px;
+
+    margin: 0 auto;
+  }
+
+  .nevada-evv__visual {
+    max-width: 600px;
+
+    margin: 0 auto;
+  }
+
+  .nevada-evv__floating {
+    right: -10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nevada-evv {
+    padding: 80px 0;
+  }
+
+  .nevada-evv__container {
+    width: min(100% - 28px, 1180px);
+  }
+
+  .nevada-evv__intro {
+    font-size: 16px;
+  }
+
+  .nevada-evv__button {
+    width: 100%;
+  }
+
+  .nevada-evv__card {
+    padding: 22px;
+  }
+
+  .nevada-evv__floating {
+    display: none;
+  }
+
+  .nevada-evv__workflow-steps {
+    gap: 4px;
+  }
+
+  .nevada-evv__line {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+}

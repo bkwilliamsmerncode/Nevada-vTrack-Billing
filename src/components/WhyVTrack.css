@@ -1,0 +1,387 @@
+.why-vtrack {
+  width: 100%;
+
+  padding: 110px 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f6f9fc 0%,
+      #ffffff 100%
+    );
+}
+
+.why-vtrack__container {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+
+  align-items: center;
+
+  gap: 80px;
+}
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.why-vtrack__visual {
+  position: relative;
+}
+
+.why-vtrack__experience {
+  position: relative;
+
+  padding: 38px;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #183664 0%,
+      #285682 100%
+    );
+
+  color: #ffffff;
+
+  box-shadow: 0 25px 60px rgba(24, 54, 100, 0.18);
+
+  overflow: hidden;
+}
+
+.why-vtrack__experience::after {
+  content: "";
+
+  position: absolute;
+
+  width: 230px;
+  height: 230px;
+
+  top: -100px;
+  right: -90px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.why-vtrack__experience span {
+  display: block;
+
+  color: #a9cce4;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.why-vtrack__experience strong {
+  display: block;
+
+  margin-top: 5px;
+
+  font-size: 6.5rem;
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: -6px;
+}
+
+.why-vtrack__experience h3 {
+  margin: 7px 0 0;
+
+  font-size: 24px;
+}
+
+.why-vtrack__experience p {
+  max-width: 350px;
+
+  margin: 13px 0 0;
+
+  color: #d0dde8;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* =========================
+   SMALL CARDS
+========================= */
+
+.why-vtrack__mini-grid {
+  position: relative;
+
+  z-index: 3;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 14px;
+
+  margin-top: -20px;
+  padding: 0 20px;
+}
+
+.why-vtrack__mini-card {
+  min-height: 150px;
+
+  padding: 22px;
+
+  border: 1px solid #e1e7ee;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow: 0 12px 30px rgba(24, 54, 100, 0.08);
+}
+
+.why-vtrack__mini-card svg {
+  color: #4685ac;
+}
+
+.why-vtrack__mini-card strong {
+  display: block;
+
+  margin-top: 14px;
+
+  color: #203b62;
+
+  font-size: 15px;
+}
+
+.why-vtrack__mini-card span {
+  display: block;
+
+  margin-top: 6px;
+
+  color: #7a8797;
+
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.why-vtrack__content {
+  max-width: 620px;
+}
+
+.why-vtrack__eyebrow {
+  display: block;
+
+  margin-bottom: 15px;
+
+  color: #4b8bb4;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 1.8px;
+}
+
+.why-vtrack__content h2 {
+  margin: 0;
+
+  color: #183664;
+
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+
+  line-height: 1.06;
+  letter-spacing: -2.4px;
+}
+
+.why-vtrack__content h2 span {
+  color: #4b8bb4;
+}
+
+.why-vtrack__description {
+  margin: 23px 0 0;
+
+  color: #6b7889;
+
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+/* =========================
+   BENEFITS
+========================= */
+
+.why-vtrack__benefits {
+  margin-top: 28px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.why-vtrack__benefit {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  color: #344d6c;
+
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.why-vtrack__benefit svg {
+  flex-shrink: 0;
+
+  color: #4b8bb4;
+}
+
+/* =========================
+   QUOTE
+========================= */
+
+.why-vtrack__quote {
+  display: flex;
+
+  gap: 15px;
+
+  margin-top: 30px;
+
+  padding: 20px 22px;
+
+  border: 1px solid #e1e8ee;
+  border-radius: 12px;
+
+  background: #ffffff;
+}
+
+.why-vtrack__quote-line {
+  width: 4px;
+
+  flex-shrink: 0;
+
+  border-radius: 999px;
+
+  background: #4b8bb4;
+}
+
+.why-vtrack__quote p {
+  margin: 0;
+
+  color: #617084;
+
+  font-size: 14px;
+  font-style: italic;
+
+  line-height: 1.7;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.why-vtrack__button {
+  width: fit-content;
+
+  min-height: 52px;
+
+  margin-top: 28px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 0 23px;
+
+  border-radius: 8px;
+
+  background: #183664;
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  box-shadow: 0 10px 25px rgba(24, 54, 100, 0.18);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.why-vtrack__button:hover {
+  transform: translateY(-2px);
+
+  background: #244c7d;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 950px) {
+  .why-vtrack__container {
+    grid-template-columns: 1fr;
+
+    gap: 65px;
+  }
+
+  .why-vtrack__visual {
+    max-width: 620px;
+
+    margin: 0 auto;
+  }
+
+  .why-vtrack__content {
+    max-width: 700px;
+
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .why-vtrack {
+    padding: 80px 0;
+  }
+
+  .why-vtrack__container {
+    width: min(100% - 28px, 1180px);
+  }
+
+  .why-vtrack__experience {
+    padding: 30px 25px;
+  }
+
+  .why-vtrack__experience strong {
+    font-size: 5rem;
+  }
+
+  .why-vtrack__mini-grid {
+    grid-template-columns: 1fr;
+
+    margin-top: 14px;
+
+    padding: 0;
+  }
+
+  .why-vtrack__mini-card {
+    min-height: auto;
+  }
+
+  .why-vtrack__description {
+    font-size: 16px;
+  }
+
+  .why-vtrack__button {
+    width: 100%;
+  }
+}

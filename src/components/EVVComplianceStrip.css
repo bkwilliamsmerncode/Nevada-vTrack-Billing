@@ -1,0 +1,143 @@
+.evv-strip {
+  width: 100%;
+  padding: 55px 0;
+
+  background: #ffffff;
+
+  border-top: 1px solid #e3e9ef;
+  border-bottom: 1px solid #e3e9ef;
+}
+
+.evv-strip__container {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.evv-strip__heading {
+  max-width: 720px;
+  margin: 0 auto 34px;
+
+  text-align: center;
+}
+
+.evv-strip__heading > span {
+  display: block;
+
+  color: #4b8bb4;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1.7px;
+}
+
+.evv-strip__heading h2 {
+  margin: 8px 0 0;
+
+  color: #183664;
+
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+}
+
+.evv-strip__heading p {
+  margin: 13px auto 0;
+
+  color: #6f7d8e;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.evv-strip__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+
+  gap: 12px;
+}
+
+.evv-strip__item {
+  min-height: 118px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 11px;
+
+  padding: 17px 12px;
+
+  border: 1px solid #dfe7ed;
+  border-radius: 12px;
+
+  background: #f8fbfd;
+
+  text-align: center;
+}
+
+.evv-strip__icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #e3eef5;
+  color: #3d80a8;
+}
+
+.evv-strip__item span {
+  color: #415a76;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+.evv-strip__footer {
+  margin: 20px 0 0;
+
+  color: #8793a0;
+
+  font-size: 11px;
+
+  text-align: center;
+}
+
+@media (max-width: 950px) {
+  .evv-strip__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .evv-strip {
+    padding: 45px 0;
+  }
+
+  .evv-strip__container {
+    width: calc(100% - 28px);
+  }
+
+  .evv-strip__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 390px) {
+  .evv-strip__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .evv-strip__item {
+    min-height: auto;
+  }
+}
