@@ -154,21 +154,14 @@ function Platform() {
                 <ArrowRight size={19} />
               </Link>
 
-<<<<<<< HEAD
-            <Link
-  to="/contact?section=form"
-  className="platform-hero__button platform-hero__button--secondary"
->
-  Explore the Platform
-</Link>
-=======
+
               <Link
                 to="/contact?section=form"
                 className="platform-hero__button platform-hero__button--secondary"
               >
                 Explore the Platform
               </Link>
->>>>>>> 268989c5b39a8eb0798f02d30e34b711432a1e88
+
             </div>
           </div>
 
