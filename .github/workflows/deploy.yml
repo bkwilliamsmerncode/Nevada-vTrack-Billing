@@ -31,6 +31,18 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      
+      - name: Verify EmailJS configuration
+        env:
+          VITE_EMAILJS_SERVICE_ID: ${{ secrets.VITE_EMAILJS_SERVICE_ID }}
+          VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}
+          VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.VITE_EMAILJS_PUBLIC_KEY }}
+        run: |
+          test -n "$VITE_EMAILJS_SERVICE_ID" || { echo "::error::Missing VITE_EMAILJS_SERVICE_ID"; exit 1; }
+          test -n "$VITE_EMAILJS_TEMPLATE_ID" || { echo "::error::Missing VITE_EMAILJS_TEMPLATE_ID"; exit 1; }
+          test -n "$VITE_EMAILJS_PUBLIC_KEY" || { echo "::error::Missing VITE_EMAILJS_PUBLIC_KEY"; exit 1; }
+          echo "All EmailJS configuration values are present."
+
       - name: Build website
         run: npm run build
         env:
