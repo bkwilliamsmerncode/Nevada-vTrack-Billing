@@ -47,7 +47,7 @@ function VTrackShowcase() {
         {/* SECTION HEADER */}
         <div className="vtrack-showcase__header">
           <span className="vtrack-showcase__eyebrow">
-            THE VTRACK DIFFERENCE
+            The vTrack Difference
           </span>
 
           <h2 className="vtrack-showcase__title">

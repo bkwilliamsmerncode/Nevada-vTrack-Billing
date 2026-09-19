@@ -13,7 +13,7 @@ function TermsOfUse() {
 
       <section className="legal-hero">
         <div className="legal-hero__container">
-          <span>VTRACK BILLING BY VICHRA</span>
+          <span>vTrack Billing by Vichra</span>
 
           <h1>Terms of Use</h1>
 
@@ -251,7 +251,7 @@ function TermsOfUse() {
           </p>
 
           <p className="legal-uppercase">
-            TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, VTRACK
+            TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, vTrack
             DISCLAIMS WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
             WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
             NON-INFRINGEMENT, ACCURACY, COMPLETENESS, AND AVAILABILITY.

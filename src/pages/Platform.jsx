@@ -131,7 +131,7 @@ function Platform() {
         <div className="platform-hero__container">
           <div className="platform-hero__content">
             <span className="platform-hero__eyebrow">
-              THE VTRACK PLATFORM
+              The vTrack Platform
             </span>
 
             <h1>

@@ -13,7 +13,7 @@ function PrivacyPolicy() {
 
       <section className="legal-hero">
         <div className="legal-hero__container">
-          <span>VTRACK BILLING BY VICHRA</span>
+          <span>vTrack Billing by Vichra</span>
 
           <h1>Privacy Policy</h1>
 
