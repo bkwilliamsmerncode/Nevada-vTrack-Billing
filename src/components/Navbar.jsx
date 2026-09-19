@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
   Link,
   NavLink,
-  useLocation,
 } from "react-router-dom";
 
 import { Menu, X } from "lucide-react";
@@ -14,11 +13,7 @@ import "./Navbar.css";
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const location = useLocation();
-
-  useEffect(() => {
-    setMenuOpen(false);
-  }, [location.pathname]);
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <header className="navbar">
@@ -48,6 +43,7 @@ function Navbar() {
           <NavLink
             to="/"
             end
+            onClick={closeMenu}
             className={({ isActive }) =>
               isActive
                 ? "navbar__link navbar__link--active"
@@ -59,6 +55,7 @@ function Navbar() {
 
           <NavLink
             to="/platform"
+            onClick={closeMenu}
             className={({ isActive }) =>
               isActive
                 ? "navbar__link navbar__link--active"
@@ -70,6 +67,7 @@ function Navbar() {
 
           <NavLink
             to="/about"
+            onClick={closeMenu}
             className={({ isActive }) =>
               isActive
                 ? "navbar__link navbar__link--active"
@@ -81,6 +79,7 @@ function Navbar() {
 
           <NavLink
             to="/contact#contact-form"
+            onClick={closeMenu}
             className={({ isActive }) =>
               isActive
                 ? "navbar__link navbar__link--active"
@@ -93,6 +92,7 @@ function Navbar() {
           <Link
             to="/contact#contact-form"
             className="navbar__cta"
+            onClick={closeMenu}
           >
             Claim Your Spot
           </Link>

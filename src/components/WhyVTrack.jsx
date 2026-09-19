@@ -15,7 +15,7 @@ const benefits = [
   "A Nevada Legacy Promotion offered through vTrack's implementation team",
   "A dedicated account manager to handle billing and payroll",
   "Issues addressed before they become billing problems",
-  "More time for your staff to focus on services—not administration",
+  "More time for your staff to focus on services, not administration",
 ];
 
 function WhyVTrack() {
@@ -24,11 +24,11 @@ function WhyVTrack() {
       <div className="why-vtrack__container">
         <div className="why-vtrack__visual">
           <div className="why-vtrack__experience">
-            <span>NEARLY</span>
+            <span>SINCE</span>
 
-            <strong>30</strong>
+            <strong>2006</strong>
 
-            <h3>Years of Experience</h3>
+            <h3>Provider Experience</h3>
 
             <p>
               Supporting provider agencies and the teams responsible for
@@ -91,7 +91,7 @@ function WhyVTrack() {
 
           <p className="why-vtrack__description">
             Provider agencies already carry complex schedules, documentation,
-            authorizations, billing, payroll, staff, and member services.
+            authorizations, billing, payroll, staff, and recipient services.
             Through the Nevada Legacy Promotion, vTrack's Implementation
             Manager helps your agency get started. After onboarding, your
             dedicated account manager handles billing and payroll while the

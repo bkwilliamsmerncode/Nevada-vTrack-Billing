@@ -18,20 +18,20 @@ function FinalCTA() {
           </h2>
 
           <p>
-            vTrack's implementation team offers the Nevada Legacy Promotion
-            and helps get your agency started. After onboarding,
-            your dedicated account manager handles billing and payroll.
+            Start with an honest review of your services, payers and current
+            workflow. We will show you what a Nevada transition requires and
+            build a practical path to go live.
           </p>
 
           <div className="final-cta__benefits">
             <div>
               <CheckCircle2 size={18} />
-              Billing and payroll handled by your account manager
+              Guided onboarding and training
             </div>
 
             <div>
               <CheckCircle2 size={18} />
-              Nearly 30 years of provider experience
+              Supporting provider agencies since 2006
             </div>
 
             <div>
@@ -70,7 +70,7 @@ function FinalCTA() {
           <h3>Months Free</h3>
 
           <p>
-            For the first 10 Nevada provider agencies that join vTrack.
+            For up to the first six months while we work through onboarding.
           </p>
 
           <div className="final-cta__offer-line"></div>

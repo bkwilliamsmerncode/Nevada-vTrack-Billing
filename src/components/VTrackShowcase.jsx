@@ -1,6 +1,5 @@
 import {
   CalendarDays,
-  FileText,
   LayoutDashboard,
   UserRoundCog,
 } from "lucide-react";
@@ -16,7 +15,7 @@ const vTrackFeatures = [
     id: 1,
     title: "Everything in One Dashboard",
     description:
-      "See the information your agency needs in one place. vTrack gives your team a centralized view of services, staff, members, billing, and day-to-day operations.",
+      "See the information your agency needs in one place. vTrack gives your team a centralized view of services, staff, recipients, billing, and day-to-day operations.",
     icon: LayoutDashboard,
     image: homepage,
   },
@@ -25,7 +24,7 @@ const vTrackFeatures = [
     id: 2,
     title: "Scheduling Made Simple",
     description:
-      "Manage appointments, staff schedules, member services, and EVV-related activity with tools designed to help provider agencies stay organized.",
+      "Manage appointments, staff schedules, recipient services, and EVV-related activity with tools designed to help provider agencies stay organized.",
     icon: CalendarDays,
     image: calendar,
   },
@@ -34,7 +33,7 @@ const vTrackFeatures = [
     id: 4,
     title: "Built for Provider Agencies",
     description:
-      "Keep member, provider, authorization, service, and agency information organized in one platform built around the needs of healthcare and HCBS providers.",
+      "Keep recipient, provider, authorization, service, and agency information organized in one platform built around the needs of healthcare and HCBS providers.",
     icon: UserRoundCog,
     image: hcbsServices,
   },
@@ -59,7 +58,7 @@ function VTrackShowcase() {
 
           <p className="vtrack-showcase__subtitle">
             vTrack brings the tools provider agencies use every day into one
-            powerful platform — helping your team spend less time managing
+            powerful platform , helping your team spend less time managing
             paperwork and more time supporting the people you serve.
           </p>
         </div>

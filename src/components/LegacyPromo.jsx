@@ -20,12 +20,12 @@ function LegacyPromo() {
             <span>NEVADA LEGACY PROMOTION</span>
           </div>
 <h2>
-  Only <span>10 Nevada Agencies</span> Will Qualify.
+  You Do Not Pay <span>While We Get You Approved.</span>
 </h2>
 
 <p className="legacy-promo__intro">
-  Don’t miss your chance to be among the first 10 Nevada provider agencies
-  to partner with vTrack.
+  Nevada onboarding takes real work. We guide each founding agency through
+  designation, training, integration and readiness before go live.
 </p>
 
 <div className="legacy-promo__offer">
@@ -36,8 +36,9 @@ function LegacyPromo() {
   <strong>GET 6 MONTHS FREE</strong>
 
   <p>
-    Get full access to everything vTrack has to offer—with no software cost
-    for your first six months. Once all 10 spots are claimed, this offer ends.
+    Your promotional period covers up to the first six months while we work
+    through the approval and onboarding process with your team. Because that
+    support is hands-on, this offer is limited to 10 founding Nevada agencies.
   </p>
           </div>
 
@@ -46,10 +47,10 @@ function LegacyPromo() {
               <CheckCircle2 size={21} />
 
               <div>
-                <strong>Full vTrack Platform</strong>
+                <strong>Structured Transition Plan</strong>
                 <span>
-                  Access the tools your agency needs for operations, EVV,
-                  billing, payroll, authorizations, and more.
+                  Work through designation, system setup, training and launch
+                  readiness with clear responsibilities at each stage.
                 </span>
               </div>
             </div>
@@ -119,12 +120,12 @@ function LegacyPromo() {
           <div className="legacy-promo__card-list">
             <div>
               <CheckCircle2 size={18} />
-              Full platform access
+              Structured transition plan
             </div>
 
             <div>
               <CheckCircle2 size={18} />
-              Nevada EVV & billing support
+              Guided Nevada onboarding
             </div>
 
             <div>

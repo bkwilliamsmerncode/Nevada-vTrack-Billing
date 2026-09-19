@@ -18,19 +18,20 @@ function NevadaEVV() {
         <div className="nevada-evv__content">
           <div className="nevada-evv__eyebrow">
             <BadgeCheck size={18} />
-            <span>NEVADA READY</span>
+            <span>NEVADA MEDICAID ENROLLMENT</span>
           </div>
 
           <h2>
-            EVV and Billing Built for
-            <span> Nevada Providers.</span>
+            Enrolled for Third-Party Billing.
+            <span> Testing for Production.</span>
           </h2>
 
           <p className="nevada-evv__intro">
-            vTrack by Vichra is licensed in Nevada as a Third-Party EVV
-            Vendor and Biller through Gainwell Technologies, giving Nevada
-            provider agencies another option for managing EVV, billing, and
-            the operational work surrounding service delivery.
+            Vichra Systems is enrolled with Nevada Medicaid as a trading
+            partner for third-party billing, Trading Partner ID 51488619.
+            Connectivity is established with Nevada Medicaid's fiscal agent,
+            and EDI certification testing is in progress. Production claim
+            submission is pending successful completion of that testing.
           </p>
 
           <div className="nevada-evv__benefits">
@@ -56,7 +57,7 @@ function NevadaEVV() {
               <div>
                 <strong>Billing & Claims</strong>
                 <p>
-                  Move approved services toward billing without maintaining
+                  Move reviewed services toward billing without maintaining
                   separate disconnected processes.
                 </p>
               </div>
@@ -71,7 +72,7 @@ function NevadaEVV() {
                 <strong>Built Around Provider Operations</strong>
                 <p>
                   EVV is only one piece of the work. vTrack also helps manage
-                  authorizations, scheduling, payroll, members, and more.
+                  authorizations, scheduling, payroll, recipients, and more.
                 </p>
               </div>
             </div>
@@ -95,7 +96,7 @@ function NevadaEVV() {
 
               <div>
                 <span>NEVADA</span>
-                <h3>Provider Ready</h3>
+                <h3>Enrollment Status</h3>
               </div>
             </div>
 
@@ -103,8 +104,8 @@ function NevadaEVV() {
               <span className="nevada-evv__status-dot"></span>
 
               <div>
-                <strong>Third-Party EVV Vendor</strong>
-                <small>vTrack by Vichra</small>
+                <strong>Third-Party Billing</strong>
+                <small>Trading Partner ID 51488619</small>
               </div>
 
               <CheckCircle2 size={20} />
@@ -114,21 +115,21 @@ function NevadaEVV() {
               <span className="nevada-evv__status-dot"></span>
 
               <div>
-                <strong>Third-Party Biller</strong>
-                <small>vTrack by Vichra</small>
+                <strong>EDI Testing in Progress</strong>
+                <small>Production approval pending</small>
               </div>
 
               <CheckCircle2 size={20} />
             </div>
 
             <div className="nevada-evv__gainwell">
-              <span>NEVADA INTEGRATION</span>
+              <span>FISCAL AGENT CONNECTIVITY</span>
 
               <strong>Gainwell Technologies</strong>
 
               <p>
-                Supporting Nevada provider agencies with connected EVV and
-                billing workflows.
+                Connectivity is established for compliance test-file
+                submission.
               </p>
             </div>
 
@@ -147,7 +148,7 @@ function NevadaEVV() {
 
                 <div>
                   <span>2</span>
-                  EVV
+                  Review
                 </div>
 
                 <div className="nevada-evv__line"></div>

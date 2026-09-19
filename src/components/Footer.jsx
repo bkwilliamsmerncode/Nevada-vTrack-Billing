@@ -22,7 +22,7 @@ function Footer() {
 
             <p>
               Provider management software designed to simplify EVV,
-              billing, payroll, authorizations, scheduling, member
+              billing, payroll, authorizations, scheduling, recipient
               tracking, and agency operations.
             </p>
 
@@ -47,17 +47,16 @@ function Footer() {
             <Link to="/platform">Billing & Claims</Link>
             <Link to="/platform">Authorizations</Link>
             <Link to="/platform">Payroll</Link>
-            <Link to="/platform">Member Tracking</Link>
+            <Link to="/platform">Recipient Tracking</Link>
           </div>
 
          <div className="footer__column">
   <h3>Nevada</h3>
 
-  <span>Supported Living (SLA)</span>
-  <span>Jobs & Day Training (JDT)</span>
-  <span>HCBS Providers</span>
   <span>Personal Care Agencies</span>
-  <span>IDD Providers</span>
+  <span>Home Health Agencies</span>
+  <span>FE & PD Waiver Providers</span>
+  <span>Residential & IDD Providers</span>
 </div>
         </div>
 

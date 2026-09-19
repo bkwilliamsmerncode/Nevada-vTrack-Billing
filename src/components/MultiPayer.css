@@ -1,0 +1,11 @@
+.multi-payer { padding: 96px 24px; background: #0d2538; color: #fff; }
+.multi-payer__container { width: min(1160px, 100%); margin: 0 auto; display: grid; grid-template-columns: 1.05fr .95fr; gap: 64px; align-items: center; }
+.multi-payer__eyebrow { display: inline-flex; align-items: center; gap: 9px; color: #87d8c5; font-weight: 800; letter-spacing: .12em; font-size: .82rem; }
+.multi-payer h2 { margin: 18px 0; font-size: clamp(2.1rem, 4vw, 3.5rem); line-height: 1.08; }
+.multi-payer h2 strong { color: #63c7ad; }
+.multi-payer p { color: #d5e1e8; line-height: 1.8; font-size: 1.05rem; }
+.multi-payer__plans { display: grid; gap: 12px; }
+.multi-payer__plans div { display: flex; gap: 13px; align-items: center; padding: 17px 18px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.13); border-radius: 12px; }
+.multi-payer__plans svg { flex: 0 0 auto; color: #63c7ad; }
+.multi-payer__plans span { font-weight: 700; line-height: 1.35; }
+@media (max-width: 800px) { .multi-payer { padding: 70px 20px; } .multi-payer__container { grid-template-columns: 1fr; gap: 36px; } }

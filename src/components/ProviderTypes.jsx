@@ -13,37 +13,37 @@ import "./ProviderTypes.css";
 
 const providerTypes = [
   {
-    icon: Home,
-    title: "Supported Living Arrangement (SLA)",
+    icon: PersonStanding,
+    title: "Personal Care Services Agencies",
     description:
-      "Support residential service operations, staffing, service delivery, authorizations, billing, and recipient information in one connected system.",
-  },
-  {
-    icon: BriefcaseBusiness,
-    title: "Jobs & Day Training (JDT)",
-    description:
-      "Manage Jobs and Day Training services, including Day Habilitation workflows, attendance, staffing, authorizations, payroll, and billing.",
+      "Connect personal care scheduling, required EVV visit information, service review, billing, and operational workflows.",
   },
   {
     icon: HeartHandshake,
-    title: "HCBS Providers",
+    title: "Home Health Agencies",
     description:
-      "Manage applicable Home and Community-Based Services with tools for scheduling, EVV, authorizations, service tracking, billing, and payroll.",
+      "Manage applicable home health EVV, scheduling, service documentation, authorizations and claims in a connected workflow.",
   },
   {
-    icon: PersonStanding,
-    title: "Personal Care Agencies",
+    icon: Home,
+    title: "FE & PD Waiver Providers",
     description:
-      "Connect personal care scheduling, EVV visit information, service review, billing, and operational workflows.",
-  },
-  {
-    icon: Users,
-    title: "IDD & Developmental Services",
-    description:
-      "Give teams supporting individuals with intellectual and developmental disabilities one place to organize critical provider operations.",
+      "Support applicable Frail Elderly and Physical Disabilities waiver services with EVV, authorization and billing tools.",
   },
   {
     icon: Building2,
+    title: "Personal Care Intermediary Organizations",
+    description:
+      "Coordinate applicable EVV, recipient services, billing and the operational work surrounding personal care.",
+  },
+  {
+    icon: Users,
+    title: "IDD, SLA & Residential Services",
+    description:
+      "Organize authorizations, staffing, service documentation, billing and payroll without positioning EVV as the primary need.",
+  },
+  {
+    icon: BriefcaseBusiness,
     title: "Multi-Service Agencies",
     description:
       "Manage multiple programs, service types, recipients, staff, and locations through one connected provider management platform.",
@@ -66,8 +66,9 @@ function ProviderTypes() {
 
           <p>
             vTrack supports the operational work behind Nevada provider
-            agencies, from residential and day services to personal care,
-            HCBS, developmental services, and multi-program organizations.
+            agencies. EVV tools are designed for provider types subject to
+            Nevada's EVV requirements, while billing, authorization and
+            payroll workflows support a wider range of services.
           </p>
         </div>
 

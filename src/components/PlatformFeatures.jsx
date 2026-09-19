@@ -1,9 +1,7 @@
 import {
   CalendarDays,
-  CircleDollarSign,
   ClipboardCheck,
   FileCheck2,
-  HeartPulse,
   ReceiptText,
   UsersRound,
   WalletCards,
@@ -38,27 +36,15 @@ const features = [
   },
   {
     icon: UsersRound,
-    title: "Member Tracking",
+    title: "Recipient Tracking",
     description:
-      "Keep member information, services, locations, appointments, and important details organized.",
+      "Keep recipient information, services, locations, appointments, and important details organized.",
   },
   {
     icon: ClipboardCheck,
     title: "Approval Workflow",
     description:
       "Review services before billing and payroll so your agency can catch issues earlier.",
-  },
-  {
-    icon: CircleDollarSign,
-    title: "Collections",
-    description:
-      "Track outstanding claims and payments while keeping your revenue cycle organized.",
-  },
-  {
-    icon: HeartPulse,
-    title: "Provider Operations",
-    description:
-      "Give your team one central system for managing the daily work behind quality services.",
   },
 ];
 
@@ -77,10 +63,8 @@ function PlatformFeatures() {
           </h2>
 
           <p>
-            The Nevada Legacy Promotion is offered through vTrack's
-            implementation team. After onboarding, your dedicated account
-            manager handles billing and payroll while your team spends more
-            time supporting the people you serve.
+            Six connected capabilities give Nevada agencies a clear view from
+            the scheduled service through billing and payroll preparation.
           </p>
         </div>
 

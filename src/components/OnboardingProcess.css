@@ -1,0 +1,15 @@
+.onboarding { padding: 100px 24px; background: #f7f4ef; }
+.onboarding__container { width: min(1200px, 100%); margin: 0 auto; text-align: center; }
+.onboarding__heading { max-width: 760px; margin: 0 auto 52px; }
+.onboarding__heading > span { color: #b95f40; font-weight: 800; letter-spacing: .13em; font-size: .82rem; }
+.onboarding h2 { margin: 15px 0; color: #122d3f; font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.12; }
+.onboarding__heading p { color: #526673; line-height: 1.75; }
+.onboarding__steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; text-align: left; }
+.onboarding__steps article { position: relative; min-height: 260px; padding: 28px 22px; background: #fff; border: 1px solid #e3ddd3; border-radius: 16px; box-shadow: 0 12px 35px rgba(19,45,63,.06); }
+.onboarding__number { color: #d9d1c5; font-size: 2rem; font-weight: 900; }
+.onboarding__steps svg { margin: 22px 0 10px; color: #348c79; }
+.onboarding__steps h3 { margin: 0 0 9px; color: #122d3f; font-size: 1.08rem; }
+.onboarding__steps p { margin: 0; color: #60727d; line-height: 1.6; font-size: .94rem; }
+.onboarding__button { display: inline-flex; align-items: center; gap: 9px; margin-top: 42px; padding: 15px 24px; border-radius: 9px; background: #b95f40; color: #fff; font-weight: 800; text-decoration: none; }
+@media (max-width: 1000px) { .onboarding__steps { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 620px) { .onboarding { padding: 72px 20px; } .onboarding__steps { grid-template-columns: 1fr; } .onboarding__steps article { min-height: auto; } }
