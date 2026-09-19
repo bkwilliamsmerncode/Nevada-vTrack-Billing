@@ -1,16 +1,40 @@
-# React + Vite
+# vTrack Nevada
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Public Nevada marketing site for vTrack by Vichra. The site is built with
+React and Vite and deploys to GitHub Pages from the `main` branch.
 
-Currently, two official plugins are available:
+## Local development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install
+cp .env.example .env
+npm run dev
+```
 
-## React Compiler
+The contact form uses EmailJS. Add the three values shown in `.env.example`
+to a local `.env` file. For GitHub Pages, create repository Actions secrets
+with the same names:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- `VITE_EMAILJS_SERVICE_ID`
+- `VITE_EMAILJS_TEMPLATE_ID`
+- `VITE_EMAILJS_PUBLIC_KEY`
 
-## Expanding the ESLint configuration
+The EmailJS template should accept `to_email`, `contact_name`, `agency_name`,
+`email`, `reply_to`, `phone`, `provider_type`, `agency_size`, `message`, and
+`legacy_interest`. Set its **To Email** field to `{{to_email}}`; form leads are
+addressed to brian@vichra.com, selena@vichra.com, and greg@vichra.com.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Quality checks
+
+```bash
+npm run lint
+npm run build
+```
+
+## Nevada status language
+
+Vichra Systems is enrolled with Nevada Medicaid as a trading partner for
+third-party billing (Trading Partner ID 51488619). Connectivity is established
+and EDI certification testing is in progress. Do not describe vTrack as a
+licensed or approved Nevada EVV vendor or as approved for production claim
+submission until those statuses are separately confirmed.
