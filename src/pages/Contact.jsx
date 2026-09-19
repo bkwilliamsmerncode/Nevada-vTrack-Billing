@@ -31,6 +31,8 @@ const EMAILJS_TEMPLATE_ID =
 const EMAILJS_PUBLIC_KEY =
   import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
+  
+
 const SALES_EMAIL = "Go-vTrack@vichra.com";
 const SALES_PHONE = "480-878-1050";
 
