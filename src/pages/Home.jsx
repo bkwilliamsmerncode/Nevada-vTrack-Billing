@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import {
   ArrowRight,
   BadgeCheck,
-  Building2,
   CheckCircle2,
   ShieldCheck,
 } from "lucide-react";
@@ -14,6 +13,8 @@ import PlatformFeatures from "../components/PlatformFeatures";
 import WhyVTrack from "../components/WhyVTrack";
 import ProviderTypes from "../components/ProviderTypes";
 import NevadaEVV from "../components/NevadaEVV";
+import OnboardingProcess from "../components/OnboardingProcess";
+import MultiPayer from "../components/MultiPayer";
 import LegacyPromo from "../components/LegacyPromo";
 import FinalCTA from "../components/FinalCTA";
 
@@ -23,10 +24,9 @@ function Home() {
   return (
     
     <div className="home">
-      <LegacyPromo />
       <SEO
-        title="vTrack Nevada | EVV, Billing & Provider Management"
-        description="vTrack by Vichra helps Nevada provider agencies manage EVV, billing, claims, payroll, authorizations, scheduling, recipient tracking and agency operations."
+        title="vTrack Nevada | Medicaid Billing, EVV & Provider Operations"
+        description="Vichra Systems is enrolled with Nevada Medicaid for third-party billing and is completing EDI certification testing. Explore vTrack for EVV, multi-payer billing and provider operations."
         path="/"
       />
 
@@ -38,28 +38,28 @@ function Home() {
           <div className="hero__content">
             <div className="hero__badge">
               <BadgeCheck size={18} />
-              <span>Built for Nevada Provider Agencies</span>
+              <span>Nevada Medicaid Trading Partner 51488619</span>
             </div>
 
             <h1 className="hero__title">
-              Your Agency's Back Office,
-              <span> Handled.</span>
+              Nevada Medicaid Billing and EVV,
+              <span> Without the Disruption.</span>
             </h1>
 
             <p className="hero__description">
-              Through the Nevada Legacy Promotion, vTrack's implementation
-              team helps your agency get started. Once you're onboarded,
-              your dedicated account manager handles billing and payroll—so
-              your team can focus on the people you serve.
+              Vichra Systems is an enrolled Nevada Medicaid trading partner
+              for third-party billing. We are completing EDI certification
+              testing while helping a limited group of founding Nevada
+              agencies prepare for a careful, supported transition.
             </p>
 
             <div className="hero__official">
               <ShieldCheck size={22} />
 
               <p>
-                Nevada Medicaid uses an open EVV model that allows provider
-                agencies to use an <strong>alternate EVV system</strong> when
-                it meets 21st Century Cures Act documentation requirements.
+                <strong>Connectivity is established.</strong> Production claim
+                submission will begin after Nevada Medicaid's fiscal agent
+                accepts our compliance test file.
               </p>
             </div>
 
@@ -68,7 +68,7 @@ function Home() {
                 to="/contact#contact-form"
                 className="hero__button hero__button--primary"
               >
-                Claim Your Free 6 Months
+                Talk With Our Nevada Team
                 <ArrowRight size={19} />
               </Link>
 
@@ -83,17 +83,17 @@ function Home() {
             <div className="hero__trust">
               <div className="hero__trust-item">
                 <CheckCircle2 size={18} />
-                <span>Nearly 30 Years of Experience</span>
+                <span>Supporting Arizona providers since 2006</span>
               </div>
 
               <div className="hero__trust-item">
                 <CheckCircle2 size={18} />
-                <span>Built for Provider Agencies</span>
+                <span>Third-party billing enrollment</span>
               </div>
 
               <div className="hero__trust-item">
                 <CheckCircle2 size={18} />
-                <span>Nevada Focused</span>
+                <span>EDI testing in progress</span>
               </div>
             </div>
           </div>
@@ -106,36 +106,12 @@ function Home() {
                     vTrack Nevada
                   </span>
 
-                  <h2>Provider Operations</h2>
+                  <h2>Nevada Enrollment Status</h2>
                 </div>
 
                 <div className="hero__status">
                   <span></span>
-                  Connected
-                </div>
-              </div>
-
-              <div className="hero__stats">
-                <div className="hero__stat-card">
-                  <div className="hero__stat-icon">
-                    <Building2 size={22} />
-                  </div>
-
-                  <div>
-                    <span>Provider Tools</span>
-                    <strong>All-in-One</strong>
-                  </div>
-                </div>
-
-                <div className="hero__stat-card">
-                  <div className="hero__stat-number">
-                    EVV
-                  </div>
-
-                  <div>
-                    <span>Electronic</span>
-                    <strong>Visit Verification</strong>
-                  </div>
+                  Enrolled
                 </div>
               </div>
 
@@ -146,9 +122,9 @@ function Home() {
                   </div>
 
                   <div>
-                    <strong>Billing & Claims</strong>
+                    <strong>Trading Partner ID 51488619</strong>
                     <span>
-                      Turn verified services into cleaner billing workflows
+                      Enrolled with Nevada Medicaid for third-party billing
                     </span>
                   </div>
                 </div>
@@ -159,9 +135,9 @@ function Home() {
                   </div>
 
                   <div>
-                    <strong>EVV & Scheduling</strong>
+                    <strong>Connectivity Established</strong>
                     <span>
-                      Manage appointments, visits, and service delivery
+                      Connected with Nevada Medicaid's fiscal agent
                     </span>
                   </div>
                 </div>
@@ -172,9 +148,9 @@ function Home() {
                   </div>
 
                   <div>
-                    <strong>Payroll</strong>
+                    <strong>EDI Certification Testing</strong>
                     <span>
-                      Use approved service data to support payroll preparation
+                      Compliance test-file submission is in progress
                     </span>
                   </div>
                 </div>
@@ -185,44 +161,14 @@ function Home() {
                   </div>
 
                   <div>
-                    <strong>Authorizations</strong>
+                    <strong>Production Status</strong>
                     <span>
-                      Track utilization and keep services organized
+                      Pending successful completion of testing
                     </span>
                   </div>
                 </div>
               </div>
 
-              <div className="hero__promo">
-                <div className="hero__promo-tag">
-                  LEGACY OFFER
-                </div>
-
-                <strong>6 Months Free</strong>
-
-                <p>
-                  Available to the first 10 Nevada provider agencies that
-                  sign up for vTrack.
-                </p>
-              </div>
-            </div>
-
-            <div className="hero__floating-card hero__floating-card--top">
-              <CheckCircle2 size={20} />
-
-              <div>
-                <strong>Nevada Ready</strong>
-                <span>EVV + Billing Workflows</span>
-              </div>
-            </div>
-
-            <div className="hero__floating-card hero__floating-card--bottom">
-              <ShieldCheck size={20} />
-
-              <div>
-                <strong>No Obligation</strong>
-                <span>After the 6-month offer</span>
-              </div>
             </div>
           </div>
         </div>
@@ -239,7 +185,11 @@ function Home() {
 
       <NevadaEVV />
 
-      
+      <MultiPayer />
+
+      <OnboardingProcess />
+
+      <LegacyPromo />
 
       <FinalCTA />
     </div>

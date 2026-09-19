@@ -80,11 +80,11 @@ const modules = [
   },
   {
     icon: UsersRound,
-    title: "Member Tracking",
+    title: "Recipient Tracking",
     description:
-      "Keep member information, services, locations, appointments, and authorization details organized in one system.",
+      "Keep recipient information, services, locations, appointments, and authorization details organized in one system.",
     features: [
-      "Member records",
+      "Recipient records",
       "Service information",
       "Location tracking",
       "Appointment history",
@@ -121,7 +121,7 @@ function Platform() {
     <div className="platform-page">
   <SEO
     title="vTrack Platform | Nevada Provider Management Software"
-    description="Explore vTrack's connected tools for EVV, scheduling, billing, claims, payroll, authorizations, member tracking, approvals and provider operations."
+    description="Explore vTrack's connected tools for EVV, scheduling, multi-payer billing, claims, payroll, authorizations, recipient tracking and provider operations."
     path="/platform"
   />
       
@@ -140,10 +140,9 @@ function Platform() {
             </h1>
 
             <p>
-              The Nevada Legacy Promotion is offered through vTrack's
-              implementation team. Once you're onboarded, your dedicated
-              account manager handles billing and payroll while vTrack keeps
-              your agency's workflows connected.
+              Go deeper than feature names. vTrack connects scheduled services,
+              visit verification, authorization limits, claim preparation,
+              payer responses, collections and payroll-ready service data.
             </p>
 
             <div className="platform-hero__actions">
@@ -151,7 +150,7 @@ function Platform() {
                 to="/contact#contact-form"
                 className="platform-hero__button platform-hero__button--primary"
               >
-                Claim Your Legacy Spot
+                Talk With Our Team
                 <ArrowRight size={19} />
               </Link>
 
@@ -247,14 +246,13 @@ function Platform() {
 
             <h2>
               Powerful Tools.
-              <strong> An Account Manager Behind Them.</strong>
+              <strong> Details Your Team Can Use.</strong>
             </h2>
 
             <p>
-              Instead of leaving your staff to manage separate processes for
-              scheduling, service verification, billing, and payroll, vTrack
-              pairs the platform with an account manager who handles billing
-              and payroll for your agency.
+              Each module supports a defined part of the provider workflow,
+              with visibility into exceptions before they become missed visits,
+              exhausted authorizations or delayed claims.
             </p>
           </div>
 
@@ -290,91 +288,6 @@ function Platform() {
         </div>
       </section>
 <VTrackShowcase />
-      <section className="platform-flow">
-        <div className="platform-flow__container">
-          <div className="platform-flow__heading">
-            <span>FROM SERVICE TO PAYMENT</span>
-
-            <h2>
-              Keep the Entire Process
-              <strong> Moving Forward.</strong>
-            </h2>
-
-            <p>
-              vTrack helps connect each stage of the provider workflow so
-              information can move through your agency more efficiently.
-            </p>
-          </div>
-
-          <div className="platform-flow__steps">
-            <div className="platform-flow__step">
-              <span className="platform-flow__number">01</span>
-              <CalendarDays size={28} />
-              <h3>Schedule</h3>
-              <p>
-                Organize staff, members, appointments, and service delivery.
-              </p>
-            </div>
-
-            <div className="platform-flow__connector">
-              <ArrowRight size={22} />
-            </div>
-
-            <div className="platform-flow__step">
-              <span className="platform-flow__number">02</span>
-              <ShieldCheck size={28} />
-              <h3>Verify</h3>
-              <p>
-                Capture visit and service information through connected EVV
-                workflows.
-              </p>
-            </div>
-
-            <div className="platform-flow__connector">
-              <ArrowRight size={22} />
-            </div>
-
-            <div className="platform-flow__step">
-              <span className="platform-flow__number">03</span>
-              <ClipboardCheck size={28} />
-              <h3>Review</h3>
-              <p>
-                Check service activity and resolve issues before billing or
-                payroll.
-              </p>
-            </div>
-
-            <div className="platform-flow__connector">
-              <ArrowRight size={22} />
-            </div>
-
-            <div className="platform-flow__step">
-              <span className="platform-flow__number">04</span>
-              <ReceiptText size={28} />
-              <h3>Bill</h3>
-              <p>
-                Prepare approved services for claims and revenue-cycle
-                workflows.
-              </p>
-            </div>
-
-            <div className="platform-flow__connector">
-              <ArrowRight size={22} />
-            </div>
-
-            <div className="platform-flow__step">
-              <span className="platform-flow__number">05</span>
-              <WalletCards size={28} />
-              <h3>Payroll</h3>
-              <p>
-                Use approved information to support payroll preparation and
-                exports.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="platform-cta">
         <div className="platform-cta__container">
           <div>

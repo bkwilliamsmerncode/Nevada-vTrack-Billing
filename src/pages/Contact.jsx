@@ -63,9 +63,11 @@ const handleSubmit = async (event) => {
   setSubmitError("");
 
   const templateParams = {
+    to_email: "brian@vichra.com, selena@vichra.com, greg@vichra.com",
     contact_name: formData.contactName,
     agency_name: formData.agencyName,
     email: formData.email,
+    reply_to: formData.email,
     phone: formData.phone || "Not provided",
     provider_type: formData.providerType,
     agency_size: formData.agencySize || "Not provided",
@@ -73,13 +75,25 @@ const handleSubmit = async (event) => {
     legacy_interest: formData.legacyInterest ? "Yes" : "No",
   };
 
+  const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+  if (!serviceId || !templateId || !publicKey) {
+    setSubmitError(
+      "This form is not connected yet. Please contact the vTrack team by phone or email."
+    );
+    setIsSending(false);
+    return;
+  }
+
   try {
     await emailjs.send(
-      import.meta.env.VITE_EMAILJS_SERVICE_ID,
-      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      serviceId,
+      templateId,
       templateParams,
       {
-        publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+        publicKey,
       }
     );
 
@@ -103,8 +117,8 @@ const handleSubmit = async (event) => {
   return (
     <div className="contact-page">
   <SEO
-    title="Claim Your vTrack Legacy Spot | Nevada Provider Agencies"
-    description="Talk with vTrack's implementation and business development team about the Nevada Legacy Promotion, then learn how your dedicated account manager handles billing and payroll."
+    title="Contact vTrack | Nevada Provider Agencies"
+    description="Talk with the vTrack team about Nevada Medicaid billing, EVV, multi-payer workflows and a supported transition for your provider agency."
     path="/contact"
   />
       <section className="contact-hero">
@@ -114,20 +128,18 @@ const handleSubmit = async (event) => {
           <div className="contact-hero__content">
             <div className="contact-hero__eyebrow">
               <CalendarDays size={18} />
-              CLAIM YOUR LEGACY SPOT
+              START A NEVADA CONVERSATION
             </div>
 
             <h1>
-              Put Your Back Office in
-              <span> Better Hands.</span>
+              Plan Your Nevada Transition
+              <span> With a Team That Knows Providers.</span>
             </h1>
 
             <p>
-              Tell us about your organization and the work weighing on your
-              team. A member of vTrack's implementation or business
-              development team will explain the Nevada Legacy Promotion and
-              how, after onboarding, your dedicated
-              account manager handles billing and payroll.
+              Tell us about your services, payers and current workflow. Our
+              team will explain enrollment status, onboarding steps and how
+              vTrack can support billing, EVV and provider operations.
             </p>
 
             <div className="contact-hero__points">
@@ -153,18 +165,18 @@ const handleSubmit = async (event) => {
 
             <span>NEVADA LEGACY PROMOTION</span>
 
-            <strong>6 Months Free</strong>
+            <strong>No Payment While We Get You Approved</strong>
 
             <p>
-              The first 10 Nevada provider agencies that join vTrack can
-              receive the full platform free for their first six months.
+              We are accepting up to 10 founding Nevada agencies for guided
+              designation, training, integration and launch support.
             </p>
 
             <div className="contact-hero__offer-line"></div>
 
             <small>
-              If your agency is not satisfied at the end of the promotional
-              period, you owe nothing and have no obligation to stay.
+              The promotional period is limited to six months. Final scope
+              and eligibility are confirmed before onboarding begins.
             </small>
           </div>
         </div>
@@ -293,20 +305,28 @@ const handleSubmit = async (event) => {
                       Select provider type
                     </option>
 
-                    <option value="Residential">
-                      Residential Provider
+                    <option value="Personal Care Services Agency">
+                      Personal Care Services Agency
                     </option>
 
-                    <option value="HCBS">
-                      HCBS Provider
+                    <option value="Home Health Agency">
+                      Home Health Agency
                     </option>
 
-                    <option value="Group Home">
-                      Group Home
+                    <option value="Personal Care Intermediary Service Organization">
+                      Personal Care Intermediary Service Organization
                     </option>
 
-                    <option value="DTA">
-                      DTA / Day Program
+                    <option value="Frail Elderly Waiver">
+                      Frail Elderly Waiver Provider
+                    </option>
+
+                    <option value="Physical Disabilities Waiver">
+                      Physical Disabilities Waiver Provider
+                    </option>
+
+                    <option value="Residential or SLA">
+                      Residential / SLA Provider
                     </option>
 
                     <option value="IDD">
@@ -444,9 +464,9 @@ const handleSubmit = async (event) => {
               <h3>Built for Providers</h3>
 
               <p>
-                Residential, HCBS, group homes, day programs, IDD providers,
-                and multi-service agencies can all benefit from connected
-                provider management tools.
+                Personal care, home health, waiver, residential, IDD and
+                multi-service agencies can use the parts of vTrack that fit
+                their billing and operational needs.
               </p>
             </div>
 
@@ -474,7 +494,7 @@ const handleSubmit = async (event) => {
               </h3>
 
               <p>
-                EVV. Billing. Payroll. Scheduling. Authorizations. Members.
+                EVV. Billing. Payroll. Scheduling. Authorizations. Recipients.
                 Billing and payroll handled by your account manager.
               </p>
             </div>

@@ -18,9 +18,9 @@ function TermsOfUse() {
           <h1>Terms of Use</h1>
 
           <p>
-            Effective Date: September 8, 2026
+            Effective Date: September 19, 2026
             <br />
-            Last Updated: September 8, 2026
+            Last Updated: September 19, 2026
           </p>
         </div>
       </section>
@@ -84,10 +84,11 @@ function TermsOfUse() {
           </p>
 
           <p>
-            Requirements established by AHCCCS, the Arizona Division of
-            Developmental Disabilities (DDD), health plans, government
-            agencies, payers, and other organizations may change and may apply
-            differently depending on an organization's circumstances.
+            Requirements established by Nevada Medicaid, its fiscal agent,
+            the Nevada Department of Health and Human Services, managed care
+            organizations, government agencies, payers, and other organizations
+            may change and may apply differently depending on an organization's
+            circumstances.
           </p>
 
           <p>
@@ -100,7 +101,7 @@ function TermsOfUse() {
           <h2>No Government Endorsement</h2>
 
           <p>
-            References to AHCCCS, DDD, government agencies, health plans,
+            References to Nevada Medicaid, its fiscal agent, government agencies, health plans,
             programs, standards, or regulatory requirements are provided for
             informational purposes.
           </p>
@@ -342,8 +343,6 @@ function TermsOfUse() {
 
           <address>
             <strong>vTrack Billing by Vichra</strong>
-            <br />
-            Arizona
             <br />
             Email:{" "}
             <a href="mailto:support@vtrackbilling.com">

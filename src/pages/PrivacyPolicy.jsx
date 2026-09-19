@@ -18,9 +18,9 @@ function PrivacyPolicy() {
           <h1>Privacy Policy</h1>
 
           <p>
-            Effective Date: September 8, 2026
+            Effective Date: September 19, 2026
             <br />
-            Last Updated: September 8, 2026
+            Last Updated: September 19, 2026
           </p>
         </div>
       </section>
@@ -93,16 +93,10 @@ function PrivacyPolicy() {
           </p>
 
           <p>
-            Certain third-party services incorporated into the Site may
-            receive technical information when their content is loaded.
-          </p>
-
-          <p>
-            For example, the Site may use Google-hosted fonts, which may
-            result in information such as a visitor's IP address being
-            transmitted to Google. The Site may also contain embedded Vimeo
-            video content. Vimeo may use cookies or collect technical and
-            viewing information when embedded content is loaded or played.
+            The contact form uses EmailJS to transmit the information you
+            choose to submit. EmailJS may receive contact information and
+            technical data needed to deliver the message. Its handling of
+            that data is governed by its own privacy practices.
           </p>
 
           <p>
@@ -191,7 +185,7 @@ function PrivacyPolicy() {
 
             <p>
               Please do not submit protected health information ("PHI") or
-              sensitive member information through public website forms or
+              sensitive recipient information through public website forms or
               unsecured website communications.
             </p>
           </div>
@@ -279,8 +273,6 @@ function PrivacyPolicy() {
 
           <address>
             <strong>vTrack Billing by Vichra</strong>
-            <br />
-            Arizona
             <br />
             Email:{" "}
             <a href="mailto:support@vtrackbilling.com">

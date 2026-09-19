@@ -44,8 +44,8 @@ function About() {
   return (
     <div className="about-page">
   <SEO
-    title="About Vichra | Nearly 30 Years Supporting Providers"
-    description="Learn about Vichra and vTrack, a provider management platform built from nearly 30 years of experience supporting provider agency operations."
+    title="About Vichra | Supporting Provider Agencies Since 2006"
+    description="Learn about Vichra and vTrack, a provider management platform built from 20 years of experience supporting provider agency operations."
     path="/about"
   />
       <section className="about-hero">
@@ -58,12 +58,12 @@ function About() {
             </span>
 
             <h1>
-              Nearly 30 Years Supporting
-              <span> Provider Agencies.</span>
+              Supporting Providers
+              <span> Since 2006.</span>
             </h1>
 
             <p>
-              Vichra has spent decades working alongside provider agencies,
+              Since 2006, Vichra has worked alongside provider agencies,
               helping simplify the administrative and operational work behind
               quality services.
             </p>
@@ -88,11 +88,11 @@ function About() {
 
           <div className="about-hero__visual">
             <div className="about-hero__experience">
-              <span>NEARLY</span>
+              <span>SINCE</span>
 
-              <strong>30</strong>
+              <strong>2006</strong>
 
-              <h2>Years of Experience</h2>
+              <h2>Provider Experience</h2>
 
               <p>
                 Working with provider agencies and developing tools designed
@@ -154,7 +154,7 @@ function About() {
 
                 <div>
                   <CheckCircle2 size={17} />
-                  Member Tracking
+                  Recipient Tracking
                 </div>
               </div>
             </div>
@@ -173,7 +173,7 @@ function About() {
             <p>
               Provider agencies manage a tremendous amount of information.
               Staff schedules, appointments, service documentation,
-              authorizations, claims, payroll, members, and payments all have
+              authorizations, claims, payroll, recipients, and payments all have
               to stay organized.
             </p>
 
@@ -254,35 +254,36 @@ function About() {
             <p>
               vTrack is now expanding into Nevada to give provider agencies a
               connected option for EVV, billing, payroll, authorizations,
-              scheduling, member tracking, and agency operations.
+              scheduling, recipient tracking, and agency operations.
             </p>
 
             <div className="about-nevada__points">
               <div>
                 <CheckCircle2 size={19} />
-                Third-Party EVV Vendor
+                Nevada Medicaid trading partner 51488619
               </div>
 
               <div>
                 <CheckCircle2 size={19} />
-                Third-Party Biller
+                Enrolled for third-party billing
               </div>
 
               <div>
                 <CheckCircle2 size={19} />
-                Nevada provider support
+                EDI certification testing in progress
               </div>
             </div>
           </div>
 
           <div className="about-nevada__offer">
-            <span>NEVADA LEGACY PROMOTION</span>
+            <span>NEVADA ENROLLMENT</span>
 
-            <strong>6 Months Free</strong>
+            <strong>51488619</strong>
 
             <p>
-              Available to the first 10 Nevada provider agencies that join
-              vTrack.
+              Our Nevada Medicaid trading partner ID for third-party billing.
+              Production claim submission remains pending completion of EDI
+              certification testing.
             </p>
 
             <Link to="/contact#contact-form">
