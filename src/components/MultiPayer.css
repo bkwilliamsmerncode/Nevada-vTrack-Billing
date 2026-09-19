@@ -1,11 +1,225 @@
-.multi-payer { padding: 96px 24px; background: #0d2538; color: #fff; }
-.multi-payer__container { width: min(1160px, 100%); margin: 0 auto; display: grid; grid-template-columns: 1.05fr .95fr; gap: 64px; align-items: center; }
-.multi-payer__eyebrow { display: inline-flex; align-items: center; gap: 9px; color: #87d8c5; font-weight: 800; letter-spacing: .12em; font-size: .82rem; }
-.multi-payer h2 { margin: 18px 0; font-size: clamp(2.1rem, 4vw, 3.5rem); line-height: 1.08; }
-.multi-payer h2 strong { color: #63c7ad; }
-.multi-payer p { color: #d5e1e8; line-height: 1.8; font-size: 1.05rem; }
-.multi-payer__plans { display: grid; gap: 12px; }
-.multi-payer__plans div { display: flex; gap: 13px; align-items: center; padding: 17px 18px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.13); border-radius: 12px; }
-.multi-payer__plans svg { flex: 0 0 auto; color: #63c7ad; }
-.multi-payer__plans span { font-weight: 700; line-height: 1.35; }
-@media (max-width: 800px) { .multi-payer { padding: 70px 20px; } .multi-payer__container { grid-template-columns: 1fr; gap: 36px; } }
+/* =========================
+   MULTI-PAYER SECTION
+========================= */
+
+.multi-payer {
+  width: 100%;
+  padding: 100px 24px;
+
+  background: #0d2538;
+  color: #ffffff;
+}
+
+/* =========================
+   TWO-COLUMN LAYOUT
+========================= */
+
+.multi-payer__container {
+  width: min(1160px, 100%);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  align-items: center;
+
+  gap: 64px;
+}
+
+.multi-payer__content {
+  min-width: 0;
+}
+
+/* =========================
+   EYEBROW
+========================= */
+
+.multi-payer__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  color: #87d8c5;
+
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1.5;
+}
+
+.multi-payer__eyebrow svg {
+  flex-shrink: 0;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.multi-payer h2 {
+  margin: 20px 0 0;
+
+  color: #ffffff;
+
+  font-size: clamp(2.1rem, 4vw, 3.5rem);
+  font-weight: 800;
+
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+}
+
+.multi-payer h2 strong {
+  color: #63c7ad;
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.multi-payer p {
+  margin: 22px 0 0;
+
+  color: #d5e1e8;
+
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.multi-payer p + p {
+  margin-top: 16px;
+}
+
+/* =========================
+   PAYER LIST
+========================= */
+
+.multi-payer__plans {
+  min-width: 0;
+
+  display: grid;
+  grid-template-columns: 1fr;
+
+  gap: 12px;
+}
+
+.multi-payer__plans div {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 17px 18px;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 12px;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.multi-payer__plans div:hover {
+  transform: translateX(3px);
+
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(135, 216, 197, 0.4);
+}
+
+.multi-payer__plans svg {
+  flex: 0 0 auto;
+  color: #63c7ad;
+}
+
+.multi-payer__plans span {
+  min-width: 0;
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 800px) {
+  .multi-payer {
+    padding: 75px 20px;
+  }
+
+  .multi-payer__container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .multi-payer__content {
+    max-width: 700px;
+  }
+
+  .multi-payer__plans {
+    max-width: 700px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .multi-payer {
+    padding: 65px 14px;
+  }
+
+  .multi-payer__container {
+    gap: 32px;
+  }
+
+  .multi-payer__eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+  }
+
+  .multi-payer h2 {
+    font-size: clamp(2rem, 8vw, 2.7rem);
+    letter-spacing: -1px;
+  }
+
+  .multi-payer p {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .multi-payer__plans {
+    gap: 10px;
+  }
+
+  .multi-payer__plans div {
+    padding: 15px;
+    gap: 11px;
+  }
+
+  .multi-payer__plans span {
+    font-size: 13px;
+  }
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .multi-payer__plans div {
+    transition: none;
+  }
+
+  .multi-payer__plans div:hover {
+    transform: none;
+  }
+}

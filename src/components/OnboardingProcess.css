@@ -1,15 +1,298 @@
-.onboarding { padding: 100px 24px; background: #f7f4ef; }
-.onboarding__container { width: min(1200px, 100%); margin: 0 auto; text-align: center; }
-.onboarding__heading { max-width: 760px; margin: 0 auto 52px; }
-.onboarding__heading > span { color: #b95f40; font-weight: 800; letter-spacing: .13em; font-size: .82rem; }
-.onboarding h2 { margin: 15px 0; color: #122d3f; font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.12; }
-.onboarding__heading p { color: #526673; line-height: 1.75; }
-.onboarding__steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; text-align: left; }
-.onboarding__steps article { position: relative; min-height: 260px; padding: 28px 22px; background: #fff; border: 1px solid #e3ddd3; border-radius: 16px; box-shadow: 0 12px 35px rgba(19,45,63,.06); }
-.onboarding__number { color: #d9d1c5; font-size: 2rem; font-weight: 900; }
-.onboarding__steps svg { margin: 22px 0 10px; color: #348c79; }
-.onboarding__steps h3 { margin: 0 0 9px; color: #122d3f; font-size: 1.08rem; }
-.onboarding__steps p { margin: 0; color: #60727d; line-height: 1.6; font-size: .94rem; }
-.onboarding__button { display: inline-flex; align-items: center; gap: 9px; margin-top: 42px; padding: 15px 24px; border-radius: 9px; background: #b95f40; color: #fff; font-weight: 800; text-decoration: none; }
-@media (max-width: 1000px) { .onboarding__steps { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 620px) { .onboarding { padding: 72px 20px; } .onboarding__steps { grid-template-columns: 1fr; } .onboarding__steps article { min-height: auto; } }
+/* =========================
+   NEVADA ONBOARDING
+========================= */
+
+.onboarding {
+  width: 100%;
+  padding: 100px 24px;
+  background: #f7f4ef;
+}
+
+.onboarding__container {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* =========================
+   SECTION HEADING
+========================= */
+
+.onboarding__heading {
+  max-width: 800px;
+  margin: 0 auto 52px;
+}
+
+.onboarding__heading > span {
+  color: #b95f40;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.onboarding h2 {
+  margin: 15px 0;
+
+  color: #122d3f;
+
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 800;
+
+  line-height: 1.12;
+  letter-spacing: -1px;
+}
+
+.onboarding__heading p {
+  margin: 18px auto 0;
+
+  color: #526673;
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* =========================
+   FIVE-STEP GRID
+========================= */
+
+.onboarding__steps {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+
+  gap: 18px;
+  text-align: left;
+}
+
+/* First row: three equal cards */
+
+.onboarding__steps article {
+  position: relative;
+
+  grid-column: span 2;
+  min-width: 0;
+  min-height: 310px;
+
+  padding: 30px 26px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3ddd3;
+  border-radius: 16px;
+
+  box-shadow: 0 12px 35px rgba(19, 45, 63, 0.06);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+/* Second row: two wider cards */
+
+.onboarding__steps article:nth-child(4),
+.onboarding__steps article:nth-child(5) {
+  grid-column: span 3;
+  min-height: 270px;
+}
+
+.onboarding__steps article:hover {
+  transform: translateY(-4px);
+
+  border-color: #c9d9d4;
+
+  box-shadow: 0 18px 42px rgba(19, 45, 63, 0.1);
+}
+
+/* =========================
+   STEP NUMBER
+========================= */
+
+.onboarding__number {
+  color: #d9d1c5;
+
+  font-size: 2.2rem;
+  font-weight: 900;
+
+  line-height: 1;
+}
+
+/* =========================
+   STEP ICON
+========================= */
+
+.onboarding__steps svg {
+  display: block;
+
+  margin: 22px 0 14px;
+
+  color: #348c79;
+}
+
+/* =========================
+   STEP TITLE
+========================= */
+
+.onboarding__steps h3 {
+  margin: 0 0 12px;
+
+  color: #122d3f;
+
+  font-size: 1.1rem;
+  font-weight: 800;
+
+  line-height: 1.4;
+}
+
+/* =========================
+   STEP DESCRIPTION
+========================= */
+
+.onboarding__steps p {
+  margin: 0;
+
+  color: #60727d;
+
+  font-size: 0.94rem;
+  line-height: 1.75;
+}
+
+/* =========================
+   CTA BUTTON
+========================= */
+
+.onboarding__button {
+  min-height: 52px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  margin-top: 45px;
+  padding: 15px 24px;
+
+  border-radius: 9px;
+
+  background: #b95f40;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  text-align: center;
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.onboarding__button:hover {
+  transform: translateY(-2px);
+
+  background: #a65034;
+
+  box-shadow: 0 12px 25px rgba(185, 95, 64, 0.2);
+}
+
+.onboarding__button:focus-visible {
+  outline: 3px solid #348c79;
+  outline-offset: 4px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+  .onboarding {
+    padding: 85px 24px;
+  }
+
+  .onboarding__steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .onboarding__steps article,
+  .onboarding__steps article:nth-child(4),
+  .onboarding__steps article:nth-child(5) {
+    grid-column: auto;
+    min-height: 290px;
+  }
+
+  /* Fifth card spans the last row. */
+
+  .onboarding__steps article:last-child {
+    grid-column: 1 / -1;
+    min-height: auto;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 620px) {
+  .onboarding {
+    padding: 72px 20px;
+  }
+
+  .onboarding__heading {
+    margin-bottom: 38px;
+  }
+
+  .onboarding__heading > span {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+  }
+
+  .onboarding h2 {
+    font-size: clamp(2rem, 8vw, 2.7rem);
+  }
+
+  .onboarding__heading p {
+    font-size: 15px;
+  }
+
+  .onboarding__steps {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .onboarding__steps article,
+  .onboarding__steps article:nth-child(4),
+  .onboarding__steps article:nth-child(5),
+  .onboarding__steps article:last-child {
+    grid-column: auto;
+    min-height: auto;
+
+    padding: 26px 23px;
+  }
+
+  .onboarding__steps svg {
+    margin: 18px 0 12px;
+  }
+
+  .onboarding__button {
+    width: 100%;
+    margin-top: 34px;
+  }
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .onboarding__steps article,
+  .onboarding__button {
+    transition: none;
+  }
+
+  .onboarding__steps article:hover,
+  .onboarding__button:hover {
+    transform: none;
+  }
+}

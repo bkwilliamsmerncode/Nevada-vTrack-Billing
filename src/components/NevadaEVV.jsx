@@ -79,7 +79,7 @@ function NevadaEVV() {
           </div>
 
           <Link
-            to="/contact#contact-form"
+            to="/contact?section=form"
             className="nevada-evv__button"
           >
             Talk With Our Nevada Team

@@ -147,7 +147,7 @@ function Platform() {
 
             <div className="platform-hero__actions">
               <Link
-                to="/contact#contact-form"
+                to="/contact?section=form"
                 className="platform-hero__button platform-hero__button--primary"
               >
                 Talk With Our Team
@@ -304,7 +304,7 @@ function Platform() {
           </div>
 
           <Link
-            to="/contact#contact-form"
+            to="/contact?section=form"
             className="platform-cta__button"
           >
             Talk With Our Team

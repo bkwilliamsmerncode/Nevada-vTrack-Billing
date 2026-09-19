@@ -7,45 +7,56 @@ function FinalCTA() {
   return (
     <section className="final-cta">
       <div className="final-cta__container">
+
+        {/* LEFT COLUMN: FINAL MESSAGE */}
+
         <div className="final-cta__content">
           <span className="final-cta__eyebrow">
-            READY TO GET THE WORK OFF YOUR PLATE?
+            YOUR NEVADA LAUNCH STARTS HERE
           </span>
 
           <h2>
-            Put Your Back Office
-            <span> in Experienced Hands.</span>
+            You take care of your recipients.
+            <span> We'll help handle the back office.</span>
           </h2>
 
           <p>
-            Start with an honest review of your services, payers and current
-            workflow. We will show you what a Nevada transition requires and
-            build a practical path to go live.
+            Tell us about your agency, services, and current
+            billing workflow. We'll walk you through what
+            vTrack offers, the steps required for Nevada
+            onboarding, and whether the Legacy Agency
+            promotion is a fit for your team.
           </p>
 
           <div className="final-cta__benefits">
             <div>
               <CheckCircle2 size={18} />
-              Guided onboarding and training
+              <span>
+                Hands-on onboarding and training
+              </span>
             </div>
 
             <div>
               <CheckCircle2 size={18} />
-              Supporting provider agencies since 2006
+              <span>
+                Supporting Arizona provider agencies since 2006
+              </span>
             </div>
 
             <div>
               <CheckCircle2 size={18} />
-              Legacy promotion available to qualifying agencies
+              <span>
+                Legacy promotion for the first 10 Nevada agencies
+              </span>
             </div>
           </div>
 
           <div className="final-cta__actions">
             <Link
-              to="/contact#contact-form"
+              to="/contact?section=form"
               className="final-cta__button final-cta__button--primary"
             >
-              Claim Your Legacy Spot
+              Become a Legacy Agency
               <ArrowRight size={19} />
             </Link>
 
@@ -53,14 +64,16 @@ function FinalCTA() {
               to="/platform"
               className="final-cta__button final-cta__button--secondary"
             >
-              Explore the Platform
+              See how vTrack works
             </Link>
           </div>
         </div>
 
+        {/* RIGHT COLUMN: LEGACY OFFER */}
+
         <div className="final-cta__offer">
           <span className="final-cta__offer-label">
-            NEVADA LEGACY PROMOTION
+            NEVADA LEGACY AGENCY OFFER
           </span>
 
           <div className="final-cta__offer-number">
@@ -70,15 +83,19 @@ function FinalCTA() {
           <h3>Months Free</h3>
 
           <p>
-            For up to the first six months while we work through onboarding.
+            Full vTrack platform access and dedicated
+            account management for the first 10 Nevada
+            agencies that sign up.
           </p>
 
           <div className="final-cta__offer-line"></div>
 
           <strong>
-            No obligation to stay after the promotional period.
+            No obligation to continue after the
+            six-month promotional period.
           </strong>
         </div>
+
       </div>
     </section>
   );

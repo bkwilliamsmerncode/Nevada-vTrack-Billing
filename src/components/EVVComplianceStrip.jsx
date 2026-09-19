@@ -16,7 +16,7 @@ const requirements = [
   },
   {
     icon: UserRound,
-    label: "Individual receiving service",
+    label: "Individual receiving the service",
   },
   {
     icon: CalendarDays,
@@ -24,15 +24,15 @@ const requirements = [
   },
   {
     icon: MapPin,
-    label: "Location of service",
+    label: "Location of service delivery",
   },
   {
     icon: UsersRound,
-    label: "Individual providing service",
+    label: "Individual providing the service",
   },
   {
     icon: Clock3,
-    label: "Start & end time",
+    label: "Time service begins and ends",
   },
 ];
 
@@ -40,14 +40,19 @@ function EVVComplianceStrip() {
   return (
     <section className="evv-strip">
       <div className="evv-strip__container">
+
         <div className="evv-strip__heading">
           <span>21ST CENTURY CURES ACT</span>
 
-          <h2>Every Visit, Verified Six Ways</h2>
+          <h2>Every visit, verified six ways</h2>
 
           <p>
-            Nevada Medicaid requires EVV systems to electronically
-            capture these six elements for applicable services.
+            EVV is a federal requirement under the
+            21st Century Cures Act. Nevada requires EVV
+            for personal care services, home health,
+            and certain waiver services, and permits
+            agencies to use an alternate EVV vendor
+            that meets the state's technical requirements.
           </p>
         </div>
 
@@ -71,8 +76,17 @@ function EVVComplianceStrip() {
         </div>
 
         <p className="evv-strip__footer">
-          Captured electronically as part of the EVV workflow.
+          Captured electronically and submitted to
+          Nevada's EVV aggregator.
         </p>
+
+        <p className="evv-strip__footer">
+          Not sure whether EVV applies to your services?
+          Nevada requires it for Provider Types 29, 30,
+          83, 48, and 58. Ask us and we will confirm
+          where your agency stands.
+        </p>
+
       </div>
     </section>
   );

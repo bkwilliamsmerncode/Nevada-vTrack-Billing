@@ -70,7 +70,7 @@ function About() {
 
             <div className="about-hero__actions">
               <Link
-                to="/contact#contact-form"
+                to="/contact?section=form"
                 className="about-hero__button about-hero__button--primary"
               >
                 Talk With Our Team
@@ -286,7 +286,7 @@ function About() {
               certification testing.
             </p>
 
-            <Link to="/contact#contact-form">
+            <Link to="/contact?section=form">
               Learn About the Offer
               <ArrowRight size={18} />
             </Link>

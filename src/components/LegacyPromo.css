@@ -1,8 +1,10 @@
+/* =========================
+   LEGACY PROMOTION
+========================= */
+
 .legacy-promo {
   position: relative;
-
   width: 100%;
-
   padding: 110px 0;
 
   background:
@@ -23,7 +25,6 @@
 
 .legacy-promo::before {
   content: "";
-
   position: absolute;
 
   width: 500px;
@@ -33,9 +34,14 @@
   bottom: -280px;
 
   border-radius: 50%;
-
   background: rgba(255, 255, 255, 0.04);
+
+  pointer-events: none;
 }
+
+/* =========================
+   CONTAINER
+========================= */
 
 .legacy-promo__container {
   position: relative;
@@ -45,16 +51,20 @@
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
   align-items: center;
 
-  gap: 80px;
+  gap: 65px;
 }
 
 .legacy-promo__content {
+  min-width: 0;
   max-width: 650px;
 }
+
+/* =========================
+   BADGE
+========================= */
 
 .legacy-promo__badge {
   width: fit-content;
@@ -64,31 +74,32 @@
   gap: 8px;
 
   margin-bottom: 22px;
-
   padding: 8px 12px;
 
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 999px;
 
   background: rgba(255, 255, 255, 0.08);
-
   color: #cce5f5;
 
   font-size: 11px;
   font-weight: 800;
-
   letter-spacing: 1.5px;
 }
+
+/* =========================
+   HEADING
+========================= */
 
 .legacy-promo__content h2 {
   margin: 0;
 
   color: #ffffff;
 
-  font-size: clamp(2.6rem, 5vw, 4.4rem);
+  font-size: clamp(2.6rem, 4.5vw, 4.2rem);
   font-weight: 800;
 
-  line-height: 1.04;
+  line-height: 1.08;
   letter-spacing: -2.5px;
 }
 
@@ -97,37 +108,38 @@
 }
 
 .legacy-promo__intro {
-  margin-top: 24px;
+  margin: 24px 0 0;
 
   color: #cbd8e5;
 
-  font-size: 17px;
-  line-height: 1.75;
+  font-size: 16px;
+  line-height: 1.8;
 }
+
+/* =========================
+   OFFER BOX
+========================= */
 
 .legacy-promo__offer {
   margin-top: 30px;
-
-  padding: 22px;
+  padding: 26px;
 
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 14px;
 
   background: rgba(255, 255, 255, 0.07);
-
   backdrop-filter: blur(8px);
 }
 
 .legacy-promo__offer-small {
   display: block;
 
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 
   color: #a9cce4;
 
   font-size: 10px;
   font-weight: 800;
-
   letter-spacing: 1.4px;
 }
 
@@ -136,41 +148,49 @@
 
   color: #ffffff;
 
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(2rem, 4vw, 2.8rem);
   font-weight: 800;
 
-  line-height: 1.1;
+  line-height: 1.15;
 }
 
 .legacy-promo__offer p {
-  margin: 9px 0 0;
+  margin: 16px 0 0;
 
-  color: #c5d4e1;
+  color: #d0deea;
 
-  font-size: 13px;
-  line-height: 1.6;
+  font-size: 14px;
+  line-height: 1.75;
 }
 
+.legacy-promo__offer p + p {
+  margin-top: 14px;
+}
+
+/* =========================
+   SUPPORTING POINTS
+========================= */
+
 .legacy-promo__points {
-  margin-top: 28px;
+  margin-top: 32px;
 
   display: flex;
   flex-direction: column;
 
-  gap: 20px;
+  gap: 24px;
 }
 
 .legacy-promo__point {
   display: flex;
   align-items: flex-start;
 
-  gap: 13px;
+  gap: 14px;
 }
 
 .legacy-promo__point svg {
   flex-shrink: 0;
 
-  margin-top: 2px;
+  margin-top: 3px;
 
   color: #78b9df;
 }
@@ -180,22 +200,27 @@
 
   color: #ffffff;
 
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: 700;
 }
 
 .legacy-promo__point span {
   display: block;
 
-  margin-top: 4px;
+  margin-top: 6px;
 
-  color: #bdcbd8;
+  color: #c4d2df;
 
   font-size: 13px;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
+/* =========================
+   ACTION BUTTONS
+========================= */
+
 .legacy-promo__actions {
-  margin-top: 34px;
+  margin-top: 36px;
 
   display: flex;
   flex-wrap: wrap;
@@ -212,11 +237,12 @@
 
   gap: 9px;
 
-  padding: 0 22px;
+  padding: 12px 22px;
 
   border-radius: 8px;
 
   text-decoration: none;
+  text-align: center;
 
   font-size: 14px;
   font-weight: 700;
@@ -224,18 +250,23 @@
   transition:
     transform 0.2s ease,
     background 0.2s ease,
-    border-color 0.2s ease;
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .legacy-promo__button--primary {
   background: #ffffff;
   color: #183664;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
 .legacy-promo__button--primary:hover {
   transform: translateY(-2px);
 
   background: #f0f6fa;
+
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
 }
 
 .legacy-promo__button--secondary {
@@ -253,15 +284,22 @@
   background: rgba(255, 255, 255, 0.08);
 }
 
-/* RIGHT CARD */
+.legacy-promo__button:focus-visible {
+  outline: 3px solid #86bcdc;
+  outline-offset: 4px;
+}
+
+/* =========================
+   RIGHT OFFER CARD
+========================= */
 
 .legacy-promo__card {
   position: relative;
 
+  width: 100%;
   max-width: 450px;
 
   padding: 42px 38px;
-
   margin-left: auto;
 
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -293,6 +331,8 @@
   border-radius: 50%;
 
   background: rgba(126, 190, 226, 0.2);
+
+  pointer-events: none;
 }
 
 .legacy-promo__card-label {
@@ -309,6 +349,10 @@
   letter-spacing: 1.6px;
 }
 
+/* =========================
+   NUMBER
+========================= */
+
 .legacy-promo__number {
   position: relative;
   z-index: 2;
@@ -317,11 +361,10 @@
 
   color: #ffffff;
 
-  font-size: 7rem;
+  font-size: clamp(5.5rem, 8vw, 7rem);
   font-weight: 800;
 
-  line-height: 0.9;
-
+  line-height: 0.95;
   letter-spacing: -6px;
 }
 
@@ -329,11 +372,12 @@
   position: relative;
   z-index: 2;
 
-  margin: 12px 0 0;
+  margin: 14px 0 0;
 
   color: #dbeaf3;
 
   font-size: 20px;
+  line-height: 1.4;
 }
 
 .legacy-promo__divider {
@@ -344,11 +388,15 @@
   background: rgba(255, 255, 255, 0.17);
 }
 
+/* =========================
+   SIX MONTHS
+========================= */
+
 .legacy-promo__six {
   display: flex;
   flex-direction: column;
 
-  line-height: 1;
+  line-height: 1.1;
 }
 
 .legacy-promo__six span:first-child {
@@ -363,7 +411,9 @@
 .legacy-promo__six strong {
   margin-top: 6px;
 
-  font-size: 2.7rem;
+  color: #ffffff;
+
+  font-size: clamp(2rem, 3.5vw, 2.7rem);
   font-weight: 800;
 }
 
@@ -376,13 +426,17 @@
   font-weight: 800;
 }
 
+/* =========================
+   CARD BENEFITS
+========================= */
+
 .legacy-promo__card-list {
   margin-top: 28px;
 
   display: flex;
   flex-direction: column;
 
-  gap: 12px;
+  gap: 14px;
 }
 
 .legacy-promo__card-list div {
@@ -394,6 +448,7 @@
   color: #d3e1eb;
 
   font-size: 13px;
+  line-height: 1.5;
 }
 
 .legacy-promo__card-list svg {
@@ -409,19 +464,25 @@
 
   border-top: 1px solid rgba(255, 255, 255, 0.15);
 
-  color: #9eb4c6;
+  color: #c4d2df;
 
-  font-size: 11px;
+  font-size: 12px;
+  line-height: 1.6;
 
   text-align: center;
 }
 
-/* RESPONSIVE */
+/* =========================
+   TABLET
+========================= */
 
 @media (max-width: 900px) {
+  .legacy-promo {
+    padding: 85px 0;
+  }
+
   .legacy-promo__container {
     grid-template-columns: 1fr;
-
     gap: 60px;
   }
 
@@ -437,13 +498,35 @@
   }
 }
 
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 600px) {
   .legacy-promo {
-    padding: 80px 0;
+    padding: 65px 0;
   }
 
   .legacy-promo__container {
-    width: min(100% - 28px, 1180px);
+    width: calc(100% - 28px);
+    gap: 45px;
+  }
+
+  .legacy-promo__content h2 {
+    font-size: clamp(2.3rem, 9vw, 3rem);
+    letter-spacing: -1.5px;
+  }
+
+  .legacy-promo__intro {
+    font-size: 15px;
+  }
+
+  .legacy-promo__offer {
+    padding: 20px;
+  }
+
+  .legacy-promo__offer p {
+    font-size: 13px;
   }
 
   .legacy-promo__actions {
@@ -464,5 +547,38 @@
 
   .legacy-promo__six strong {
     font-size: 2.2rem;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 390px) {
+  .legacy-promo__badge {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .legacy-promo__content h2 {
+    font-size: 2.2rem;
+  }
+
+  .legacy-promo__card {
+    padding: 28px 20px;
+  }
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .legacy-promo__button {
+    transition: none;
+  }
+
+  .legacy-promo__button:hover {
+    transform: none;
   }
 }

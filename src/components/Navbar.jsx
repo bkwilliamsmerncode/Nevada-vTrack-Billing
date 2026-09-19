@@ -78,7 +78,7 @@ function Navbar() {
           </NavLink>
 
           <NavLink
-            to="/contact#contact-form"
+            to="/contact?section=form"
             onClick={closeMenu}
             className={({ isActive }) =>
               isActive
@@ -90,7 +90,7 @@ function Navbar() {
           </NavLink>
 
           <Link
-            to="/contact#contact-form"
+            to="/contact?section=form"
             className="navbar__cta"
             onClick={closeMenu}
           >

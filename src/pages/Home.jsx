@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 import {
   ArrowRight,
   BadgeCheck,
+  CalendarDays,
   CheckCircle2,
+  MonitorSmartphone,
   ShieldCheck,
 } from "lucide-react";
 
@@ -12,7 +14,6 @@ import EVVComplianceStrip from "../components/EVVComplianceStrip";
 import PlatformFeatures from "../components/PlatformFeatures";
 import WhyVTrack from "../components/WhyVTrack";
 import ProviderTypes from "../components/ProviderTypes";
-import NevadaEVV from "../components/NevadaEVV";
 import OnboardingProcess from "../components/OnboardingProcess";
 import MultiPayer from "../components/MultiPayer";
 import LegacyPromo from "../components/LegacyPromo";
@@ -20,15 +21,42 @@ import FinalCTA from "../components/FinalCTA";
 
 import "./Home.css";
 
+const stats = [
+  {
+    icon: CalendarDays,
+    value: "Since 2006",
+    label: "Arizona EVV and Medicaid billing",
+  },
+  {
+    icon: BadgeCheck,
+    value: "Enrolled",
+    label: "Nevada Medicaid trading partner",
+  },
+  {
+    icon: ShieldCheck,
+    value: "Open EVV",
+    label: "Nevada permits alternate EVV vendors",
+  },
+  {
+    icon: MonitorSmartphone,
+    value: "Any device",
+    label: "Web based, nothing to install",
+  },
+];
+
 function Home() {
   return (
     
     <div className="home">
       <SEO
-        title="vTrack Nevada | Medicaid Billing, EVV & Provider Operations"
-        description="Vichra Systems is enrolled with Nevada Medicaid for third-party billing and is completing EDI certification testing. Explore vTrack for EVV, multi-payer billing and provider operations."
+        title="vTrack Nevada | EVV, Medicaid Billing & Provider Operations"
+        description="Vichra Systems has supported Arizona provider agencies since 2006 and is now an enrolled Nevada Medicaid EDI trading partner. Learn about vTrack and our Nevada onboarding process."
         path="/"
       />
+{<LegacyPromo />}
+      {/* =========================
+          HERO
+      ========================= */}
 
       <section className="hero">
         <div className="hero__glow hero__glow--one"></div>
@@ -38,37 +66,41 @@ function Home() {
           <div className="hero__content">
             <div className="hero__badge">
               <BadgeCheck size={18} />
-              <span>Nevada Medicaid Trading Partner 51488619</span>
+              <span>NOW ENROLLED WITH NEVADA MEDICAID</span>
             </div>
 
             <h1 className="hero__title">
-              Nevada Medicaid Billing and EVV,
-              <span> Without the Disruption.</span>
+              EVV and billing for
+              <span> Nevada provider agencies.</span>
             </h1>
 
             <p className="hero__description">
-              Vichra Systems is an enrolled Nevada Medicaid trading partner
-              for third-party billing. We are completing EDI certification
-              testing while helping a limited group of founding Nevada
-              agencies prepare for a careful, supported transition.
+              vTrack has handled EVV, claims, and billing operations
+              for Arizona provider agencies since 2006. We are now
+              enrolled with Nevada Medicaid as a trading partner
+              and are onboarding our first Nevada agencies.
             </p>
 
             <div className="hero__official">
               <ShieldCheck size={22} />
 
               <p>
-                <strong>Connectivity is established.</strong> Production claim
-                submission will begin after Nevada Medicaid's fiscal agent
-                accepts our compliance test file.
+                <strong>
+                  Vichra Systems, LLC
+                </strong>
+                <br />
+                Nevada Medicaid Trading Partner ID 51488619.
+                EDI compliance testing is in progress;
+                production claim submission is not yet authorized.
               </p>
             </div>
 
             <div className="hero__actions">
               <Link
-                to="/contact#contact-form"
+                to="/contact?section=form"
                 className="hero__button hero__button--primary"
               >
-                Talk With Our Nevada Team
+                Become a Legacy Agency
                 <ArrowRight size={19} />
               </Link>
 
@@ -76,27 +108,29 @@ function Home() {
                 to="/platform"
                 className="hero__button hero__button--secondary"
               >
-                Explore vTrack
+                See how vTrack works
               </Link>
             </div>
 
             <div className="hero__trust">
               <div className="hero__trust-item">
                 <CheckCircle2 size={18} />
-                <span>Supporting Arizona providers since 2006</span>
+                <span>Arizona experience since 2006</span>
               </div>
 
               <div className="hero__trust-item">
                 <CheckCircle2 size={18} />
-                <span>Third-party billing enrollment</span>
+                <span>Nevada trading partner enrolled</span>
               </div>
 
               <div className="hero__trust-item">
                 <CheckCircle2 size={18} />
-                <span>EDI testing in progress</span>
+                <span>Guided Nevada onboarding</span>
               </div>
             </div>
           </div>
+
+          {/* ENROLLMENT STATUS CARD */}
 
           <div className="hero__visual">
             <div className="hero__dashboard">
@@ -124,7 +158,8 @@ function Home() {
                   <div>
                     <strong>Trading Partner ID 51488619</strong>
                     <span>
-                      Enrolled with Nevada Medicaid for third-party billing
+                      Enrolled with Nevada Medicaid for
+                      third-party billing
                     </span>
                   </div>
                 </div>
@@ -137,7 +172,7 @@ function Home() {
                   <div>
                     <strong>Connectivity Established</strong>
                     <span>
-                      Connected with Nevada Medicaid's fiscal agent
+                      Trading partner connectivity is established
                     </span>
                   </div>
                 </div>
@@ -148,9 +183,10 @@ function Home() {
                   </div>
 
                   <div>
-                    <strong>EDI Certification Testing</strong>
+                    <strong>EDI Compliance Testing</strong>
                     <span>
-                      Compliance test-file submission is in progress
+                      Testing must be completed before production
+                      claim submission
                     </span>
                   </div>
                 </div>
@@ -161,37 +197,74 @@ function Home() {
                   </div>
 
                   <div>
-                    <strong>Production Status</strong>
+                    <strong>EVV Vendor Status</strong>
                     <span>
-                      Pending successful completion of testing
+                      Nevada alternate EVV vendor approval is
+                      a separate, pending process
                     </span>
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
       </section>
 
+      {/* =========================
+          FOUR-ITEM STAT STRIP
+      ========================= */}
 
-      <EVVComplianceStrip />
+      <section
+        className="home-stats"
+        aria-label="vTrack experience and Nevada overview"
+      >
+        <div className="home-stats__container">
+          {stats.map((stat) => {
+            const Icon = stat.icon;
 
-      <PlatformFeatures />
+            return (
+              <div className="home-stats__item" key={stat.value}>
+                <div className="home-stats__icon">
+                  <Icon size={23} strokeWidth={1.8} />
+                </div>
 
+                <div>
+                  <strong>{stat.value}</strong>
+                  <span>{stat.label}</span>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* =========================
+          APPROVED HOMEPAGE ORDER
+      ========================= */}
+
+      {/* Legacy Agency offer */}
+    
+
+      {/* Arizona experience and Nevada enrollment */}
       <WhyVTrack />
 
+      {/* Six required EVV elements */}
+      <EVVComplianceStrip />
+
+      {/* Nevada provider categories */}
       <ProviderTypes />
 
-      <NevadaEVV />
-
+      {/* Fee-for-service and managed care */}
       <MultiPayer />
 
+      {/* Six connected platform capabilities */}
+      <PlatformFeatures />
+
+      {/* Five-step Nevada onboarding */}
       <OnboardingProcess />
 
-      <LegacyPromo />
-
-      <FinalCTA />
+      {/* Final contact invitation */}
+      {/* <FinalCTA /> */}
     </div>
   );
 }

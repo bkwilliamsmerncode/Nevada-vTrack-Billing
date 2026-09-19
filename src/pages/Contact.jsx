@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import emailjs from "@emailjs/browser";
+
 import {
   ArrowRight,
   BadgeCheck,
@@ -13,8 +15,9 @@ import {
   Users,
 } from "lucide-react";
 
-import "./Contact.css";
 import SEO from "../components/SEO";
+import "./Contact.css";
+
 const initialForm = {
   contactName: "",
   agencyName: "",
@@ -26,25 +29,43 @@ const initialForm = {
   legacyInterest: false,
 };
 
-import emailjs from "@emailjs/browser";
+const providerTypes = [
+  "Personal Care Services Agency",
+  "Home Health Agency",
+  "Personal Care Intermediary Service Organization",
+  "Frail Elderly Waiver Provider",
+  "Physical Disabilities Waiver Provider",
+  "Residential / SLA Provider",
+  "Jobs and Day Training Provider",
+  "IDD Provider",
+  "Multi-Service Agency",
+  "Other",
+];
 
 function Contact() {
   const [formData, setFormData] = useState(initialForm);
   const [submitted, setSubmitted] = useState(false);
-const [isSending, setIsSending] = useState(false);
-const [submitError, setSubmitError] = useState("");
+  const [isSending, setIsSending] = useState(false);
+  const [submitError, setSubmitError] = useState("");
+
   const { hash } = useLocation();
 
-  useEffect(() => {
-    if (hash === "#contact-form") {
-      requestAnimationFrame(() => {
-        document.getElementById("contact-form")?.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-      });
-    }
-  }, [hash]);
+const { search } = useLocation();
+
+useEffect(() => {
+  const params = new URLSearchParams(search);
+
+  if (params.get("section") !== "form") return;
+
+  const frame = requestAnimationFrame(() => {
+    document.getElementById("contact-form")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  });
+
+  return () => cancelAnimationFrame(frame);
+}, [search]);
 
   const handleChange = (event) => {
     const { name, value, type, checked } = event.target;
@@ -55,72 +76,70 @@ const [submitError, setSubmitError] = useState("");
     }));
   };
 
-const handleSubmit = async (event) => {
-  event.preventDefault();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
 
-  setIsSending(true);
-  setSubmitted(false);
-  setSubmitError("");
+    if (isSending) return;
 
-  const templateParams = {
-    to_email: "brian@vichra.com, selena@vichra.com, greg@vichra.com",
-    contact_name: formData.contactName,
-    agency_name: formData.agencyName,
-    email: formData.email,
-    reply_to: formData.email,
-    phone: formData.phone || "Not provided",
-    provider_type: formData.providerType,
-    agency_size: formData.agencySize || "Not provided",
-    message: formData.message || "No additional message",
-    legacy_interest: formData.legacyInterest ? "Yes" : "No",
+    setIsSending(true);
+    setSubmitted(false);
+    setSubmitError("");
+
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      setSubmitError(
+        "The online form is temporarily unavailable. Please call 833-887-2251 or email support@vtrackbilling.com."
+      );
+      setIsSending(false);
+      return;
+    }
+
+    const templateParams = {
+      contact_name: formData.contactName.trim(),
+      agency_name: formData.agencyName.trim(),
+      email: formData.email.trim(),
+      reply_to: formData.email.trim(),
+      phone: formData.phone.trim() || "Not provided",
+      provider_type: formData.providerType,
+      agency_size: formData.agencySize || "Not provided",
+      message: formData.message.trim() || "No additional message",
+      legacy_interest: formData.legacyInterest ? "Yes" : "No",
+    };
+
+    try {
+      await emailjs.send(
+        serviceId,
+        templateId,
+        templateParams,
+        { publicKey }
+      );
+
+      setSubmitted(true);
+      setFormData(initialForm);
+    } catch (error) {
+      console.error("Contact form submission failed:", error);
+
+      setSubmitError(
+        "We couldn't send your request. Please try again or contact us directly at support@vtrackbilling.com or 833-887-2251."
+      );
+    } finally {
+      setIsSending(false);
+    }
   };
 
-  const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-  const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-
-  if (!serviceId || !templateId || !publicKey) {
-    setSubmitError(
-      "This form is not connected yet. Please contact the vTrack team by phone or email."
-    );
-    setIsSending(false);
-    return;
-  }
-
-  try {
-    await emailjs.send(
-      serviceId,
-      templateId,
-      templateParams,
-      {
-        publicKey,
-      }
-    );
-
-    setSubmitted(true);
-    setFormData(initialForm);
-
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  } catch (error) {
-    console.error("EmailJS error:", error);
-
-    setSubmitError(
-      "We couldn't send your request. Please try again."
-    );
-  } finally {
-    setIsSending(false);
-  }
-};
   return (
     <div className="contact-page">
-  <SEO
-    title="Contact vTrack | Nevada Provider Agencies"
-    description="Talk with the vTrack team about Nevada Medicaid billing, EVV, multi-payer workflows and a supported transition for your provider agency."
-    path="/contact"
-  />
+      <SEO
+        title="Contact vTrack | Nevada Provider Agencies"
+        description="Contact vTrack to discuss Nevada Medicaid trading partner enrollment, EVV, billing, provider operations, and the Nevada Legacy Agency offer."
+        path="/contact"
+      />
+
+      {/* CONTACT HERO */}
+
       <section className="contact-hero">
         <div className="contact-hero__glow"></div>
 
@@ -132,30 +151,31 @@ const handleSubmit = async (event) => {
             </div>
 
             <h1>
-              Plan Your Nevada Transition
-              <span> With a Team That Knows Providers.</span>
+              Plan your Nevada transition
+              <span> with an experienced team.</span>
             </h1>
 
             <p>
-              Tell us about your services, payers and current workflow. Our
-              team will explain enrollment status, onboarding steps and how
-              vTrack can support billing, EVV and provider operations.
+              Tell us about your services, payers, and current workflow.
+              We'll explain vTrack's capabilities, our Nevada trading
+              partner enrollment status, and the steps required before
+              your agency can go live.
             </p>
 
             <div className="contact-hero__points">
               <div>
                 <CheckCircle2 size={19} />
-                A conversation about your agency's needs
+                A conversation focused on your agency's needs
               </div>
 
               <div>
                 <CheckCircle2 size={19} />
-                Billing and payroll handled by your account manager
+                Dedicated account management and onboarding support
               </div>
 
               <div>
                 <CheckCircle2 size={19} />
-                No-pressure conversation with our team
+                Clear guidance on outstanding Nevada requirements
               </div>
             </div>
           </div>
@@ -163,69 +183,75 @@ const handleSubmit = async (event) => {
           <div className="contact-hero__offer">
             <Sparkles size={25} />
 
-            <span>NEVADA LEGACY PROMOTION</span>
+            <span>NEVADA LEGACY AGENCY OFFER</span>
 
-            <strong>No Payment While We Get You Approved</strong>
+            <strong>Six Months Free</strong>
 
             <p>
-              We are accepting up to 10 founding Nevada agencies for guided
-              designation, training, integration and launch support.
+              The first 10 Nevada agencies that sign up can receive
+              six months of vTrack platform access and dedicated
+              account management at no software cost.
             </p>
 
             <div className="contact-hero__offer-line"></div>
 
             <small>
-              The promotional period is limited to six months. Final scope
-              and eligibility are confirmed before onboarding begins.
+              No obligation to continue after the promotional period.
+              Eligibility, terms, and onboarding details are confirmed
+              with our team before enrollment.
             </small>
           </div>
         </div>
       </section>
 
+      {/* CONTACT FORM */}
+
       <section className="contact-main">
         <div className="contact-main__container">
           <div className="contact-form-area">
-      {submitted && (
-  <div className="contact-success">
-    <CheckCircle2 size={24} />
-
-    <div>
-      <strong>Thank you! Your Legacy Spot request was sent.</strong>
-
-      <p>
-        A member of the vTrack team will follow up with you about
-        your Nevada agency.
-      </p>
-    </div>
-  </div>
-)}
-
-{submitError && (
-  <div className="contact-error">
-    <strong>{submitError}</strong>
-  </div>
-)}
             <div className="contact-form-heading">
               <span>TELL US ABOUT YOUR AGENCY</span>
 
-              <h2>Claim Your vTrack Legacy Spot</h2>
+              <h2>Become a Legacy Agency</h2>
 
               <p>
-                Complete the form below and we'll use this information to
-                better understand your agency's needs.
+                Complete the form and our team will follow up to
+                discuss your agency's needs and the Legacy offer.
+                Submitting this form does not reserve a promotional spot.
               </p>
             </div>
+
+            {submitted && (
+              <div className="contact-success" role="status">
+                <CheckCircle2 size={24} />
+
+                <div>
+                  <strong>Your request was submitted.</strong>
+
+                  <p>
+                    Thank you for contacting vTrack. Our team will
+                    follow up about your Nevada agency.
+                  </p>
+                </div>
+              </div>
+            )}
+
+            {submitError && (
+              <div className="contact-error" role="alert">
+                <strong>{submitError}</strong>
+              </div>
+            )}
 
             <form
               id="contact-form"
               className="contact-form"
               onSubmit={handleSubmit}
+              aria-busy={isSending}
             >
               <div className="contact-form__grid">
                 <div className="contact-field">
                   <label htmlFor="contactName">
-                    Your Name
-                    <span>*</span>
+                    Your Name <span>*</span>
                   </label>
 
                   <input
@@ -235,14 +261,15 @@ const handleSubmit = async (event) => {
                     value={formData.contactName}
                     onChange={handleChange}
                     placeholder="First and last name"
+                    autoComplete="name"
                     required
+                    disabled={isSending}
                   />
                 </div>
 
                 <div className="contact-field">
                   <label htmlFor="agencyName">
-                    Agency Name
-                    <span>*</span>
+                    Agency Name <span>*</span>
                   </label>
 
                   <input
@@ -252,14 +279,15 @@ const handleSubmit = async (event) => {
                     value={formData.agencyName}
                     onChange={handleChange}
                     placeholder="Your organization"
+                    autoComplete="organization"
                     required
+                    disabled={isSending}
                   />
                 </div>
 
                 <div className="contact-field">
                   <label htmlFor="email">
-                    Email Address
-                    <span>*</span>
+                    Email Address <span>*</span>
                   </label>
 
                   <input
@@ -269,14 +297,14 @@ const handleSubmit = async (event) => {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="name@agency.com"
+                    autoComplete="email"
                     required
+                    disabled={isSending}
                   />
                 </div>
 
                 <div className="contact-field">
-                  <label htmlFor="phone">
-                    Phone Number
-                  </label>
+                  <label htmlFor="phone">Phone Number</label>
 
                   <input
                     id="phone"
@@ -285,13 +313,14 @@ const handleSubmit = async (event) => {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="(000) 000-0000"
+                    autoComplete="tel"
+                    disabled={isSending}
                   />
                 </div>
 
                 <div className="contact-field">
                   <label htmlFor="providerType">
-                    Provider Type
-                    <span>*</span>
+                    Provider Type <span>*</span>
                   </label>
 
                   <select
@@ -300,83 +329,34 @@ const handleSubmit = async (event) => {
                     value={formData.providerType}
                     onChange={handleChange}
                     required
+                    disabled={isSending}
                   >
-                    <option value="">
-                      Select provider type
-                    </option>
+                    <option value="">Select provider type</option>
 
-                    <option value="Personal Care Services Agency">
-                      Personal Care Services Agency
-                    </option>
-
-                    <option value="Home Health Agency">
-                      Home Health Agency
-                    </option>
-
-                    <option value="Personal Care Intermediary Service Organization">
-                      Personal Care Intermediary Service Organization
-                    </option>
-
-                    <option value="Frail Elderly Waiver">
-                      Frail Elderly Waiver Provider
-                    </option>
-
-                    <option value="Physical Disabilities Waiver">
-                      Physical Disabilities Waiver Provider
-                    </option>
-
-                    <option value="Residential or SLA">
-                      Residential / SLA Provider
-                    </option>
-
-                    <option value="IDD">
-                      IDD Provider
-                    </option>
-
-                    <option value="Multi-Service">
-                      Multi-Service Agency
-                    </option>
-
-                    <option value="Other">
-                      Other
-                    </option>
+                    {providerTypes.map((type) => (
+                      <option key={type} value={type}>
+                        {type}
+                      </option>
+                    ))}
                   </select>
                 </div>
 
                 <div className="contact-field">
-                  <label htmlFor="agencySize">
-                    Agency Size
-                  </label>
+                  <label htmlFor="agencySize">Agency Size</label>
 
                   <select
                     id="agencySize"
                     name="agencySize"
                     value={formData.agencySize}
                     onChange={handleChange}
+                    disabled={isSending}
                   >
-                    <option value="">
-                      Select agency size
-                    </option>
-
-                    <option value="1-25">
-                      1–25 Staff
-                    </option>
-
-                    <option value="26-50">
-                      26–50 Staff
-                    </option>
-
-                    <option value="51-100">
-                      51–100 Staff
-                    </option>
-
-                    <option value="101-250">
-                      101–250 Staff
-                    </option>
-
-                    <option value="250+">
-                      250+ Staff
-                    </option>
+                    <option value="">Select agency size</option>
+                    <option value="1-25">1–25 Staff</option>
+                    <option value="26-50">26–50 Staff</option>
+                    <option value="51-100">51–100 Staff</option>
+                    <option value="101-250">101–250 Staff</option>
+                    <option value="250+">250+ Staff</option>
                   </select>
                 </div>
               </div>
@@ -391,8 +371,9 @@ const handleSubmit = async (event) => {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="Tell us about your current EVV, billing, scheduling, payroll, authorization, or provider management needs..."
-                  rows="6"
+                  placeholder="Tell us about your EVV, billing, scheduling, payroll, authorization, or provider management needs. Please do not include protected health information."
+                  rows={6}
+                  disabled={isSending}
                 ></textarea>
               </div>
 
@@ -402,45 +383,48 @@ const handleSubmit = async (event) => {
                   name="legacyInterest"
                   checked={formData.legacyInterest}
                   onChange={handleChange}
+                  disabled={isSending}
                 />
 
-                <span className="contact-checkbox__box"></span>
+                <span
+                  className="contact-checkbox__box"
+                  aria-hidden="true"
+                ></span>
 
                 <span className="contact-checkbox__text">
-                  I'm interested in learning more about the Nevada Legacy
-                  Promotion.
+                  I'm interested in learning more about the
+                  Nevada Legacy Agency offer.
                 </span>
               </label>
 
-         <button
-  type="submit"
-  className="contact-submit"
-  disabled={isSending}
->
-  {isSending ? (
-    "Sending..."
-  ) : (
-    <>
-      Claim My Legacy Spot
-      <Send size={18} />
-    </>
-  )}
-</button>
-<p className="contact-form__note">
-  By submitting this form, you agree to our{" "}
-  <Link to="/privacy-policy">
-    Privacy Policy
-  </Link>{" "}
-  and{" "}
-  <Link to="/terms-of-use">
-    Terms of Use
-  </Link>{" "}
-  and agree that a vTrack representative may contact you by
-  phone or email regarding your request. Please do not submit
-  protected health information through this form.
-</p>
+              <button
+                type="submit"
+                className="contact-submit"
+                disabled={isSending}
+              >
+                {isSending ? (
+                  "Sending..."
+                ) : (
+                  <>
+                    Send My Request
+                    <Send size={18} />
+                  </>
+                )}
+              </button>
+
+              <p className="contact-form__note">
+                By submitting, you acknowledge our{" "}
+                <Link to="/privacy-policy">Privacy Policy</Link>{" "}
+                and{" "}
+                <Link to="/terms-of-use">Terms of Use</Link>{" "}
+                and agree that a vTrack representative may
+                contact you by phone or email regarding your request.
+                Please do not submit protected health information.
+              </p>
             </form>
           </div>
+
+          {/* SIDEBAR */}
 
           <aside className="contact-sidebar">
             <div className="contact-sidebar__card">
@@ -448,11 +432,13 @@ const handleSubmit = async (event) => {
                 <BadgeCheck size={25} />
               </div>
 
-              <h3>Nevada Ready</h3>
+              <h3>Nevada Trading Partner Enrollment</h3>
 
               <p>
-                vTrack is positioned to support Nevada provider agencies with
-                connected EVV, billing, and operational workflows.
+                Vichra Systems, LLC is an enrolled Nevada Medicaid
+                EDI trading partner, ID 51488619. EDI compliance
+                testing and production authorization remain pending.
+                Alternate EVV vendor approval is a separate process.
               </p>
             </div>
 
@@ -464,9 +450,10 @@ const handleSubmit = async (event) => {
               <h3>Built for Providers</h3>
 
               <p>
-                Personal care, home health, waiver, residential, IDD and
-                multi-service agencies can use the parts of vTrack that fit
-                their billing and operational needs.
+                vTrack supports operational workflows for personal
+                care, home health, waiver, residential, IDD, and
+                multi-service agencies. Applicable Nevada setup
+                requirements depend on your services.
               </p>
             </div>
 
@@ -475,12 +462,20 @@ const handleSubmit = async (event) => {
                 <Users size={25} />
               </div>
 
-              <h3>A Real Conversation</h3>
+              <h3>Talk With Our Team</h3>
 
               <p>
-                We'll learn about how your agency operates and explain how a
-                implementation or business development team can help you
-                claim the Legacy Promotion and get your agency started.
+                We'll review your current processes, explain the
+                onboarding steps, and discuss whether the Legacy
+                Agency offer fits your organization.
+              </p>
+
+              <p>
+                <a href="tel:+18338872251">833-887-2251</a>
+                <br />
+                <a href="mailto:support@vtrackbilling.com">
+                  support@vtrackbilling.com
+                </a>
               </p>
             </div>
 
@@ -489,18 +484,19 @@ const handleSubmit = async (event) => {
 
               <span>THE VTRACK DIFFERENCE</span>
 
-              <h3>
-                One Partner for the Work Behind Your Agency.
-              </h3>
+              <h3>One Partner for Your Back Office.</h3>
 
               <p>
-                EVV. Billing. Payroll. Scheduling. Authorizations. Recipients.
-                Billing and payroll handled by your account manager.
+                EVV, scheduling, authorizations, recipient tracking,
+                billing, and payroll in a connected platform,
+                supported by an experienced account management team.
               </p>
             </div>
           </aside>
         </div>
       </section>
+
+      {/* WHAT HAPPENS NEXT */}
 
       <section className="contact-next">
         <div className="contact-next__container">
@@ -508,22 +504,21 @@ const handleSubmit = async (event) => {
             <span>WHAT HAPPENS NEXT?</span>
 
             <h2>
-              A Simple Conversation About
-              <strong> Your Agency.</strong>
+              A simple conversation about
+              <strong> your agency.</strong>
             </h2>
           </div>
 
           <div className="contact-next__steps">
             <div className="contact-next__step">
               <div>01</div>
-
               <Mail size={25} />
 
               <h3>Send Your Request</h3>
 
               <p>
-                Tell us a little about your organization and what you're
-                looking to improve.
+                Tell us about your organization and the
+                workflows you'd like to improve.
               </p>
             </div>
 
@@ -534,14 +529,13 @@ const handleSubmit = async (event) => {
 
             <div className="contact-next__step">
               <div>02</div>
-
               <Users size={25} />
 
               <h3>Talk With Our Team</h3>
 
               <p>
-                We'll learn about your current workflow, services, and
-                operational needs.
+                We'll review your services, payers, and
+                applicable Nevada onboarding requirements.
               </p>
             </div>
 
@@ -552,14 +546,13 @@ const handleSubmit = async (event) => {
 
             <div className="contact-next__step">
               <div>03</div>
-
               <CalendarDays size={25} />
 
               <h3>See vTrack in Action</h3>
 
               <p>
-                We'll walk through the parts of vTrack that matter most to
-                your agency.
+                We'll demonstrate the platform features
+                relevant to your agency.
               </p>
             </div>
           </div>

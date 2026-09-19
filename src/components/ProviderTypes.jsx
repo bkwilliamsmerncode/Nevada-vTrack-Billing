@@ -5,6 +5,7 @@ import {
   Home,
   PersonStanding,
   Users,
+  Layers3,
 } from "lucide-react";
 
 import { Link } from "react-router-dom";
@@ -14,39 +15,45 @@ import "./ProviderTypes.css";
 const providerTypes = [
   {
     icon: PersonStanding,
-    title: "Personal Care Services Agencies",
+    title: "Personal Care Agencies",
     description:
-      "Connect personal care scheduling, required EVV visit information, service review, billing, and operational workflows.",
+      "Provider Type 30. Connect scheduling, applicable EVV visit capture, authorizations, billing, and payroll in one workflow.",
   },
   {
     icon: HeartHandshake,
     title: "Home Health Agencies",
     description:
-      "Manage applicable home health EVV, scheduling, service documentation, authorizations and claims in a connected workflow.",
-  },
-  {
-    icon: Home,
-    title: "FE & PD Waiver Providers",
-    description:
-      "Support applicable Frail Elderly and Physical Disabilities waiver services with EVV, authorization and billing tools.",
+      "Provider Type 29. Manage applicable EVV requirements alongside visit documentation, scheduling, authorizations, and claims.",
   },
   {
     icon: Building2,
-    title: "Personal Care Intermediary Organizations",
+    title: "Intermediary Service Organizations",
     description:
-      "Coordinate applicable EVV, recipient services, billing and the operational work surrounding personal care.",
+      "Provider Type 83. Coordinate applicable EVV, recipient services, provider records, billing, and operational workflows.",
   },
   {
-    icon: Users,
-    title: "IDD, SLA & Residential Services",
+    icon: Home,
+    title: "Supported Living Arrangements",
     description:
-      "Organize authorizations, staffing, service documentation, billing and payroll without positioning EVV as the primary need.",
+      "Bring staffing, service documentation, authorizations, billing, and payroll together for supported living operations.",
   },
   {
     icon: BriefcaseBusiness,
+    title: "Jobs and Day Training",
+    description:
+      "Manage program schedules, recipient services, attendance, authorizations, billing, and payroll.",
+  },
+  {
+    icon: Users,
+    title: "IDD and Waiver Providers",
+    description:
+      "Support recipient tracking, service documentation, staffing, authorizations, and billing across applicable programs. EVV requirements depend on the specific service.",
+  },
+  {
+    icon: Layers3,
     title: "Multi-Service Agencies",
     description:
-      "Manage multiple programs, service types, recipients, staff, and locations through one connected provider management platform.",
+      "Coordinate multiple programs, service types, recipients, employees, and locations through one connected platform.",
   },
 ];
 
@@ -54,23 +61,29 @@ function ProviderTypes() {
   return (
     <section className="provider-types">
       <div className="provider-types__container">
+
+        {/* SECTION HEADING */}
+
         <div className="provider-types__heading">
           <span className="provider-types__eyebrow">
             BUILT FOR NEVADA PROVIDERS
           </span>
 
           <h2>
-            Nevada Services.
-            <span> One Connected Platform.</span>
+            Your services.
+            <span> One connected platform.</span>
           </h2>
 
           <p>
-            vTrack supports the operational work behind Nevada provider
-            agencies. EVV tools are designed for provider types subject to
-            Nevada's EVV requirements, while billing, authorization and
-            payroll workflows support a wider range of services.
+            Whether your agency provides personal care, home health,
+            supported living, day services, or multiple programs,
+            vTrack brings the operational work together. EVV applies
+            to specific provider types and services, not every
+            Nevada provider program.
           </p>
         </div>
+
+        {/* PROVIDER CATEGORY CARDS */}
 
         <div className="provider-types__grid">
           {providerTypes.map((provider) => {
@@ -95,23 +108,29 @@ function ProviderTypes() {
           })}
         </div>
 
+        {/* BOTTOM CTA */}
+
         <div className="provider-types__bottom">
           <div>
-            <strong>Don't see your service type listed?</strong>
+            <strong>
+              Not sure whether vTrack fits your agency?
+            </strong>
 
             <span>
-              vTrack can support a variety of Nevada provider programs
-              and service models.
+              Tell us which services you provide. We can discuss
+              your operational needs and the EVV requirements
+              that may apply to your programs.
             </span>
           </div>
 
           <Link
-            to="/contact#contact-form"
+            to="/contact?section=form"
             className="provider-types__link"
           >
-            Talk With Our Team
+            Talk with our team
           </Link>
         </div>
+
       </div>
     </section>
   );

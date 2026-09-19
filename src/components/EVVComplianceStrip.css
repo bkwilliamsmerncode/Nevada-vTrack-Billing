@@ -1,6 +1,10 @@
+/* =========================
+   EVV COMPLIANCE SECTION
+========================= */
+
 .evv-strip {
   width: 100%;
-  padding: 55px 0;
+  padding: 70px 0;
 
   background: #ffffff;
 
@@ -13,9 +17,13 @@
   margin: 0 auto;
 }
 
+/* =========================
+   SECTION HEADING
+========================= */
+
 .evv-strip__heading {
-  max-width: 720px;
-  margin: 0 auto 34px;
+  max-width: 780px;
+  margin: 0 auto 38px;
 
   text-align: center;
 }
@@ -25,51 +33,59 @@
 
   color: #4b8bb4;
 
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 800;
 
   letter-spacing: 1.7px;
 }
 
 .evv-strip__heading h2 {
-  margin: 8px 0 0;
+  margin: 10px 0 0;
 
   color: #183664;
 
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
 
-  line-height: 1.1;
+  line-height: 1.15;
   letter-spacing: -1.5px;
 }
 
 .evv-strip__heading p {
-  margin: 13px auto 0;
+  max-width: 720px;
+
+  margin: 18px auto 0;
 
   color: #6f7d8e;
 
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 15px;
+  line-height: 1.8;
 }
+
+/* =========================
+   SIX EVV REQUIREMENTS
+========================= */
 
 .evv-strip__grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+
+  grid-template-columns: repeat(6, minmax(0, 1fr));
 
   gap: 12px;
 }
 
 .evv-strip__item {
-  min-height: 118px;
+  min-height: 145px;
 
   display: flex;
   flex-direction: column;
+
   align-items: center;
   justify-content: center;
 
-  gap: 11px;
+  gap: 14px;
 
-  padding: 17px 12px;
+  padding: 20px 12px;
 
   border: 1px solid #dfe7ed;
   border-radius: 12px;
@@ -77,15 +93,34 @@
   background: #f8fbfd;
 
   text-align: center;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
+.evv-strip__item:hover {
+  transform: translateY(-3px);
+
+  border-color: #b8d3e5;
+
+  box-shadow: 0 10px 25px rgba(24, 54, 100, 0.06);
+}
+
+/* =========================
+   ICONS
+========================= */
+
 .evv-strip__icon {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  flex-shrink: 0;
 
   border-radius: 10px;
 
@@ -96,41 +131,108 @@
 .evv-strip__item span {
   color: #415a76;
 
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
 
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
+/* =========================
+   FOOTNOTES
+========================= */
+
 .evv-strip__footer {
-  margin: 20px 0 0;
+  max-width: 850px;
 
-  color: #8793a0;
+  margin: 24px auto 0;
 
-  font-size: 11px;
+  color: #6f7d8e;
+
+  font-size: 13px;
+  line-height: 1.7;
 
   text-align: center;
 }
 
+.evv-strip__footer + .evv-strip__footer {
+  margin-top: 16px;
+
+  padding: 18px 24px;
+
+  border: 1px solid #dce7f0;
+  border-radius: 10px;
+
+  background: #f7fafc;
+
+  color: #415a76;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* =========================
+   TABLET
+========================= */
+
 @media (max-width: 950px) {
   .evv-strip__grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .evv-strip__item {
+    min-height: 135px;
   }
 }
 
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 600px) {
   .evv-strip {
-    padding: 45px 0;
+    padding: 50px 0;
   }
 
   .evv-strip__container {
     width: calc(100% - 28px);
   }
 
+  .evv-strip__heading {
+    margin-bottom: 30px;
+  }
+
+  .evv-strip__heading h2 {
+    letter-spacing: -1px;
+  }
+
+  .evv-strip__heading p {
+    font-size: 14px;
+  }
+
   .evv-strip__grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+  }
+
+  .evv-strip__item {
+    min-height: 135px;
+
+    padding: 16px 10px;
+  }
+
+  .evv-strip__item span {
+    font-size: 11px;
+  }
+
+  .evv-strip__footer + .evv-strip__footer {
+    padding: 16px;
   }
 }
+
+/* =========================
+   SMALL MOBILE
+========================= */
 
 @media (max-width: 390px) {
   .evv-strip__grid {
@@ -139,5 +241,12 @@
 
   .evv-strip__item {
     min-height: auto;
+
+    flex-direction: row;
+    justify-content: flex-start;
+
+    padding: 16px;
+
+    text-align: left;
   }
 }
