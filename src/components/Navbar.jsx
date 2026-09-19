@@ -2,6 +2,7 @@ import { useState } from "react";
 import {
   Link,
   NavLink,
+  useLocation,
 } from "react-router-dom";
 
 import { Menu, X } from "lucide-react";
@@ -12,8 +13,22 @@ import "./Navbar.css";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { pathname } = useLocation();
 
   const closeMenu = () => setMenuOpen(false);
+
+  const handleContactFormClick = () => {
+    closeMenu();
+
+    // When already on the contact page, React Router may keep the same URL,
+    // so Contact's query-string effect does not run a second time.
+    if (pathname === "/contact") {
+      document.getElementById("contact-form")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
 
   return (
     <header className="navbar">
@@ -79,7 +94,7 @@ function Navbar() {
 
           <NavLink
             to="/contact?section=form"
-            onClick={closeMenu}
+            onClick={handleContactFormClick}
             className={({ isActive }) =>
               isActive
                 ? "navbar__link navbar__link--active"
@@ -92,7 +107,7 @@ function Navbar() {
           <Link
             to="/contact?section=form"
             className="navbar__cta"
-            onClick={closeMenu}
+            onClick={handleContactFormClick}
           >
             Claim Your Spot
           </Link>
