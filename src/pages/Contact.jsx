@@ -89,6 +89,12 @@ useEffect(() => {
     const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
+    console.log("EmailJS Configuration:", {
+  serviceId,
+  templateId,
+  publicKeyLoaded: Boolean(publicKey),
+});
+
     if (!serviceId || !templateId || !publicKey) {
       setSubmitError(
         "The online form is temporarily unavailable. Please call 833-887-2251 or email support@vtrackbilling.com."
