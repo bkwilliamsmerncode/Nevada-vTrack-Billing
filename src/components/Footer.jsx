@@ -50,39 +50,39 @@ function Footer() {
             <Link to="/platform">Recipient Tracking</Link>
           </div>
 
-         <div className="footer__column">
-  <h3>Nevada</h3>
+          <div className="footer__column">
+            <h3>Nevada</h3>
 
-  <span>Personal Care Agencies</span>
-  <span>Home Health Agencies</span>
-  <span>FE & PD Waiver Providers</span>
-  <span>Residential & IDD Providers</span>
-</div>
+            <a href="https://www.adsd.nv.gov/program-policy/" target="_blank" rel="noopener noreferrer">Personal Care Agencies</a>
+            <a href="https://www.adsd.nv.gov/" target="_blank" rel="noopener noreferrer">Home Health Agencies</a>
+            <a href="https://www.adsd.nv.gov/contact/" target="_blank" rel="noopener noreferrer">FE &amp; PD Waiver Providers</a>
+            <a href="https://adsd.nv.gov/programs/intellectual/sla/sla/" target="_blank" rel="noopener noreferrer">Residential &amp; IDD Providers</a>
+          </div>
         </div>
 
-<div className="footer__bottom">
-  <div className="footer__legal">
-    <span>
-      © {year} vTrack Billing by Vichra. All rights reserved.
-    </span>
+        <div className="footer__bottom">
+          <div className="footer__legal">
+            <span>
+              © {year} vTrack Billing by Vichra. All rights reserved.
+            </span>
 
-    <span className="footer__separator">|</span>
+            <span className="footer__separator">|</span>
 
-    <Link to="/privacy-policy">
-      Privacy Policy
-    </Link>
+            <Link to="/privacy-policy">
+              Privacy Policy
+            </Link>
 
-    <span className="footer__separator">|</span>
+            <span className="footer__separator">|</span>
 
-    <Link to="/terms-of-use">
-      Terms of Use
-    </Link>
-  </div>
+            <Link to="/terms-of-use">
+              Terms of Use
+            </Link>
+          </div>
 
-  <p>
-    vTrack by Vichra, Nevada
-  </p>
-</div>
+          <p>
+            vTrack by Vichra, Nevada
+          </p>
+        </div>
       </div>
     </footer>
   );
