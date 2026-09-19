@@ -31,8 +31,8 @@ const EMAILJS_TEMPLATE_ID =
 const EMAILJS_PUBLIC_KEY =
   import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-const SUPPORT_EMAIL = "support@vtrackbilling.com";
-const SUPPORT_PHONE = "833-887-2251";
+const SALES_EMAIL = "Go-vTrack@vichra.com";
+const SALES_PHONE = "480-878-1050";
 
 // ============================================
 // FORM DATA
@@ -70,7 +70,7 @@ const createEmailFallback = (data) => {
   const subject = `Nevada Agency Inquiry - ${data.agencyName}`;
 
   const body = `
-NEW NEVADA AGENCY INQUIRY
+New Nevada agency inquiry
 
 Contact Name: ${data.contactName}
 
@@ -91,7 +91,7 @@ Message:
 ${data.message || "No additional message"}
 `;
 
-  return `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(
+  return `mailto:${SALES_EMAIL}?subject=${encodeURIComponent(
     subject
   )}&body=${encodeURIComponent(body)}`;
 };
@@ -112,6 +112,7 @@ function Contact() {
   const [showFallback, setShowFallback] = useState(false);
 
   const sendingRef = useRef(false);
+  const formRef = useRef(null);
 
   const { search, hash } = useLocation();
 
@@ -191,40 +192,13 @@ function Contact() {
       return;
     }
 
-    // Prepare email template parameters
-
-    const templateParams = {
-      contact_name: formData.contactName.trim(),
-
-      agency_name: formData.agencyName.trim(),
-
-      email: formData.email.trim(),
-
-      reply_to: formData.email.trim(),
-
-      phone:
-        formData.phone.trim() || "Not provided",
-
-      provider_type: formData.providerType,
-
-      agency_size:
-        formData.agencySize || "Not provided",
-
-      message:
-        formData.message.trim() ||
-        "No additional message",
-
-      legacy_interest:
-        formData.legacyInterest ? "Yes" : "No",
-    };
-
     try {
       // Send through EmailJS
 
-      const response = await emailjs.send(
+      const response = await emailjs.sendForm(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
-        templateParams,
+        formRef.current,
         {
           publicKey: EMAILJS_PUBLIC_KEY,
         }
@@ -323,7 +297,7 @@ function Contact() {
 
             <div className="contact-hero__eyebrow">
               <CalendarDays size={18} />
-              START A NEVADA CONVERSATION
+              Start a Nevada conversation
             </div>
 
             <h1>
@@ -364,7 +338,7 @@ function Contact() {
 
             <Sparkles size={25} />
 
-            <span>NEVADA LEGACY AGENCY OFFER</span>
+            <span>Nevada Legacy Agency offer</span>
 
             <strong>Six Months Free</strong>
 
@@ -402,7 +376,7 @@ function Contact() {
 
             <div className="contact-form-heading">
 
-              <span>TELL US ABOUT YOUR AGENCY</span>
+              <span>Tell us about your agency</span>
 
               <h2>Become a Legacy Agency</h2>
 
@@ -496,8 +470,8 @@ function Contact() {
 
                 <p style={{ marginTop: "12px" }}>
                   Or call{" "}
-                  <a href="tel:+18338872251">
-                    {SUPPORT_PHONE}
+                  <a href="tel:+14808781050">
+                    {SALES_PHONE}
                   </a>
                 </p>
 
@@ -508,11 +482,25 @@ function Contact() {
             {/* FORM */}
 
             <form
+              ref={formRef}
               id="contact-form"
               className="contact-form"
               onSubmit={handleSubmit}
               aria-busy={isSending}
             >
+
+              {/* Template aliases preserve the existing EmailJS template fields. */}
+              <input type="hidden" name="to_email" value="brian@vichra.com,selena@vichra.com,greg@vichra.com" />
+              <input type="hidden" name="contact_name" value={formData.contactName.trim()} />
+              <input type="hidden" name="user_name" value={formData.contactName.trim()} />
+              <input type="hidden" name="user_email" value={formData.email.trim()} />
+              <input type="hidden" name="user_subject" value={`Nevada agency inquiry - ${formData.agencyName.trim()}`} />
+              <input type="hidden" name="from_name" value={formData.contactName.trim()} />
+              <input type="hidden" name="agency_name" value={formData.agencyName.trim()} />
+              <input type="hidden" name="reply_to" value={formData.email.trim()} />
+              <input type="hidden" name="provider_type" value={formData.providerType} />
+              <input type="hidden" name="agency_size" value={formData.agencySize || "Not provided"} />
+              <input type="hidden" name="legacy_interest" value={formData.legacyInterest ? "Yes" : "No"} />
 
               <div className="contact-form__grid">
 
@@ -832,27 +820,16 @@ function Contact() {
                 <Users size={25} />
               </div>
 
-              <h3>Talk With Our Team</h3>
-
+              <h3>Sales email</h3>
+              <p>For pricing, demos, and general inquiries.</p>
               <p>
-                We'll review your current processes,
-                explain the onboarding steps, and
-                discuss whether the Legacy Agency
-                offer fits your organization.
+                <a href={`mailto:${SALES_EMAIL}`}>{SALES_EMAIL}</a>
               </p>
 
+              <h3>Sales phone</h3>
+              <p>Talk to our team about pricing, demos, or adding vTrack.</p>
               <p>
-
-                <a href="tel:+18338872251">
-                  {SUPPORT_PHONE}
-                </a>
-
-                <br />
-
-                <a href={`mailto:${SUPPORT_EMAIL}`}>
-                  {SUPPORT_EMAIL}
-                </a>
-
+                <a href="tel:4808781050">{SALES_PHONE}</a>
               </p>
 
             </div>
@@ -893,7 +870,7 @@ function Contact() {
 
           <div className="contact-next__heading">
 
-            <span>WHAT HAPPENS NEXT?</span>
+            <span>What happens next?</span>
 
             <h2>
               A simple conversation about

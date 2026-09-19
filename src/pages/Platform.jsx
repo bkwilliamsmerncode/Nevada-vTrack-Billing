@@ -244,7 +244,7 @@ function Platform() {
       >
         <div className="platform-modules__container">
           <div className="platform-modules__heading">
-            <span>BUILT AROUND PROVIDER OPERATIONS</span>
+            <span>Built around provider operations</span>
 
             <h2>
               Powerful Tools.
@@ -293,7 +293,7 @@ function Platform() {
       <section className="platform-cta">
         <div className="platform-cta__container">
           <div>
-            <span>START WITH A CONVERSATION</span>
+            <span>Start with a conversation</span>
 
             <h2>
               Ready to Put the Work in Better Hands?

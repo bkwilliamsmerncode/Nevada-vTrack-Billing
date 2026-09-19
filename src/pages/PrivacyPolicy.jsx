@@ -275,13 +275,13 @@ function PrivacyPolicy() {
             <strong>vTrack Billing by Vichra</strong>
             <br />
             Email:{" "}
-            <a href="mailto:support@vtrackbilling.com">
-              support@vtrackbilling.com
+            <a href="mailto:Go-vTrack@vichra.com">
+              Go-vTrack@vichra.com
             </a>
             <br />
             Phone:{" "}
-            <a href="tel:18338872251">
-              833-887-2251
+            <a href="tel:14808781050">
+              480-878-1050
             </a>
           </address>
         </div>

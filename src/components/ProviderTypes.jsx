@@ -66,7 +66,7 @@ function ProviderTypes() {
 
         <div className="provider-types__heading">
           <span className="provider-types__eyebrow">
-            BUILT FOR NEVADA PROVIDERS
+            Built for Nevada providers
           </span>
 
           <h2>

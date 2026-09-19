@@ -246,20 +246,20 @@ function TermsOfUse() {
           <h2>Disclaimer of Warranties</h2>
 
           <p className="legal-uppercase">
-            THE SITE AND ITS CONTENT ARE PROVIDED ON AN "AS IS" AND "AS
-            AVAILABLE" BASIS.
+            The Site and its content are provided on an "as is" and "as
+            available" basis.
           </p>
 
           <p className="legal-uppercase">
-            TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, vTrack
-            DISCLAIMS WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
-            WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
-            NON-INFRINGEMENT, ACCURACY, COMPLETENESS, AND AVAILABILITY.
+            To the fullest extent permitted by applicable law, vTrack
+            disclaims warranties of any kind, express or implied, including
+            warranties of merchantability, fitness for a particular purpose,
+            non-infringement, accuracy, completeness, and availability.
           </p>
 
           <p className="legal-uppercase">
-            WE DO NOT WARRANT THAT THE SITE WILL ALWAYS BE AVAILABLE,
-            UNINTERRUPTED, SECURE, CURRENT, COMPLETE, OR ERROR-FREE.
+            We do not warrant that the Site will always be available,
+            uninterrupted, secure, current, complete, or error-free.
           </p>
 
           <p>
@@ -345,13 +345,13 @@ function TermsOfUse() {
             <strong>vTrack Billing by Vichra</strong>
             <br />
             Email:{" "}
-            <a href="mailto:support@vtrackbilling.com">
-              support@vtrackbilling.com
+            <a href="mailto:Go-vTrack@vichra.com">
+              Go-vTrack@vichra.com
             </a>
             <br />
             Phone:{" "}
-            <a href="tel:18338872251">
-              833-887-2251
+            <a href="tel:14808781050">
+              480-878-1050
             </a>
           </address>
         </div>

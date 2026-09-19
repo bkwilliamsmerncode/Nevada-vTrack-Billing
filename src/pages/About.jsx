@@ -54,7 +54,7 @@ function About() {
         <div className="about-hero__container">
           <div className="about-hero__content">
             <span className="about-hero__eyebrow">
-              ABOUT VICHRA
+              About Vichra
             </span>
 
             <h1>
@@ -162,7 +162,7 @@ function About() {
 
           <div className="about-story__content">
             <span className="about-story__eyebrow">
-              OUR APPROACH
+              Our approach
             </span>
 
             <h2>
@@ -203,7 +203,7 @@ function About() {
       <section className="about-values">
         <div className="about-values__container">
           <div className="about-values__heading">
-            <span>WHAT GUIDES US</span>
+            <span>What guides us</span>
 
             <h2>
               Built Around the Needs of
@@ -243,7 +243,7 @@ function About() {
         <div className="about-nevada__container">
           <div>
             <span className="about-nevada__eyebrow">
-              VTRACK IN NEVADA
+              vTrack in Nevada
             </span>
 
             <h2>
@@ -276,7 +276,7 @@ function About() {
           </div>
 
           <div className="about-nevada__offer">
-            <span>NEVADA ENROLLMENT</span>
+            <span>Nevada enrollment</span>
 
             <strong>51488619</strong>
 

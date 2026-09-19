@@ -17,7 +17,6 @@ import ProviderTypes from "../components/ProviderTypes";
 import OnboardingProcess from "../components/OnboardingProcess";
 import MultiPayer from "../components/MultiPayer";
 import LegacyPromo from "../components/LegacyPromo";
-import FinalCTA from "../components/FinalCTA";
 
 import "./Home.css";
 
@@ -66,7 +65,7 @@ function Home() {
           <div className="hero__content">
             <div className="hero__badge">
               <BadgeCheck size={18} />
-              <span>NOW ENROLLED WITH NEVADA MEDICAID</span>
+              <span>Now enrolled with Nevada Medicaid</span>
             </div>
 
             <h1 className="hero__title">

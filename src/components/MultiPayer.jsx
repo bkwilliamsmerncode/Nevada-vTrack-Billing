@@ -22,7 +22,7 @@ function MultiPayer() {
 
           <span className="multi-payer__eyebrow">
             <Layers3 size={18} />
-            NEVADA'S MULTI-PAYER REALITY
+            Nevada's multi-payer reality
           </span>
 
           <h2>

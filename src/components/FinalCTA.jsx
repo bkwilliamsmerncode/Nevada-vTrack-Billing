@@ -12,7 +12,7 @@ function FinalCTA() {
 
         <div className="final-cta__content">
           <span className="final-cta__eyebrow">
-            YOUR NEVADA LAUNCH STARTS HERE
+            Your Nevada launch starts here
           </span>
 
           <h2>
@@ -73,7 +73,7 @@ function FinalCTA() {
 
         <div className="final-cta__offer">
           <span className="final-cta__offer-label">
-            NEVADA LEGACY AGENCY OFFER
+            Nevada Legacy Agency offer
           </span>
 
           <div className="final-cta__offer-number">

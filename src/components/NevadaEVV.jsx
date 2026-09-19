@@ -18,7 +18,7 @@ function NevadaEVV() {
         <div className="nevada-evv__content">
           <div className="nevada-evv__eyebrow">
             <BadgeCheck size={18} />
-            <span>NEVADA MEDICAID ENROLLMENT</span>
+            <span>Nevada Medicaid enrollment</span>
           </div>
 
           <h2>
@@ -123,7 +123,7 @@ function NevadaEVV() {
             </div>
 
             <div className="nevada-evv__gainwell">
-              <span>FISCAL AGENT CONNECTIVITY</span>
+              <span>Fiscal agent connectivity</span>
 
               <strong>Gainwell Technologies</strong>
 
@@ -135,7 +135,7 @@ function NevadaEVV() {
 
             <div className="nevada-evv__workflow">
               <span className="nevada-evv__workflow-label">
-                ONE CONNECTED WORKFLOW
+                One connected workflow
               </span>
 
               <div className="nevada-evv__workflow-steps">

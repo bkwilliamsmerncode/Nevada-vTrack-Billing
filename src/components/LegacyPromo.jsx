@@ -21,7 +21,7 @@ function LegacyPromo() {
 
           <div className="legacy-promo__badge">
             <Sparkles size={17} />
-            <span>NEVADA LEGACY AGENCIES</span>
+            <span>Nevada Legacy Agencies</span>
           </div>
 
           <h2>
@@ -41,7 +41,7 @@ function LegacyPromo() {
           <div className="legacy-promo__offer">
 
             <span className="legacy-promo__offer-small">
-              THE LEGACY AGENCY OFFER
+              The Legacy Agency offer
             </span>
 
             <strong>Six months free</strong>
@@ -144,7 +144,7 @@ function LegacyPromo() {
           <div className="legacy-promo__card-glow"></div>
 
           <span className="legacy-promo__card-label">
-            NEVADA LEGACY AGENCIES
+            Nevada Legacy Agencies
           </span>
 
           <div className="legacy-promo__number">

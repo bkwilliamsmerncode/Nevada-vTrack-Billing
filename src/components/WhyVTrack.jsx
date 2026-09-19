@@ -87,7 +87,7 @@ function WhyVTrack() {
         <div className="why-vtrack__content">
 
           <span className="why-vtrack__eyebrow">
-            ARIZONA PROVEN, NEVADA READY
+            Arizona proven, Nevada ready
           </span>
 
           <h2>

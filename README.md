@@ -19,6 +19,10 @@ with the same names:
 - `VITE_EMAILJS_TEMPLATE_ID`
 - `VITE_EMAILJS_PUBLIC_KEY`
 
+The form uses `emailjs.sendForm` with the three environment variables above.
+It supplies `user_name`, `user_email`, and `user_subject` for the original
+contact template, plus the agency fields below.
+
 The EmailJS template should accept `to_email`, `contact_name`, `agency_name`,
 `email`, `reply_to`, `phone`, `provider_type`, `agency_size`, `message`, and
 `legacy_interest`. Set its **To Email** field to `{{to_email}}`; form leads are

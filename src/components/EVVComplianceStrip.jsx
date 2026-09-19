@@ -42,7 +42,7 @@ function EVVComplianceStrip() {
       <div className="evv-strip__container">
 
         <div className="evv-strip__heading">
-          <span>21ST CENTURY CURES ACT</span>
+          <span>21st Century Cures Act</span>
 
           <h2>Every visit, verified six ways</h2>
 

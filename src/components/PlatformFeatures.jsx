@@ -57,7 +57,7 @@ function PlatformFeatures() {
 
         <div className="platform-features__heading">
           <span className="platform-features__eyebrow">
-            ONE CONNECTED PLATFORM
+            One connected platform
           </span>
 
           <h2>

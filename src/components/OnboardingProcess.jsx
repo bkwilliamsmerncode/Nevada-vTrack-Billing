@@ -39,7 +39,7 @@ function OnboardingProcess() {
         {/* SECTION HEADING */}
 
         <div className="onboarding__heading">
-          <span>HOW NEVADA ONBOARDING WORKS</span>
+          <span>How Nevada onboarding works</span>
 
           <h2>
             A clear path from first call to go live.
