@@ -154,12 +154,12 @@ function Platform() {
                 <ArrowRight size={19} />
               </Link>
 
-              <a
-                href="#modules"
-                className="platform-hero__button platform-hero__button--secondary"
-              >
-                Explore the Platform
-              </a>
+            <Link
+  to="/contact?section=form"
+  className="platform-hero__button platform-hero__button--secondary"
+>
+  Explore the Platform
+</Link>
             </div>
           </div>
 
