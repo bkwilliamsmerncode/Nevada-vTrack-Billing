@@ -1,363 +1,145 @@
-import { useEffect, useRef, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 import {
   ArrowRight,
-  BadgeCheck,
-  Building2,
   CalendarDays,
   CheckCircle2,
+  Gift,
   Mail,
-  Send,
+  Phone,
   ShieldCheck,
-  Sparkles,
   Users,
 } from "lucide-react";
 
-import SEO from "../components/SEO";
 import "./Contact.css";
 
-// ============================================
-// CONFIGURATION
-// ============================================
+export const ContactUs = () => {
+  const form = useRef();
 
-const EMAILJS_SERVICE_ID =
-  import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const [status, setStatus] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [legacyInterest, setLegacyInterest] = useState(false);
 
-const EMAILJS_TEMPLATE_ID =
-  import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  // WORKING EMAILJS CONFIGURATION
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-const EMAILJS_PUBLIC_KEY =
-  import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+    if (isSubmitting) return;
 
-  
+    setIsSubmitting(true);
+    setStatus("");
 
-const SALES_EMAIL = "Go-vTrack@vichra.com";
-const SALES_PHONE = "480-878-1050";
-
-// ============================================
-// FORM DATA
-// ============================================
-
-const initialForm = {
-  contactName: "",
-  agencyName: "",
-  email: "",
-  phone: "",
-  providerType: "",
-  agencySize: "",
-  message: "",
-  legacyInterest: false,
-};
-
-const providerTypes = [
-  "Personal Care Services Agency",
-  "Home Health Agency",
-  "Personal Care Intermediary Service Organization",
-  "Frail Elderly Waiver Provider",
-  "Physical Disabilities Waiver Provider",
-  "Residential / SLA Provider",
-  "Jobs and Day Training Provider",
-  "IDD Provider",
-  "Multi-Service Agency",
-  "Other",
-];
-
-// ============================================
-// EMAIL FALLBACK
-// ============================================
-
-const createEmailFallback = (data) => {
-  const subject = `Nevada Agency Inquiry - ${data.agencyName}`;
-
-  const body = `
-New Nevada agency inquiry
-
-Contact Name: ${data.contactName}
-
-Agency Name: ${data.agencyName}
-
-Email: ${data.email}
-
-Phone: ${data.phone || "Not provided"}
-
-Provider Type: ${data.providerType}
-
-Agency Size: ${data.agencySize || "Not provided"}
-
-Legacy Agency Interest:
-${data.legacyInterest ? "Yes" : "No"}
-
-Message:
-${data.message || "No additional message"}
-`;
-
-  return `mailto:${SALES_EMAIL}?subject=${encodeURIComponent(
-    subject
-  )}&body=${encodeURIComponent(body)}`;
-};
-
-// ============================================
-// CONTACT COMPONENT
-// ============================================
-
-function Contact() {
-  const [formData, setFormData] = useState(initialForm);
-
-  const [submitted, setSubmitted] = useState(false);
-
-  const [isSending, setIsSending] = useState(false);
-
-  const [submitError, setSubmitError] = useState("");
-
-  const [showFallback, setShowFallback] = useState(false);
-
-  const sendingRef = useRef(false);
-  const formRef = useRef(null);
-
-  const { search, hash } = useLocation();
-
-  // ============================================
-  // SCROLL TO CONTACT FORM
-  // ============================================
-
-  useEffect(() => {
-    const params = new URLSearchParams(search);
-
-    const shouldScroll =
-      params.get("section") === "form" ||
-      hash === "#contact-form";
-
-    if (!shouldScroll) return;
-
-    const frame = requestAnimationFrame(() => {
-      document
-        .getElementById("contact-form")
-        ?.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-    });
-
-    return () => cancelAnimationFrame(frame);
-  }, [search, hash]);
-
-  // ============================================
-  // HANDLE INPUT CHANGES
-  // ============================================
-
-  const handleChange = (event) => {
-    const { name, value, type, checked } = event.target;
-
-    setFormData((current) => ({
-      ...current,
-      [name]: type === "checkbox" ? checked : value,
-    }));
-  };
-
-  // ============================================
-  // HANDLE FORM SUBMISSION
-  // ============================================
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    if (sendingRef.current) return;
-
-    sendingRef.current = true;
-
-    setIsSending(true);
-    setSubmitted(false);
-    setSubmitError("");
-    setShowFallback(false);
-
-    // Validate configuration
-
-    if (
-      !EMAILJS_SERVICE_ID ||
-      !EMAILJS_TEMPLATE_ID ||
-      !EMAILJS_PUBLIC_KEY
-    ) {
-      console.error(
-        "EmailJS configuration is missing."
-      );
-
-      setSubmitError(
-        "The online form is temporarily unavailable. Please use the email option below."
-      );
-
-      setShowFallback(true);
-      setIsSending(false);
-      sendingRef.current = false;
-
-      return;
-    }
-
-    try {
-      // Send through EmailJS
-
-      const response = await emailjs.sendForm(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        formRef.current,
+    emailjs
+      .sendForm(
+        "service_ays9k2h",
+        "template_grp7nxt",
+        form.current,
         {
-          publicKey: EMAILJS_PUBLIC_KEY,
+          publicKey: "hQim4ICvqwKb9uuvj",
         }
-      );
+      )
+      .then(
+        () => {
+          console.log("SUCCESS!");
 
-      // Confirm EmailJS accepted the request
+          setStatus("success");
 
-      if (response.status !== 200) {
-        throw new Error(
-          `Unexpected EmailJS status: ${response.status}`
-        );
-      }
+          form.current.reset();
 
-      console.log(
-        "EmailJS request accepted:",
-        response.status
-      );
+          setLegacyInterest(false);
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
 
-      // Success
-
-      setSubmitted(true);
-
-      setFormData(initialForm);
-
-      setShowFallback(false);
-
-      setSubmitError("");
-
-    } catch (error) {
-      // Log actual failure for debugging
-
-      console.error(
-        "Contact form submission failed:",
-        {
-          status: error?.status,
-          text: error?.text,
-          message: error?.message,
-          error,
+          setStatus("error");
         }
-      );
-
-      // Provide a useful error message
-
-      if (error?.status === 429) {
-        setSubmitError(
-          "Too many requests have been submitted. Please wait a moment or contact us directly."
-        );
-      } else if (error?.status === 403) {
-        setSubmitError(
-          "The email service rejected this request. Please use the email option below."
-        );
-      } else if (error?.status === 502) {
-        setSubmitError(
-          "Our email service is temporarily experiencing a connection problem. Please use the email option below."
-        );
-      } else {
-        setSubmitError(
-          "We couldn't confirm that your request was sent. Please use the email option below or call us directly."
-        );
-      }
-
-      // Preserve the form and display fallback
-
-      setShowFallback(true);
-
-    } finally {
-      setIsSending(false);
-      sendingRef.current = false;
-    }
+      )
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   };
-
-  // ============================================
-  // RENDER
-  // ============================================
 
   return (
-    <div className="contact-page">
+    <main className="contact-page">
 
-      <SEO
-        title="Contact vTrack | Nevada Provider Agencies"
-        description="Contact vTrack to discuss Nevada Medicaid trading partner enrollment, EVV, billing, provider operations, and the Nevada Legacy Agency offer."
-        path="/contact"
-      />
-
-      {/* ======================================
-          CONTACT HERO
-      ====================================== */}
+      {/* =========================
+          HERO SECTION
+      ========================= */}
 
       <section className="contact-hero">
 
-        <div className="contact-hero__glow"></div>
+        <div className="contact-hero__glow" />
 
         <div className="contact-hero__container">
 
           <div className="contact-hero__content">
 
             <div className="contact-hero__eyebrow">
-              <CalendarDays size={18} />
-              Start a Nevada conversation
+              <CalendarDays size={16} />
+              Connect with vTrack
             </div>
 
             <h1>
-              Plan your Nevada transition
-              <span> with an experienced team.</span>
+              Let's simplify your{" "}
+              <span>agency operations.</span>
             </h1>
 
             <p>
-              Tell us about your services, payers, and
-              current workflow. We'll explain vTrack's
-              capabilities, our Nevada trading partner
-              enrollment status, and the steps required
-              before your agency can go live.
+              Discover how vTrack by Vichra can help your
+              Nevada provider agency manage scheduling,
+              EVV, billing, payroll, authorizations,
+              and daily operations.
             </p>
 
             <div className="contact-hero__points">
 
               <div>
                 <CheckCircle2 size={19} />
-                A conversation focused on your agency's needs
+                Connect with our team to discuss your agency.
               </div>
 
               <div>
                 <CheckCircle2 size={19} />
-                Dedicated account management and onboarding support
+                Explore how vTrack supports your operations.
               </div>
 
               <div>
                 <CheckCircle2 size={19} />
-                Clear guidance on outstanding Nevada requirements
+                Learn about the Nevada Legacy Agency offer.
               </div>
 
             </div>
 
           </div>
 
+
+          {/* LEGACY PROMOTION CARD */}
+
           <div className="contact-hero__offer">
 
-            <Sparkles size={25} />
+            <Gift size={34} />
 
-            <span>Nevada Legacy Agency offer</span>
+            <span>NEVADA LEGACY AGENCY OFFER</span>
 
-            <strong>Six Months Free</strong>
+            <strong>
+              6 Months Free
+            </strong>
 
             <p>
-              The first 10 Nevada agencies that sign up
-              can receive six months of vTrack platform
-              access and dedicated account management
-              at no software cost.
+              The first 10 Nevada provider agencies
+              that sign up for vTrack receive six
+              months of access at no cost.
             </p>
 
-            <div className="contact-hero__offer-line"></div>
+            <div className="contact-hero__offer-line" />
 
             <small>
-              No obligation to continue after the
-              promotional period. Eligibility, terms,
-              and onboarding details are confirmed
-              with our team before enrollment.
+              At the end of six months, if you're
+              not satisfied, you owe nothing and
+              have no obligation to continue.
+              Submitting a request does not reserve
+              a promotional spot.
             </small>
 
           </div>
@@ -366,9 +148,10 @@ function Contact() {
 
       </section>
 
-      {/* ======================================
-          CONTACT FORM
-      ====================================== */}
+
+      {/* =========================
+          MAIN CONTACT SECTION
+      ========================= */}
 
       <section className="contact-main">
 
@@ -376,11 +159,18 @@ function Contact() {
 
           <div className="contact-form-area">
 
+
+            {/* FORM HEADING */}
+
             <div className="contact-form-heading">
 
-              <span>Tell us about your agency</span>
+              <span>
+                Tell us about your agency
+              </span>
 
-              <h2>Become a Legacy Agency</h2>
+              <h2>
+                Become a Legacy Agency
+              </h2>
 
               <p>
                 Complete the form and our team will
@@ -392,27 +182,28 @@ function Contact() {
 
             </div>
 
+
             {/* SUCCESS MESSAGE */}
 
-            {submitted && (
+            {status === "success" && (
 
               <div
                 className="contact-success"
                 role="status"
               >
 
-                <CheckCircle2 size={24} />
+                <CheckCircle2 size={23} />
 
                 <div>
 
                   <strong>
-                    Your request was submitted.
+                    Your request has been sent!
                   </strong>
 
                   <p>
                     Thank you for contacting vTrack.
-                    Our team will follow up about
-                    your Nevada agency.
+                    Our team will follow up regarding
+                    your agency's request.
                   </p>
 
                 </div>
@@ -421,136 +212,103 @@ function Contact() {
 
             )}
 
+
             {/* ERROR MESSAGE */}
 
-            {submitError && (
+            {status === "error" && (
 
               <div
                 className="contact-error"
                 role="alert"
               >
 
-                <strong>{submitError}</strong>
-
-              </div>
-
-            )}
-
-            {/* EMAIL FALLBACK */}
-
-            {showFallback && (
-
-              <div className="contact-error">
+                <strong>
+                  Your request could not be sent.
+                </strong>
 
                 <p>
-                  Your information is still saved
-                  in the form.
-                </p>
-
-                <p>
-                  You can open your email application
-                  with your inquiry already filled out.
-                  Review the message and press Send
-                  in your email application.
-                </p>
-
-                <a
-                  href={createEmailFallback(formData)}
-                  className="contact-submit"
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    gap: "10px",
-                    textDecoration: "none",
-                    marginTop: "12px",
-                  }}
-                >
-                  <Mail size={18} />
-                  Open Email Application
-                </a>
-
-                <p style={{ marginTop: "12px" }}>
-                  Or call{" "}
-                  <a href="tel:+14808781050">
-                    {SALES_PHONE}
-                  </a>
+                  Please try again or contact us
+                  directly at support@vtrackbilling.com.
                 </p>
 
               </div>
 
             )}
 
-            {/* FORM */}
+
+            {/* =========================
+                WORKING EMAILJS FORM
+            ========================= */}
 
             <form
-              ref={formRef}
-              id="contact-form"
+              ref={form}
+              onSubmit={sendEmail}
               className="contact-form"
-              onSubmit={handleSubmit}
-              aria-busy={isSending}
+              id="contact-form"
             >
 
-              {/* Template aliases preserve the existing EmailJS template fields. */}
-              <input type="hidden" name="to_email" value="brian@vichra.com,selena@vichra.com,greg@vichra.com" />
-              <input type="hidden" name="contact_name" value={formData.contactName.trim()} />
-              <input type="hidden" name="user_name" value={formData.contactName.trim()} />
-              <input type="hidden" name="user_email" value={formData.email.trim()} />
-              <input type="hidden" name="user_subject" value={`Nevada agency inquiry - ${formData.agencyName.trim()}`} />
-              <input type="hidden" name="from_name" value={formData.contactName.trim()} />
-              <input type="hidden" name="agency_name" value={formData.agencyName.trim()} />
-              <input type="hidden" name="reply_to" value={formData.email.trim()} />
-              <input type="hidden" name="provider_type" value={formData.providerType} />
-              <input type="hidden" name="agency_size" value={formData.agencySize || "Not provided"} />
-              <input type="hidden" name="legacy_interest" value={formData.legacyInterest ? "Yes" : "No"} />
+
+              {/* EMAILJS TEMPLATE VARIABLES */}
+
+              <input
+                type="hidden"
+                name="name"
+                value="Nevada Legacy Agency Request"
+              />
+
+              <input
+                type="hidden"
+                name="time"
+                value={new Date().toLocaleString()}
+              />
+
 
               <div className="contact-form__grid">
 
-                {/* CONTACT NAME */}
+
+                {/* YOUR NAME */}
 
                 <div className="contact-field">
 
-                  <label htmlFor="contactName">
+                  <label htmlFor="contact_name">
                     Your Name <span>*</span>
                   </label>
 
                   <input
-                    id="contactName"
-                    name="contactName"
+                    id="contact_name"
                     type="text"
-                    value={formData.contactName}
-                    onChange={handleChange}
-                    placeholder="First and last name"
+                    name="contact_name"
+                    placeholder="Your full name"
                     autoComplete="name"
                     required
-                    disabled={isSending}
+                    disabled={isSubmitting}
                   />
 
                 </div>
+
 
                 {/* AGENCY NAME */}
 
                 <div className="contact-field">
 
-                  <label htmlFor="agencyName">
+                  <label htmlFor="agency_name">
                     Agency Name <span>*</span>
                   </label>
 
                   <input
-                    id="agencyName"
-                    name="agencyName"
+                    id="agency_name"
                     type="text"
-                    value={formData.agencyName}
-                    onChange={handleChange}
-                    placeholder="Your organization"
+                    name="agency_name"
+                    placeholder="Your agency name"
                     autoComplete="organization"
                     required
-                    disabled={isSending}
+                    disabled={isSubmitting}
                   />
 
                 </div>
 
-                {/* EMAIL */}
+
+                {/* EMAIL ADDRESS */}
 
                 <div className="contact-field">
 
@@ -560,19 +318,18 @@ function Contact() {
 
                   <input
                     id="email"
-                    name="email"
                     type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="name@agency.com"
+                    name="email"
+                    placeholder="you@agency.com"
                     autoComplete="email"
                     required
-                    disabled={isSending}
+                    disabled={isSubmitting}
                   />
 
                 </div>
 
-                {/* PHONE */}
+
+                {/* PHONE NUMBER */}
 
                 <div className="contact-field">
 
@@ -582,90 +339,117 @@ function Contact() {
 
                   <input
                     id="phone"
-                    name="phone"
                     type="tel"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    placeholder="(000) 000-0000"
+                    name="phone"
+                    placeholder="(702) 555-0123"
                     autoComplete="tel"
-                    disabled={isSending}
+                    disabled={isSubmitting}
                   />
 
                 </div>
+
 
                 {/* PROVIDER TYPE */}
 
                 <div className="contact-field">
 
-                  <label htmlFor="providerType">
+                  <label htmlFor="provider_type">
                     Provider Type <span>*</span>
                   </label>
 
                   <select
-                    id="providerType"
-                    name="providerType"
-                    value={formData.providerType}
-                    onChange={handleChange}
+                    id="provider_type"
+                    name="provider_type"
+                    defaultValue=""
                     required
-                    disabled={isSending}
+                    disabled={isSubmitting}
                   >
 
-                    <option value="">
+                    <option value="" disabled>
                       Select provider type
                     </option>
 
-                    {providerTypes.map((type) => (
+                    <option value="Personal Care Services Agency">
+                      Personal Care Services Agency
+                    </option>
 
-                      <option
-                        key={type}
-                        value={type}
-                      >
-                        {type}
-                      </option>
+                    <option value="Home Health Agency">
+                      Home Health Agency
+                    </option>
 
-                    ))}
+                    <option value="Personal Care Intermediary Service Organization">
+                      Personal Care Intermediary Service Organization
+                    </option>
+
+                    <option value="Frail Elderly Waiver Provider">
+                      Frail Elderly Waiver Provider
+                    </option>
+
+                    <option value="Physical Disabilities Waiver Provider">
+                      Physical Disabilities Waiver Provider
+                    </option>
+
+                    <option value="Residential / SLA Provider">
+                      Residential / SLA Provider
+                    </option>
+
+                    <option value="Jobs and Day Training Provider">
+                      Jobs and Day Training Provider
+                    </option>
+
+                    <option value="IDD Provider">
+                      IDD Provider
+                    </option>
+
+                    <option value="Multi-Service Agency">
+                      Multi-Service Agency
+                    </option>
+
+                    <option value="Other">
+                      Other
+                    </option>
 
                   </select>
 
                 </div>
 
+
                 {/* AGENCY SIZE */}
 
                 <div className="contact-field">
 
-                  <label htmlFor="agencySize">
+                  <label htmlFor="agency_size">
                     Agency Size
                   </label>
 
                   <select
-                    id="agencySize"
-                    name="agencySize"
-                    value={formData.agencySize}
-                    onChange={handleChange}
-                    disabled={isSending}
+                    id="agency_size"
+                    name="agency_size"
+                    defaultValue=""
+                    disabled={isSubmitting}
                   >
 
-                    <option value="">
+                    <option value="" disabled>
                       Select agency size
                     </option>
 
-                    <option value="1-25">
+                    <option value="1–25 Staff">
                       1–25 Staff
                     </option>
 
-                    <option value="26-50">
+                    <option value="26–50 Staff">
                       26–50 Staff
                     </option>
 
-                    <option value="51-100">
+                    <option value="51–100 Staff">
                       51–100 Staff
                     </option>
 
-                    <option value="101-250">
+                    <option value="101–250 Staff">
                       101–250 Staff
                     </option>
 
-                    <option value="250+">
+                    <option value="250+ Staff">
                       250+ Staff
                     </option>
 
@@ -675,7 +459,10 @@ function Contact() {
 
               </div>
 
-              {/* MESSAGE */}
+
+              {/* =========================
+                  MESSAGE
+              ========================= */}
 
               <div className="contact-field contact-field--full">
 
@@ -686,84 +473,91 @@ function Contact() {
                 <textarea
                   id="message"
                   name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  placeholder="Tell us about your EVV, billing, scheduling, payroll, authorization, or provider management needs. Please do not include protected health information."
+                  placeholder="Tell us about your agency's needs..."
                   rows={6}
-                  disabled={isSending}
+                  disabled={isSubmitting}
                 />
 
               </div>
 
-              {/* LEGACY INTEREST */}
+
+              {/* =========================
+                  LEGACY INTEREST
+              ========================= */}
+
+              <input
+                type="hidden"
+                name="legacy_interest"
+                value={legacyInterest ? "Yes" : "No"}
+              />
 
               <label className="contact-checkbox">
 
                 <input
                   type="checkbox"
-                  name="legacyInterest"
-                  checked={formData.legacyInterest}
-                  onChange={handleChange}
-                  disabled={isSending}
+                  checked={legacyInterest}
+                  onChange={(e) =>
+                    setLegacyInterest(e.target.checked)
+                  }
+                  disabled={isSubmitting}
                 />
 
-                <span
-                  className="contact-checkbox__box"
-                  aria-hidden="true"
-                ></span>
+                <span className="contact-checkbox__box" />
 
                 <span className="contact-checkbox__text">
+
                   I'm interested in learning more
                   about the Nevada Legacy Agency offer.
+
                 </span>
 
               </label>
 
-              {/* SUBMIT BUTTON */}
+
+              {/* =========================
+                  SUBMIT BUTTON
+              ========================= */}
 
               <button
                 type="submit"
                 className="contact-submit"
-                disabled={isSending}
+                disabled={isSubmitting}
               >
 
-                {isSending ? (
+                {isSubmitting
+                  ? "Sending Request..."
+                  : "Send My Request"}
 
-                  "Sending..."
-
-                ) : (
-
-                  <>
-                    Send My Request
-                    <Send size={18} />
-                  </>
-
+                {!isSubmitting && (
+                  <ArrowRight size={18} />
                 )}
 
               </button>
 
-              {/* FORM DISCLAIMER */}
+
+              {/* =========================
+                  PRIVACY DISCLAIMER
+              ========================= */}
 
               <p className="contact-form__note">
 
                 By submitting, you acknowledge our{" "}
 
-                <Link to="/privacy-policy">
+                <a href="#/privacy-policy">
                   Privacy Policy
-                </Link>{" "}
+                </a>
 
-                and{" "}
+                {" "}and{" "}
 
-                <Link to="/terms-of-use">
+                <a href="#/terms-of-use">
                   Terms of Use
-                </Link>{" "}
+                </a>
 
-                and agree that a vTrack representative
-                may contact you by phone or email
-                regarding your request.
-
-                Please do not submit protected
-                health information.
+                {" "}and agree that a vTrack
+                representative may contact you
+                by phone or email regarding
+                your request. Please do not
+                submit protected health information.
 
               </p>
 
@@ -771,87 +565,85 @@ function Contact() {
 
           </div>
 
-          {/* ======================================
-              SIDEBAR
-          ====================================== */}
+
+          {/* =========================
+              CONTACT SIDEBAR
+          ========================= */}
 
           <aside className="contact-sidebar">
 
+
+            {/* PHONE CARD */}
+
             <div className="contact-sidebar__card">
 
               <div className="contact-sidebar__icon">
-                <BadgeCheck size={25} />
+                <Phone size={23} />
               </div>
 
               <h3>
-                Nevada Trading Partner Enrollment
+                Call Our Team
               </h3>
 
               <p>
-                Vichra Systems, LLC is an enrolled
-                Nevada Medicaid EDI trading partner,
-                ID 51488619. EDI compliance testing
-                and production authorization remain
-                pending. Alternate EVV vendor approval
-                is a separate process.
+                Have questions? Speak directly
+                with our team.
+              </p>
+
+              <p>
+                <a href="tel:480-878-1050">
+                  480-878-1050
+                </a>
               </p>
 
             </div>
+
+
+            {/* EMAIL CARD */}
 
             <div className="contact-sidebar__card">
 
               <div className="contact-sidebar__icon">
-                <Building2 size={25} />
+                <Mail size={23} />
               </div>
 
-              <h3>Built for Providers</h3>
+              <h3>
+                Email Us
+              </h3>
 
               <p>
-                vTrack supports operational workflows
-                for personal care, home health, waiver,
-                residential, IDD, and multi-service
-                agencies. Applicable Nevada setup
-                requirements depend on your services.
+                Reach out to our support team.
+              </p>
+
+              <p>
+                <a href="mailto:Go-vTrack@vichra.com
+Sales: 480-878-1050">
+                  Go-vTrack@vichra.com
+                </a>
               </p>
 
             </div>
 
-            <div className="contact-sidebar__card">
 
-              <div className="contact-sidebar__icon">
-                <Users size={25} />
-              </div>
-
-              <h3>Sales email</h3>
-              <p>For pricing, demos, and general inquiries.</p>
-              <p>
-                <a href={`mailto:${SALES_EMAIL}`}>{SALES_EMAIL}</a>
-              </p>
-
-              <h3>Sales phone</h3>
-              <p>Talk to our team about pricing, demos, or adding vTrack.</p>
-              <p>
-                <a href="tel:4808781050">{SALES_PHONE}</a>
-              </p>
-
-            </div>
+            {/* PLATFORM CARD */}
 
             <div className="contact-sidebar__card contact-sidebar__card--dark">
 
-              <ShieldCheck size={28} />
+              <ShieldCheck size={32} />
 
-              <span>The vTrack Difference</span>
+              <span>
+                BUILT FOR PROVIDER AGENCIES
+              </span>
 
               <h3>
-                One Partner for Your Back Office.
+                One connected platform.
               </h3>
 
               <p>
-                EVV, scheduling, authorizations,
-                recipient tracking, billing, and
-                payroll in a connected platform,
-                supported by an experienced account
-                management team.
+                Bring scheduling, EVV,
+                authorizations, billing,
+                payroll, and operational
+                workflows together with vTrack.
               </p>
 
             </div>
@@ -862,9 +654,10 @@ function Contact() {
 
       </section>
 
-      {/* ======================================
+
+      {/* =========================
           WHAT HAPPENS NEXT
-      ====================================== */}
+      ========================= */}
 
       <section className="contact-next">
 
@@ -872,70 +665,94 @@ function Contact() {
 
           <div className="contact-next__heading">
 
-            <span>What happens next?</span>
+            <span>
+              OUR PROCESS
+            </span>
 
             <h2>
-              A simple conversation about
-              <strong> your agency.</strong>
+              What happens{" "}
+              <strong>next?</strong>
             </h2>
 
           </div>
 
+
           <div className="contact-next__steps">
 
+
+            {/* STEP ONE */}
+
             <div className="contact-next__step">
 
-              <div>01</div>
+              <div>
+                STEP 01
+              </div>
 
-              <Mail size={25} />
+              <Mail size={30} />
 
-              <h3>Send Your Request</h3>
+              <h3>
+                Submit Your Request
+              </h3>
 
               <p>
-                Tell us about your organization
-                and the workflows you'd like
-                to improve.
+                Complete the form and tell
+                us about your agency.
               </p>
 
             </div>
 
+
             <ArrowRight
               className="contact-next__arrow"
-              size={24}
+              size={25}
             />
+
+
+            {/* STEP TWO */}
 
             <div className="contact-next__step">
 
-              <div>02</div>
+              <div>
+                STEP 02
+              </div>
 
-              <Users size={25} />
+              <Users size={30} />
 
-              <h3>Talk With Our Team</h3>
+              <h3>
+                Connect With Our Team
+              </h3>
 
               <p>
-                We'll review your services,
-                payers, and applicable Nevada
-                onboarding requirements.
+                We'll discuss your agency's
+                needs and answer your questions.
               </p>
 
             </div>
 
+
             <ArrowRight
               className="contact-next__arrow"
-              size={24}
+              size={25}
             />
+
+
+            {/* STEP THREE */}
 
             <div className="contact-next__step">
 
-              <div>03</div>
+              <div>
+                STEP 03
+              </div>
 
-              <CalendarDays size={25} />
+              <CalendarDays size={30} />
 
-              <h3>See vTrack in Action</h3>
+              <h3>
+                Explore vTrack
+              </h3>
 
               <p>
-                We'll demonstrate the platform
-                features relevant to your agency.
+                Schedule a demonstration and
+                see how vTrack fits your workflow.
               </p>
 
             </div>
@@ -946,8 +763,8 @@ function Contact() {
 
       </section>
 
-    </div>
+    </main>
   );
-}
+};
 
-export default Contact;
+export default ContactUs;
