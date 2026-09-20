@@ -3,11 +3,57 @@
 ========================= */
 
 .multi-payer {
-  width: 100%;
-  padding: 100px 24px;
+  position: relative;
 
-  background: #0d2538;
-  color: #ffffff;
+  width: 100%;
+  min-height: 780px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 130px 24px;
+
+  background: linear-gradient(
+    115deg,
+    #f7faff 0%,
+    #ffffff 48%,
+    #edf5fb 100%
+  );
+
+  overflow: hidden;
+}
+
+/* =========================
+   BACKGROUND GLOW
+========================= */
+
+.multi-payer__glow {
+  position: absolute;
+
+  border-radius: 50%;
+  filter: blur(10px);
+
+  pointer-events: none;
+}
+
+.multi-payer__glow--one {
+  width: 550px;
+  height: 550px;
+
+  top: -250px;
+  right: -180px;
+
+  background: rgba(73, 151, 199, 0.13);
+}
+
+.multi-payer__glow--two {
+  width: 450px;
+  height: 450px;
+
+  bottom: -230px;
+  left: -180px;
+
+  background: rgba(24, 54, 100, 0.08);
 }
 
 /* =========================
@@ -15,18 +61,26 @@
 ========================= */
 
 .multi-payer__container {
-  width: min(1160px, 100%);
+  position: relative;
+  z-index: 2;
+
+  width: min(1180px, 100%);
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+
+  grid-template-columns:
+    minmax(0, 0.95fr)
+    minmax(0, 1.05fr);
+
   align-items: center;
 
-  gap: 64px;
+  gap: 70px;
 }
 
 .multi-payer__content {
   min-width: 0;
+  max-width: 580px;
 }
 
 /* =========================
@@ -34,16 +88,31 @@
 ========================= */
 
 .multi-payer__eyebrow {
+  width: fit-content;
+  max-width: 100%;
+
   display: inline-flex;
   align-items: center;
+
   gap: 9px;
 
-  color: #87d8c5;
+  margin-bottom: 24px;
+  padding: 9px 14px;
 
-  font-size: 0.82rem;
+  border: 1px solid #c9dceb;
+  border-radius: 999px;
+
+  background: #ffffff;
+  color: #275f8c;
+
+  font-size: 12px;
   font-weight: 800;
-  letter-spacing: 0.12em;
+
   line-height: 1.5;
+  letter-spacing: 0.04em;
+
+  box-shadow:
+    0 7px 20px rgba(24, 54, 100, 0.06);
 }
 
 .multi-payer__eyebrow svg {
@@ -55,117 +124,384 @@
 ========================= */
 
 .multi-payer h2 {
-  margin: 20px 0 0;
+  margin: 0;
 
-  color: #ffffff;
+  color: #183664;
 
-  font-size: clamp(2.1rem, 4vw, 3.5rem);
+  font-size: clamp(2.8rem, 4.5vw, 4.2rem);
   font-weight: 800;
 
-  line-height: 1.1;
-  letter-spacing: -1.5px;
+  line-height: 1.08;
+  letter-spacing: -2px;
 }
 
-.multi-payer h2 strong {
-  color: #63c7ad;
+.multi-payer h2 span {
+  color: #4b8bb4;
 }
 
 /* =========================
    DESCRIPTION
 ========================= */
 
-.multi-payer p {
+.multi-payer__content > p {
   margin: 22px 0 0;
 
-  color: #d5e1e8;
+  color: #5e6d80;
 
-  font-size: 1.05rem;
-  line-height: 1.8;
+  font-size: 16px;
+  line-height: 1.85;
 }
 
-.multi-payer p + p {
-  margin-top: 16px;
+.multi-payer__content > .multi-payer__lead {
+  margin-top: 28px;
+
+  color: #263d5d;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  line-height: 1.65;
 }
 
 /* =========================
-   PAYER LIST
+   ONBOARDING NOTICE
+========================= */
+
+.multi-payer__notice {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 13px;
+
+  margin-top: 30px;
+  padding: 19px 20px;
+
+  border-left: 4px solid #4b8bb4;
+  border-radius: 6px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 8px 25px rgba(24, 54, 100, 0.05);
+}
+
+.multi-payer__notice svg {
+  flex: 0 0 auto;
+
+  margin-top: 2px;
+
+  color: #3479a5;
+}
+
+.multi-payer__notice p {
+  margin: 0;
+
+  color: #46556a;
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* =========================
+   CTA BUTTON
+========================= */
+
+.multi-payer__actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 14px;
+
+  margin-top: 32px;
+}
+
+.multi-payer__button {
+  min-height: 54px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  padding: 14px 24px;
+
+  border-radius: 8px;
+
+  background: #183664;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  line-height: 1.4;
+
+  text-align: center;
+  text-decoration: none;
+
+  box-shadow:
+    0 10px 25px rgba(24, 54, 100, 0.2);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.multi-payer__button:hover {
+  transform: translateY(-2px);
+
+  background: #244c7d;
+
+  box-shadow:
+    0 14px 32px rgba(24, 54, 100, 0.27);
+}
+
+.multi-payer__button:focus-visible {
+  outline: 3px solid #4b8bb4;
+  outline-offset: 4px;
+}
+
+.multi-payer__button svg {
+  flex-shrink: 0;
+}
+
+/* =========================
+   PAYER PANEL
+========================= */
+
+.multi-payer__panel {
+  min-width: 0;
+
+  padding: 34px;
+
+  border: 1px solid rgba(204, 217, 230, 0.85);
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  box-shadow:
+    0 30px 80px rgba(24, 54, 100, 0.13),
+    0 5px 20px rgba(24, 54, 100, 0.05);
+}
+
+/* =========================
+   PANEL HEADER
+========================= */
+
+.multi-payer__panel-header {
+  margin-bottom: 28px;
+}
+
+.multi-payer__panel-label {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #3479a5;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+}
+
+.multi-payer__panel-header h3 {
+  margin: 0;
+
+  color: #183664;
+
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
+  font-weight: 800;
+
+  line-height: 1.25;
+  letter-spacing: -0.7px;
+}
+
+.multi-payer__panel-header h3 span {
+  color: #4b8bb4;
+}
+
+.multi-payer__panel-header p {
+  margin: 14px 0 0;
+
+  color: #66788b;
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* =========================
+   PAYER GRID
 ========================= */
 
 .multi-payer__plans {
   min-width: 0;
 
   display: grid;
-  grid-template-columns: 1fr;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
 
   gap: 12px;
 }
 
-.multi-payer__plans div {
+/* =========================
+   PAYER CARDS
+========================= */
+
+.multi-payer__plan {
   min-width: 0;
+  min-height: 105px;
 
   display: flex;
   align-items: center;
 
-  gap: 13px;
+  gap: 12px;
 
-  padding: 17px 18px;
+  padding: 18px 15px;
 
-  background: rgba(255, 255, 255, 0.07);
-
-  border: 1px solid rgba(255, 255, 255, 0.13);
+  border: 1px solid #e0e7ee;
   border-radius: 12px;
 
+  background: #f8fbfd;
+
   transition:
+    transform 0.2s ease,
     background 0.2s ease,
     border-color 0.2s ease,
-    transform 0.2s ease;
+    box-shadow 0.2s ease;
 }
 
-.multi-payer__plans div:hover {
-  transform: translateX(3px);
+.multi-payer__plan:hover {
+  transform: translateY(-3px);
 
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(135, 216, 197, 0.4);
+  background: #ffffff;
+
+  border-color: #a8c9df;
+
+  box-shadow:
+    0 10px 25px rgba(24, 54, 100, 0.08);
 }
 
-.multi-payer__plans svg {
+/* =========================
+   PAYER ICON
+========================= */
+
+.multi-payer__plan-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   flex: 0 0 auto;
-  color: #63c7ad;
+
+  border-radius: 10px;
+
+  background: #e7f1f7;
+  color: #3479a5;
 }
 
-.multi-payer__plans span {
+/* =========================
+   PAYER NAME
+========================= */
+
+.multi-payer__plan-name {
   min-width: 0;
 
-  color: #ffffff;
+  color: #263d5d;
 
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
 
   line-height: 1.5;
+
   overflow-wrap: anywhere;
+}
+
+/* =========================
+   PANEL FOOTER
+========================= */
+
+.multi-payer__panel-footer {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  margin-top: 25px;
+  padding-top: 22px;
+
+  border-top: 1px solid #e7edf4;
+
+  color: #647286;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  line-height: 1.6;
+}
+
+.multi-payer__panel-footer svg {
+  flex: 0 0 auto;
+
+  color: #4b8bb4;
+}
+
+/* =========================
+   LAPTOP
+========================= */
+
+@media (max-width: 1100px) {
+
+  .multi-payer__container {
+    gap: 40px;
+  }
+
+  .multi-payer__panel {
+    padding: 26px;
+  }
+
+  .multi-payer__plan {
+    padding: 14px 12px;
+  }
+
+  .multi-payer__plan-name {
+    font-size: 12px;
+  }
+
 }
 
 /* =========================
    TABLET
 ========================= */
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
+
   .multi-payer {
-    padding: 75px 20px;
+    min-height: auto;
+    padding: 90px 20px;
   }
 
   .multi-payer__container {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 55px;
   }
 
   .multi-payer__content {
-    max-width: 700px;
+    max-width: 720px;
+    margin: 0 auto;
   }
 
-  .multi-payer__plans {
-    max-width: 700px;
+  .multi-payer__panel {
+    width: 100%;
+    max-width: 720px;
+
+    margin: 0 auto;
   }
+
 }
 
 /* =========================
@@ -173,41 +509,93 @@
 ========================= */
 
 @media (max-width: 600px) {
+
   .multi-payer {
-    padding: 65px 14px;
+    padding: 70px 14px;
   }
 
   .multi-payer__container {
-    gap: 32px;
+    gap: 40px;
   }
 
   .multi-payer__eyebrow {
-    font-size: 11px;
-    letter-spacing: 0.08em;
+    padding: 8px 12px;
+
+    font-size: 10px;
+    letter-spacing: 0.02em;
   }
 
   .multi-payer h2 {
-    font-size: clamp(2rem, 8vw, 2.7rem);
-    letter-spacing: -1px;
+    font-size: clamp(2.3rem, 9vw, 3rem);
+    letter-spacing: -1.5px;
   }
 
-  .multi-payer p {
+  .multi-payer__content > p {
     font-size: 15px;
     line-height: 1.75;
   }
 
+  .multi-payer__content > .multi-payer__lead {
+    font-size: 16px;
+  }
+
+  .multi-payer__notice {
+    padding: 15px;
+  }
+
+  .multi-payer__actions {
+    flex-direction: column;
+  }
+
+  .multi-payer__button {
+    width: 100%;
+  }
+
+  .multi-payer__panel {
+    padding: 22px 16px;
+    border-radius: 16px;
+  }
+
+  .multi-payer__panel-header h3 {
+    font-size: 24px;
+  }
+
   .multi-payer__plans {
+    grid-template-columns: 1fr;
     gap: 10px;
   }
 
-  .multi-payer__plans div {
-    padding: 15px;
-    gap: 11px;
+  .multi-payer__plan {
+    min-height: 75px;
+
+    padding: 14px;
+    gap: 13px;
   }
 
-  .multi-payer__plans span {
+  .multi-payer__plan-name {
     font-size: 13px;
   }
+
+  .multi-payer__panel-footer {
+    align-items: flex-start;
+  }
+
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+  .multi-payer h2 {
+    font-size: 2.2rem;
+  }
+
+  .multi-payer__panel {
+    padding: 18px 12px;
+  }
+
 }
 
 /* =========================
@@ -215,11 +603,15 @@
 ========================= */
 
 @media (prefers-reduced-motion: reduce) {
-  .multi-payer__plans div {
+
+  .multi-payer__button,
+  .multi-payer__plan {
     transition: none;
   }
 
-  .multi-payer__plans div:hover {
+  .multi-payer__button:hover,
+  .multi-payer__plan:hover {
     transform: none;
   }
+
 }

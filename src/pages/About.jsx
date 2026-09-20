@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import OnboardingProcess from "../components/OnboardingProcess";
 import {
   ArrowRight,
   BadgeCheck,
@@ -42,15 +42,19 @@ const values = [
 
 function About() {
   return (
+     
     <div className="about-page">
+
   <SEO
+  
     title="About Vichra | Supporting Provider Agencies Since 2006"
     description="Learn about Vichra and vTrack, a provider management platform built from 20 years of experience supporting provider agency operations."
     path="/about"
   />
+  
       <section className="about-hero">
         <div className="about-hero__glow"></div>
-
+<OnboardingProcess />
         <div className="about-hero__container">
           <div className="about-hero__content">
             <span className="about-hero__eyebrow">
