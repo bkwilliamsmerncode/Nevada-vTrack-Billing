@@ -877,10 +877,31 @@
 ========================= */
 
 @media (max-width: 700px) {
+  .contact-page {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-main {
+    order: 1;
+  }
+
+  .contact-hero {
+    order: 2;
+  }
+
+  .contact-next {
+    order: 3;
+  }
+
   .contact-hero,
   .contact-main,
   .contact-next {
     padding: 75px 0;
+  }
+
+  .contact-main {
+    padding-top: 35px;
   }
 
   .contact-hero__container,

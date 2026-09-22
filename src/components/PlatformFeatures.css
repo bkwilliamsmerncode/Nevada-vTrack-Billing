@@ -218,13 +218,31 @@
   }
 
   .platform-features__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(82%, 1fr);
     gap: 15px;
+
+    margin-right: -14px;
+    padding: 2px 14px 18px 0;
+
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 0 14px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .platform-features__grid::-webkit-scrollbar {
+    display: none;
   }
 
   .platform-feature-card {
-    min-height: auto;
+    min-height: 285px;
     padding: 26px 24px;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
   }
 }
 

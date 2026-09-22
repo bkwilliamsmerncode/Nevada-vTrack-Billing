@@ -294,13 +294,32 @@
   }
 
   .provider-types__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(86%, 1fr);
     gap: 14px;
+
+    margin-right: -14px;
+    padding: 2px 14px 18px 0;
+
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 0 14px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .provider-types__grid::-webkit-scrollbar {
+    display: none;
   }
 
   .provider-type-card {
-    min-height: auto;
+    min-height: 220px;
     padding: 22px;
+
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
   }
 
   /* All cards occupy one column on mobile. */

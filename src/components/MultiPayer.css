@@ -561,15 +561,34 @@
   }
 
   .multi-payer__plans {
-    grid-template-columns: 1fr;
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(86%, 1fr);
     gap: 10px;
+
+    margin-right: -16px;
+    padding: 2px 16px 16px 0;
+
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 0 16px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .multi-payer__plans::-webkit-scrollbar {
+    display: none;
   }
 
   .multi-payer__plan {
-    min-height: 75px;
+    min-height: 105px;
 
     padding: 14px;
     gap: 13px;
+
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
   }
 
   .multi-payer__plan-name {

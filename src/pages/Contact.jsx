@@ -123,23 +123,24 @@ export const ContactUs = () => {
             <span>NEVADA LEGACY AGENCY OFFER</span>
 
             <strong>
-              6 Months Free
+              Run your agency with less overhead.
             </strong>
 
             <p>
-              The first 10 Nevada provider agencies
-              that sign up for vTrack receive six
-              months of access at no cost.
+              Replace disconnected systems with one
+              platform for EVV, scheduling, billing,
+              claims, payroll, authorizations, and
+              recipient tracking.
             </p>
 
             <div className="contact-hero__offer-line" />
 
             <small>
-              At the end of six months, if you're
-              not satisfied, you owe nothing and
-              have no obligation to continue.
-              Submitting a request does not reserve
-              a promotional spot.
+              A few Legacy Agency spaces remain.
+              Eligible founding Nevada agencies receive
+              six months of service free. The offer ends
+              when the remaining spaces are filled.
+              Submitting a request does not reserve a spot.
             </small>
 
           </div>
@@ -169,13 +170,14 @@ export const ContactUs = () => {
               </span>
 
               <h2>
-                Become a Legacy Agency
+                See what vTrack can replace
               </h2>
 
               <p>
                 Complete the form and our team will
-                follow up to discuss your agency's
-                needs and the Legacy offer.
+                follow up to discuss your current
+                systems, operational needs, and the
+                Legacy Agency offer.
                 Submitting this form does not reserve
                 a promotional spot.
               </p>

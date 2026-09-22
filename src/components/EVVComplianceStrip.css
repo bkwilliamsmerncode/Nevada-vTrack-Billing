@@ -210,15 +210,33 @@
   }
 
   .evv-strip__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(72%, 1fr);
     gap: 10px;
+
+    margin-right: -14px;
+    padding: 2px 14px 16px 0;
+
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 0 14px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .evv-strip__grid::-webkit-scrollbar {
+    display: none;
   }
 
   .evv-strip__item {
     min-height: 135px;
 
     padding: 16px 10px;
+
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
   }
 
   .evv-strip__item span {
@@ -236,11 +254,12 @@
 
 @media (max-width: 390px) {
   .evv-strip__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: none;
+    grid-auto-columns: minmax(82%, 1fr);
   }
 
   .evv-strip__item {
-    min-height: auto;
+    min-height: 110px;
 
     flex-direction: row;
     justify-content: flex-start;

@@ -13,7 +13,7 @@ function Footer() {
         <div className="footer__top">
           <div className="footer__brand">
             <Link to="/">
-              <img
+              <img onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                 src={vTrackLogo}
                 alt="vTrack by Vichra"
                 className="footer__logo"
@@ -30,6 +30,7 @@ function Footer() {
               Now serving Nevada provider agencies.
             </span>
           </div>
+          
 
           <div className="footer__column">
             <h3>Navigate</h3>

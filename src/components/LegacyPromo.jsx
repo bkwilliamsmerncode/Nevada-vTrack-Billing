@@ -25,17 +25,15 @@ function LegacyPromo() {
           </div>
 
           <h2>
-            Six months free{" "}
-            <span>while we get you approved</span>
+            Replace the cost of running your agency.
+            <span> Get paid accurately and on time.</span>
           </h2>
 
           <p className="legacy-promo__intro">
-            Moving to an alternate EVV vendor in Nevada
-            takes time. Your agency designates vTrack
-            with the state's EVV aggregator, completes
-            Aggregator training, and works through
-            integration with us. We do not think you
-            should pay during that process.
+            Bring EVV, scheduling, billing, claims,
+            payroll, authorizations, and recipient
+            tracking together in one connected system,
+            backed by a dedicated account manager.
           </p>
 
           <div className="legacy-promo__offer">
@@ -44,24 +42,22 @@ function LegacyPromo() {
               The Legacy Agency offer
             </span>
 
-            <strong>Six months free</strong>
+            <strong>Receive six months free</strong>
 
             <p>
-              So for our first ten Nevada agencies,
-              vTrack is free for six months. You get
-              the full platform and a dedicated account
-              manager handling your billing and payroll,
-              at no software cost, while we work together
-              to get you live.
+              A few Legacy Agency spaces remain. Eligible
+              founding Nevada agencies receive the full
+              vTrack platform and hands-on support free
+              for their first six months while we work
+              together through onboarding and launch.
             </p>
 
             <p>
-              We are limiting this to ten agencies
-              because each one gets hands on support
-              through a state approval process, and
-              because working closely with our first
-              Nevada partners is how we learn this
-              market properly.
+              The offer ends when the remaining spaces
+              are filled. Availability is limited so
+              each agency receives the focused support
+              needed for state requirements, training,
+              integration, testing, and go-live.
             </p>
 
           </div>
@@ -188,8 +184,8 @@ function LegacyPromo() {
           </div>
 
           <p className="legacy-promo__availability">
-            Our first ten Nevada agencies receive
-            hands on support throughout onboarding.
+            A few founding-agency spaces remain. The
+            offer ends when all available spaces are filled.
           </p>
 
         </div>
