@@ -25,7 +25,7 @@ function LegacyPromo() {
           </div>
 
           <h2>
-            Replace the cost of running your agency.
+            Cut the cost of running your agency.
             <span> Get paid accurately and on time.</span>
           </h2>
 
@@ -42,13 +42,13 @@ function LegacyPromo() {
               The Legacy Agency offer
             </span>
 
-            <strong>Receive six months free</strong>
+            <strong>No cost while you Onboard</strong>
 
             <p>
               A few Legacy Agency spaces remain. Eligible
               founding Nevada agencies receive the full
               vTrack platform and hands-on support free
-              for their first six months while we work
+              for their first 3 - 6 months while we work
               together through onboarding and launch.
             </p>
 
@@ -155,8 +155,8 @@ function LegacyPromo() {
 
           <div className="legacy-promo__six">
             <span>FIRST</span>
-            <strong>6 MONTHS</strong>
-            <span>FREE</span>
+            <strong>3 - 6 MONTHS</strong>
+            <span>No Cost</span>
           </div>
 
           <div className="legacy-promo__card-list">

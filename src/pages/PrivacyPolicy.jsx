@@ -7,7 +7,7 @@ function PrivacyPolicy() {
     <div className="legal-page">
       <SEO
         title="Privacy Policy | vTrack Billing by Vichra"
-        description="Privacy Policy for the public vTrack Billing by Vichra website."
+        description="Privacy Policy for vTrack public websites operated by Vichra Systems, LLC."
         path="/privacy-policy"
       />
 
@@ -18,270 +18,268 @@ function PrivacyPolicy() {
           <h1>Privacy Policy</h1>
 
           <p>
-            Effective Date: September 19, 2026
+            Effective Date: September 23, 2026
             <br />
-            Last Updated: September 19, 2026
+            Last Updated: September 23, 2026
           </p>
         </div>
       </section>
 
       <section className="legal-content">
         <div className="legal-content__container">
+          <h2>Who We Are</h2>
+
           <p>
-            vTrack ("vTrack," "we," "us," or "our") respects your privacy.
-            This Privacy Policy explains how information is collected and used
-            when you visit the public vTrack website at vtrackbilling.com and
-            related public webpages (the "Site").
+            vTrack is a billing, Electronic Visit Verification, and compliance
+            platform operated by Vichra Systems, LLC ("vTrack," "we," "us," or
+            "our"). This Privacy Policy explains how we handle information
+            collected through{" "}
+            <a
+              href="https://vtrackbilling.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              vtrackbilling.com
+            </a>{" "}
+            and our other vTrack websites, including our state-specific sites
+            (together, the "Sites").
           </p>
 
-          <h2>Information We Collect</h2>
+          <h2>What This Policy Does Not Cover</h2>
 
           <p>
-            We may collect information that you voluntarily provide when you
-            request a demonstration, contact us, or otherwise communicate with
-            us through the Site. This information may include:
-          </p>
-
-          <ul>
-            <li>Your first and last name</li>
-            <li>Email address</li>
-            <li>Telephone number</li>
-            <li>Other information you voluntarily provide to us</li>
-          </ul>
-
-          <p>
-            We use this information to respond to your inquiry, provide
-            information you request, schedule demonstrations, communicate with
-            you, and provide information about vTrack products and services.
+            This policy covers our public websites only.
           </p>
 
           <p>
-            We do not sell or rent personal information collected through the
-            Site.
+            It does not cover information processed inside the vTrack platform
+            on behalf of our customers. When a provider agency uses vTrack, we
+            handle recipient and workforce information as a service provider to
+            that agency, under our customer agreement and, where applicable, a
+            Business Associate Agreement under the Health Insurance Portability
+            and Accountability Act. Those agreements govern that information,
+            not this policy.
           </p>
+
+          <p>
+            If you receive services from an agency that uses vTrack, please
+            contact your agency with questions about your information.
+          </p>
+
+          <p>
+            This policy also does not cover websites operated by others that we
+            link to, including state agency and health plan websites.
+          </p>
+
+          <h2>Information You Give Us</h2>
+
+          <p>
+            When you fill out a form on our Sites, we collect the information
+            you choose to provide, which may include your name, email address,
+            phone number, agency name, the services or provider type your agency
+            offers, and any message you write.
+          </p>
+
+          <p>
+            We use this information to respond to your inquiry, schedule a
+            demonstration, answer questions about vTrack, and follow up about
+            our products and services.
+          </p>
+
+          <div className="legal-warning">
+            <strong>
+              Please do not send protected health information through our
+              website forms or by unsecured email.
+            </strong>
+
+            <p>
+              This includes names of people receiving services, dates of
+              service, diagnoses, Medicaid identification numbers, and similar
+              details. Our website forms are not designed to collect health
+              information, and we do not collect consumer health data through
+              our Sites.
+            </p>
+
+            <p>
+              If you are a customer with a question involving that kind of
+              information, call us at{" "}
+              <a href="tel:18338872251">833-887-2251</a> or use the secure
+              channels inside the vTrack platform.
+            </p>
+          </div>
 
           <h2>Information Collected Automatically</h2>
 
           <p>
-            When you visit the Site, certain technical information may be
-            collected automatically by our web server or service providers.
-            This may include:
+            Like most websites, our servers automatically record basic
+            technical information when you visit, such as your IP address,
+            browser type, device type, the pages you view, the page that
+            referred you, and the date and time of your visit.
+          </p>
+
+          <p>
+            We use this to keep the Sites secure, fix problems, and understand
+            which content is useful. On our customer help pages, we may also
+            record search terms and which documents are downloaded so we can
+            improve those resources.
+          </p>
+
+          <h2>Cookies and Third Party Services</h2>
+
+          <p>
+            Our Sites do not set their own cookies, and we do not use analytics,
+            advertising, retargeting, or session recording tools. We do not
+            allow third parties to track your activity on our Sites over time
+            or across other websites.
+          </p>
+
+          <p>
+            Depending on which of our Sites you visit, these third party
+            services may receive limited information:
           </p>
 
           <ul>
-            <li>IP address</li>
-            <li>Browser type</li>
-            <li>Device or operating-system information</li>
-            <li>Referring webpage</li>
-            <li>Pages visited</li>
-            <li>Date and time of access</li>
-            <li>Website search activity or resource downloads</li>
+            <li>
+              <strong>Google Fonts.</strong> Some of our pages load typefaces
+              from Google, which means your IP address is sent to Google when
+              the page loads.
+            </li>
+
+            <li>
+              <strong>Vimeo.</strong> Some of our pages include an embedded
+              Vimeo video player, which may set cookies and collect viewing
+              information when the player loads or plays.
+            </li>
+
+            <li>
+              <strong>EmailJS.</strong> Some of our forms use EmailJS to
+              deliver your submission to our team. EmailJS receives the
+              information you enter in the form in order to send it.
+            </li>
           </ul>
 
           <p>
-            We may use this information to operate, maintain, secure,
-            troubleshoot, and improve the Site and to understand how visitors
-            use our website and resources.
-          </p>
-
-          <h2>Cookies and Third-Party Services</h2>
-
-          <p>
-            vTrack does not currently use its own cookies for advertising or
-            behavioral tracking and does not currently use advertising pixels,
-            retargeting technology, or session-recording tools on the Site.
-          </p>
-
-          <p>
-            The contact form uses EmailJS to transmit the information you
-            choose to submit. EmailJS may receive contact information and
-            technical data needed to deliver the message. Its handling of
-            that data is governed by its own privacy practices.
-          </p>
-
-          <p>
-            Information collected directly by third-party services is governed
-            by the privacy practices of those providers.
-          </p>
-
-          <p>
-            If our use of cookies, analytics, advertising technology, or
-            similar technologies materially changes, we may update this
-            Privacy Policy accordingly.
+            Each of these services handles information under its own privacy
+            policy. If we add analytics or advertising tools in the future, we
+            will update this policy before or at the time we do.
           </p>
 
           <h2>Do Not Track</h2>
 
           <p>
-            Some web browsers allow users to transmit a "Do Not Track" signal.
-            Because the Site does not currently use behavioral advertising or
-            cross-site tracking technologies controlled by vTrack, we do not
-            currently alter the Site's operation in response to Do Not Track
-            browser signals. Third-party services incorporated into the Site
-            may process information according to their own privacy practices
-            and settings.
+            Some browsers send a "Do Not Track" signal. Because our Sites do
+            not use tracking or advertising technologies, we do not respond
+            differently to that signal.
           </p>
 
-          <h2>How We Use Information</h2>
+          <h2>Who We Share Information With</h2>
 
           <p>
-            Information collected through the Site may be used to:
+            We do not sell, rent, or trade the information collected through
+            our Sites.
           </p>
 
+          <p>We share it only in these limited situations:</p>
+
           <ul>
-            <li>Respond to inquiries and requests</li>
-            <li>Schedule or provide product demonstrations</li>
-            <li>Communicate about vTrack products and services</li>
-            <li>Provide customer or prospective-customer assistance</li>
-            <li>Operate, maintain, secure, and improve the Site</li>
-            <li>Diagnose technical issues</li>
-            <li>Maintain appropriate business records</li>
-            <li>Comply with applicable legal requirements</li>
             <li>
-              Protect vTrack, our customers, and others from misuse, fraud,
-              security threats, or unlawful activity
+              <strong>Service providers.</strong> Service providers that help
+              us run our Sites and business, such as website hosting, form
+              delivery, and email providers, only for that purpose.
+            </li>
+
+            <li>
+              <strong>Legal requirements.</strong> When required by law,
+              subpoena, court order, or a valid government request, or to
+              protect our rights, safety, or property.
+            </li>
+
+            <li>
+              <strong>Business transfers.</strong> If our business is sold or
+              reorganized.
             </li>
           </ul>
 
-          <h2>How We May Share Information</h2>
+          <h2>How Long We Keep It</h2>
 
           <p>
-            We do not sell or rent personal information collected through the
-            Site.
+            We keep inquiry information as long as needed to respond to you and
+            maintain a record of our relationship, and afterward as needed for
+            legitimate business, tax, and legal purposes. We keep server logs
+            for a limited period for security and troubleshooting.
           </p>
 
+          <h2>Security</h2>
+
           <p>
-            Information may be disclosed to service providers that assist us
-            in operating our website or business, such as website hosting,
-            email, communications, or other technology providers.
+            We use reasonable safeguards to protect information collected
+            through our Sites, including encrypted website connections and
+            restricted access to inquiry records. No system is completely
+            secure, and we cannot guarantee absolute security. If a breach
+            affects your personal information, we will notify you and the
+            appropriate authorities as required by law.
           </p>
 
+          <h2>Your Choices</h2>
+
           <p>
-            We may also disclose information when reasonably necessary to
-            comply with applicable law, legal process, court orders,
-            regulatory requirements, or governmental requests; to protect our
-            legal rights or property; or in connection with a merger,
-            acquisition, sale, reorganization, or other business transaction.
+            You may ask us to see, correct, or delete the information you
+            submitted through our Sites, or ask us to stop contacting you, by
+            emailing{" "}
+            <a href="mailto:support@vtrackbilling.com">
+              support@vtrackbilling.com
+            </a>{" "}
+            or calling <a href="tel:18338872251">833-887-2251</a>. Depending
+            on where you live, you may have additional rights under your
+            state's privacy laws, and we will honor them where they apply.
           </p>
 
-          <h2>
-            vTrack Software Platform and Protected Health Information
-          </h2>
+          <h2>Nevada Residents</h2>
 
           <p>
-            This Privacy Policy applies to the public vTrack website. It is
-            not intended to govern information processed within the vTrack
-            software platform on behalf of vTrack customers.
-          </p>
-
-          <p>
-            Information processed through the vTrack platform is subject to
-            the applicable agreements between vTrack and its customers and
-            other applicable legal and contractual requirements.
-          </p>
-
-          <div className="legal-warning">
-            <strong>Please do not submit protected health information.</strong>
-
-            <p>
-              Please do not submit protected health information ("PHI") or
-              sensitive recipient information through public website forms or
-              unsecured website communications.
-            </p>
-          </div>
-
-          <p>
-            Existing customers should use the appropriate vTrack support and
-            secure communication channels when assistance requires the exchange
-            of sensitive or protected information.
-          </p>
-
-          <h2>Data Security</h2>
-
-          <p>
-            We use reasonable administrative, technical, and organizational
-            measures designed to protect information collected through the
-            Site. However, no website, electronic communication, or method of
-            electronic storage can be guaranteed to be completely secure.
-          </p>
-
-          <h2>Data Retention</h2>
-
-          <p>
-            We retain information collected through the Site for as long as
-            reasonably necessary for the purposes for which it was collected,
-            including responding to inquiries, maintaining business records,
-            operating and securing the Site, and satisfying applicable legal
-            obligations.
-          </p>
-
-          <h2>Your Information</h2>
-
-          <p>
-            You may contact us to request access to, correction of, or
-            deletion of personal information you have submitted through the
-            Site, subject to applicable legal requirements and legitimate
-            record-retention needs.
-          </p>
-
-          <p>
-            You may also ask us to stop sending marketing communications to
-            you.
-          </p>
-
-          <p>
-            Requests may be made using the contact information below.
-            Depending on where you reside, applicable law may provide
-            additional privacy rights. vTrack will respond to valid requests
-            as required by applicable law.
+            We do not sell covered information as defined by Nevada law.
+            Nevada residents may still submit a verified request directing us
+            not to sell their covered information by emailing{" "}
+            <a href="mailto:support@vtrackbilling.com">
+              support@vtrackbilling.com
+            </a>{" "}
+            or calling <a href="tel:18338872251">833-887-2251</a>. We will
+            respond within 60 days.
           </p>
 
           <h2>Children</h2>
 
           <p>
-            The Site is intended for businesses, provider agencies,
-            professionals, and their staff. It is not directed toward
-            children, and we do not knowingly collect personal information
-            from children through the Site.
+            Our Sites are intended for provider agencies and their staff and
+            are not directed to children. We do not knowingly collect personal
+            information from children. If you believe a child has submitted
+            information, contact us and we will delete it.
           </p>
 
-          <h2>Third-Party Websites</h2>
+          <h2>Changes to This Policy</h2>
 
           <p>
-            The Site may contain links to websites operated by government
-            agencies, health plans, vendors, or other third parties. vTrack
-            does not control the privacy practices of those websites. Their
-            collection and use of information are governed by their respective
-            privacy policies.
-          </p>
-
-          <h2>Changes to This Privacy Policy</h2>
-
-          <p>
-            We may update this Privacy Policy periodically to reflect changes
-            in our website, business practices, technology, or applicable
-            requirements. When this Policy is updated, the "Last Updated" date
-            at the top of the page will be revised.
+            We may update this policy from time to time. When we do, we will
+            change the "Last Updated" date above and post the new version on
+            this page. If we make a material change to how we handle
+            information, we will note it clearly on this page.
           </p>
 
           <h2>Contact Us</h2>
 
-          <p>
-            Questions or requests regarding this Privacy Policy may be
-            directed to:
-          </p>
-
           <address>
-            <strong>vTrack Billing by Vichra</strong>
+            <strong>Vichra Systems, LLC</strong>
+            <br />
+            [insert mailing address]
             <br />
             Email:{" "}
-            <a href="mailto:Go-vTrack@vichra.com">
-              Go-vTrack@vichra.com
+            <a href="mailto:support@vtrackbilling.com">
+              support@vtrackbilling.com
             </a>
             <br />
             Phone:{" "}
-            <a href="tel:14808781050">
-              480-878-1050
+            <a href="tel:18338872251">
+              833-887-2251
             </a>
           </address>
         </div>

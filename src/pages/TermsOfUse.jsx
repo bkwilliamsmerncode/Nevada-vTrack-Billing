@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import SEO from "../components/SEO";
 
 import "./Legal.css";
@@ -7,7 +8,7 @@ function TermsOfUse() {
     <div className="legal-page">
       <SEO
         title="Terms of Use | vTrack Billing by Vichra"
-        description="Terms of Use for the public vTrack Billing by Vichra website."
+        description="Terms of Use for vTrack public websites operated by Vichra Systems, LLC."
         path="/terms-of-use"
       />
 
@@ -18,340 +19,293 @@ function TermsOfUse() {
           <h1>Terms of Use</h1>
 
           <p>
-            Effective Date: September 19, 2026
+            Effective Date: September 23, 2026
             <br />
-            Last Updated: September 19, 2026
+            Last Updated: September 23, 2026
           </p>
         </div>
       </section>
 
       <section className="legal-content">
         <div className="legal-content__container">
+          <h2>Agreement</h2>
+
           <p>
-            These Terms of Use ("Terms") govern your access to and use of the
-            public vTrack website at vtrackbilling.com and related public
-            webpages (the "Site").
+            These Terms of Use govern your use of{" "}
+            <a
+              href="https://vtrackbilling.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              vtrackbilling.com
+            </a>{" "}
+            and our other vTrack websites, including our state-specific sites
+            (together, the "Sites"), operated by Vichra Systems, LLC
+            ("vTrack," "we," "us," or "our").
           </p>
 
           <p>
-            By accessing or using the Site, you agree to these Terms. If you
-            do not agree with these Terms, please do not use the Site.
+            By using the Sites, you agree to these Terms. If you do not agree,
+            please do not use the Sites.
           </p>
 
-          <h2>Public Website Only</h2>
+          <h2>These Terms Cover Our Websites, Not the vTrack Platform</h2>
 
           <p>
-            These Terms apply to the public vTrack website.
-          </p>
-
-          <p>
-            Use of the vTrack software platform by customers is governed by
-            the applicable agreement between vTrack and the customer. If these
-            Terms conflict with a signed customer agreement concerning use of
-            the vTrack software platform, the applicable customer agreement
-            controls with respect to the platform.
-          </p>
-
-          <h2>Website Information</h2>
-
-          <p>
-            The Site provides information about vTrack, its software,
-            features, services, resources, and topics related to Electronic
-            Visit Verification (EVV), billing, provider operations, and
-            regulatory requirements.
-          </p>
-
-          <p>
-            We make reasonable efforts to provide useful and accurate
-            information. However, information may become outdated, incomplete,
-            or inaccurate, particularly when laws, regulations, payer
-            requirements, agency policies, or technical requirements change.
+            Use of the vTrack software platform is governed by a separate
+            written agreement with each customer agency, which may include a
+            Master Services Agreement, order forms, and a Business Associate
+            Agreement. If these Terms conflict with a signed customer
+            agreement, the customer agreement controls.
           </p>
 
           <h2>
-            Not Legal, Compliance, Billing, or Professional Advice
+            Website Information Is Not Legal, Compliance, or Billing Advice
           </h2>
 
           <p>
-            Information provided on the Site is for general informational and
-            educational purposes only.
+            Our Sites include general information about Electronic Visit
+            Verification, Medicaid billing, and related requirements in the
+            states we serve, including Arizona and Nevada. This information is
+            for general educational purposes only.
           </p>
 
           <p>
-            Nothing on the Site constitutes legal advice, regulatory advice,
-            compliance advice, billing advice, accounting advice, or other
-            professional advice.
+            It is not legal, compliance, billing, or professional advice, and
+            it does not create a professional relationship between you and
+            vTrack. Requirements change often and may apply differently to
+            your agency.
           </p>
 
-          <p>
-            Requirements established by Nevada Medicaid, its fiscal agent,
-            the Nevada Department of Health and Human Services, managed care
-            organizations, government agencies, payers, and other organizations
-            may change and may apply differently depending on an organization's
-            circumstances.
-          </p>
+          <div className="legal-warning">
+            <strong>
+              Do not rely on our Sites as your source of truth for a compliance
+              decision.
+            </strong>
+
+            <p>
+              You are responsible for confirming current requirements with the
+              agencies and health plans that govern your services, such as
+              AHCCCS and the Division of Developmental Disabilities in Arizona,
+              or Nevada Medicaid, the Aging and Disability Services Division,
+              and your managed care organizations in Nevada, along with your
+              own legal and compliance advisors.
+            </p>
+          </div>
 
           <p>
-            You are responsible for verifying current requirements applicable
-            to your organization and should not rely solely upon information
-            published on this Site when making legal, billing, regulatory, or
-            compliance decisions.
+            We make reasonable efforts to keep our Sites accurate and current,
+            but we do not guarantee that information is complete, current, or
+            error free.
           </p>
 
           <h2>No Government Endorsement</h2>
 
           <p>
-            References to Nevada Medicaid, its fiscal agent, government agencies, health plans,
-            programs, standards, or regulatory requirements are provided for
-            informational purposes.
+            In Arizona, vTrack is listed by AHCCCS as an alternate Electronic
+            Visit Verification vendor. In Nevada, Vichra Systems, LLC is an
+            enrolled Nevada Medicaid trading partner.
           </p>
 
           <p>
-            Unless expressly stated otherwise by the applicable government
-            agency, such references do not mean that vTrack is endorsed,
-            sponsored, recommended, certified, or approved by that agency.
-            Any third-party names and trademarks belong to their respective
-            owners.
+            No state agency or health plan endorses, certifies, or recommends
+            any vendor, and nothing on our Sites should be read as a claim of
+            government endorsement, certification, or approval. Each provider
+            agency remains responsible for confirming that its vendors support
+            its own compliance.
           </p>
 
-          <h2>Intellectual Property</h2>
+          <h2>Our Content</h2>
 
           <p>
-            Unless otherwise indicated, the Site and its contents, including
-            text, graphics, designs, logos, software descriptions, videos,
-            documentation, downloadable materials, and other content, are
-            owned by or licensed to vTrack and are protected by applicable
-            intellectual-property laws.
-          </p>
-
-          <p>
-            You may view the Site and download or print materials made
-            available for that purpose for legitimate personal or internal
-            business use.
+            Our Sites and their contents, including text, graphics, logos, the
+            vTrack name and logo, videos, and documentation, are owned by
+            vTrack or its licensors and protected by copyright, trademark, and
+            other laws.
           </p>
 
           <p>
-            You may not reproduce, republish, distribute, sell, commercially
-            exploit, modify, or create derivative works from Site content
-            without authorization from vTrack, except as otherwise permitted
-            by law.
-          </p>
-
-          <h2>vTrack Resources and Documentation</h2>
-
-          <p>
-            Certain guides, documentation, training materials, downloads, or
-            other resources may be provided for the benefit of vTrack
-            customers and users.
+            You may view our Sites and print or download individual pages for
+            your own internal business use. You may not copy, republish,
+            distribute, sell, or modify our content, or use it commercially,
+            without our written permission.
           </p>
 
           <p>
-            Unless otherwise stated, these materials are provided for
-            authorized internal business, training, and reference purposes.
-            They may not be sold, publicly redistributed, or used to develop,
-            market, or support a competing product or service without
-            permission.
+            Customer help materials on our Sites are provided to current vTrack
+            customers for internal training and reference only and may not be
+            shared outside your organization.
           </p>
 
           <h2>Acceptable Use</h2>
 
-          <p>You may not use the Site to:</p>
+          <p>You agree not to:</p>
 
           <ul>
-            <li>Violate applicable law</li>
+            <li>Use our Sites for any unlawful purpose</li>
+
             <li>
-              Provide false, misleading, fraudulent, or impersonating
-              information
+              Submit false or misleading information, or impersonate anyone,
+              through our forms
             </li>
-            <li>
-              Attempt to gain unauthorized access to the Site, servers,
-              systems, or accounts
-            </li>
-            <li>
-              Introduce viruses, malicious code, or other harmful technology
-            </li>
-            <li>
-              Interfere with or disrupt the operation or security of the Site
-            </li>
-            <li>Circumvent security or access controls</li>
-            <li>
-              Harvest contact information for unauthorized solicitation
-            </li>
-            <li>
-              Use automated systems in a manner that unreasonably burdens or
-              disrupts the Site
-            </li>
-            <li>
-              Copy or commercially exploit Site content in violation of these
-              Terms
-            </li>
-            <li>
-              Use Site content to develop or support a competing software
-              product or service
-            </li>
+
             <li>
               Submit protected health information or other sensitive
-              information through public website forms when a secure method
-              should be used
+              information through our website forms or by unsecured email
+            </li>
+
+            <li>
+              Attempt to access any part of our Sites or systems without
+              authorization
+            </li>
+
+            <li>
+              Introduce viruses or anything designed to disrupt or damage our
+              Sites
+            </li>
+
+            <li>
+              Use automated tools to copy our Sites or collect contact
+              information from them
+            </li>
+
+            <li>
+              Use our Sites or content to build or support a competing product
             </li>
           </ul>
 
           <p>
-            We may restrict access to the Site when reasonably necessary to
-            protect the Site, vTrack, our customers, or others.
+            We may restrict access to our Sites at any time for conduct we
+            reasonably believe violates these Terms.
           </p>
 
-          <h2>Contact and Demo Requests</h2>
+          <h2>Forms and Communications</h2>
 
           <p>
-            If you submit a contact or demonstration request, you represent
-            that the information you provide is accurate and that you are
-            authorized to provide it.
-          </p>
-
-          <p>
-            By submitting your contact information, you authorize vTrack to
-            contact you by phone or email regarding your inquiry and vTrack
-            products or services. You may ask us to stop marketing
-            communications at any time.
-          </p>
-
-          <h2>Third-Party Websites and Services</h2>
-
-          <p>
-            The Site may contain links to or embedded content from third
-            parties, including government agencies, health plans, vendors, or
-            other organizations.
+            When you submit a form, you confirm the information is accurate
+            and that you are authorized to provide it.
           </p>
 
           <p>
-            Those websites and services are controlled by their respective
-            operators. vTrack is not responsible for their availability,
-            content, accuracy, security, or privacy practices.
+            You agree that we may contact you by phone or email to respond to
+            your inquiry and follow up about vTrack products and services. You
+            can ask us to stop at any time by emailing{" "}
+            <a href="mailto:support@vtrackbilling.com">
+              support@vtrackbilling.com
+            </a>{" "}
+            or calling <a href="tel:18338872251">833-887-2251</a>.
           </p>
 
+          <h2>Promotions</h2>
+
           <p>
-            Links are provided for convenience and informational purposes and
-            do not necessarily constitute endorsement.
+            Any promotional offer described on our Sites, including founding
+            or introductory programs, is subject to availability, eligibility,
+            and a signed customer agreement. Submitting a form does not reserve
+            a spot or create an agreement.
+          </p>
+
+          <h2>Links to Other Websites</h2>
+
+          <p>
+            Our Sites may link to state agency, health plan, and other websites
+            for convenience. We do not control or take responsibility for
+            those websites.
           </p>
 
           <h2>Privacy</h2>
 
           <p>
-            Our collection and use of information through the public Site is
-            described in our Privacy Policy, which is incorporated into these
-            Terms by reference.
+            Our{" "}
+            <Link to="/privacy-policy">
+              Privacy Policy
+            </Link>{" "}
+            explains how we handle information collected through our Sites and
+            is part of these Terms.
           </p>
 
           <h2>Disclaimer of Warranties</h2>
 
           <p className="legal-uppercase">
-            The Site and its content are provided on an "as is" and "as
-            available" basis.
+            Our Sites and their content are provided "as is" and "as
+            available," without warranties of any kind, express or implied, to
+            the fullest extent permitted by law.
           </p>
 
           <p className="legal-uppercase">
-            To the fullest extent permitted by applicable law, vTrack
-            disclaims warranties of any kind, express or implied, including
-            warranties of merchantability, fitness for a particular purpose,
-            non-infringement, accuracy, completeness, and availability.
-          </p>
-
-          <p className="legal-uppercase">
-            We do not warrant that the Site will always be available,
-            uninterrupted, secure, current, complete, or error-free.
+            We do not guarantee that our Sites will be uninterrupted, secure,
+            or error free.
           </p>
 
           <p>
-            Nothing in these Terms modifies an express warranty or obligation
-            contained in a separate written agreement between vTrack and a
-            customer.
+            Nothing in this section limits any warranty in a signed customer
+            agreement.
           </p>
 
           <h2>Limitation of Liability</h2>
 
           <p>
-            To the fullest extent permitted by applicable law, vTrack and its
-            owners, officers, employees, contractors, representatives, and
-            agents will not be liable for indirect, incidental, special,
-            consequential, exemplary, or punitive damages arising from or
-            related to your access to or use of the Site, inability to use the
-            Site, or reliance upon information available through the Site.
+            To the fullest extent permitted by law, vTrack and its owners,
+            officers, employees, and agents are not liable for any indirect,
+            incidental, special, consequential, or punitive damages, or for
+            lost profits, revenue, or data, arising from your use of our Sites
+            or reliance on their content.
           </p>
 
           <p>
-            This includes, to the extent permitted by law, loss of profits,
-            revenue, data, business opportunities, or business interruption.
-          </p>
-
-          <p>
-            Nothing in these Terms excludes or limits liability that cannot
-            legally be excluded or limited.
+            Our total liability relating to our Sites will not exceed one
+            hundred dollars ($100).
           </p>
 
           <h2>Indemnification</h2>
 
           <p>
-            To the extent permitted by applicable law, you agree to indemnify
-            and hold harmless vTrack and its owners, officers, employees,
-            contractors, representatives, and agents from claims, liabilities,
-            losses, damages, costs, and reasonable expenses arising from your
-            unlawful use of the Site, your material violation of these Terms,
-            or your infringement of the rights of another person or
-            organization.
+            You agree to indemnify and hold harmless vTrack and its owners,
+            officers, employees, and agents from claims, losses, and expenses,
+            including reasonable attorneys' fees, arising from your use of our
+            Sites or your violation of these Terms.
           </p>
 
           <h2>Governing Law</h2>
 
           <p>
-            These Terms are governed by the laws of the State of Arizona,
-            without regard to conflict-of-law principles.
-          </p>
-
-          <p>
-            Any dispute relating to the public Site or these Terms will be
-            subject to applicable Arizona and federal law.
+            These Terms are governed by the laws of the State of Arizona. Any
+            dispute relating to these Terms or our Sites will be brought in the
+            state or federal courts located in Maricopa County, Arizona.
           </p>
 
           <h2>Changes to These Terms</h2>
 
           <p>
-            We may update these Terms periodically. Changes become effective
-            when the revised Terms are posted to the Site. The "Last Updated"
-            date at the top of this page will indicate when the Terms were most
-            recently revised.
+            We may update these Terms at any time. Changes take effect when
+            posted, and we will change the "Last Updated" date above.
+            Continued use of our Sites means you accept the updated Terms.
           </p>
 
-          <h2>Severability</h2>
+          <h2>General</h2>
 
           <p>
-            If any provision of these Terms is determined to be invalid or
-            unenforceable, the remaining provisions will remain in effect to
-            the fullest extent permitted by law.
-          </p>
-
-          <p>
-            Failure by vTrack to enforce a provision of these Terms does not
-            waive our right to enforce that provision later.
+            If any part of these Terms is found unenforceable, the rest remains
+            in effect. Our failure to enforce any provision is not a waiver.
+            These Terms and our Privacy Policy are the entire agreement between
+            you and vTrack regarding our Sites.
           </p>
 
           <h2>Contact Us</h2>
 
-          <p>
-            Questions regarding these Terms may be directed to:
-          </p>
-
           <address>
-            <strong>vTrack Billing by Vichra</strong>
+            <strong>Vichra Systems, LLC</strong>
+            <br />
+            [insert mailing address]
             <br />
             Email:{" "}
-            <a href="mailto:Go-vTrack@vichra.com">
-              Go-vTrack@vichra.com
+            <a href="mailto:support@vtrackbilling.com">
+              support@vtrackbilling.com
             </a>
             <br />
             Phone:{" "}
-            <a href="tel:14808781050">
-              480-878-1050
+            <a href="tel:18338872251">
+              833-887-2251
             </a>
           </address>
         </div>

@@ -54,7 +54,7 @@ function About() {
   
       <section className="about-hero">
         <div className="about-hero__glow"></div>
-<OnboardingProcess />
+
         <div className="about-hero__container">
           <div className="about-hero__content">
             <span className="about-hero__eyebrow">
@@ -88,6 +88,7 @@ function About() {
                 Explore vTrack
               </Link>
             </div>
+            
           </div>
 
           <div className="about-hero__visual">
@@ -117,7 +118,7 @@ function About() {
           </div>
         </div>
       </section>
-
+<OnboardingProcess />
       <section className="about-story">
         <div className="about-story__container">
           <div className="about-story__visual">

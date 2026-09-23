@@ -44,20 +44,34 @@ function Footer() {
           <div className="footer__column">
             <h3>Platform</h3>
 
-            <Link to="/platform">EVV</Link>
-            <Link to="/platform">Billing & Claims</Link>
-            <Link to="/platform">Authorizations</Link>
-            <Link to="/platform">Payroll</Link>
-            <Link to="/platform">Recipient Tracking</Link>
+<Link to="/platform" state={{ scrollTo: "evv" }}>
+  EVV
+</Link>
+
+<Link to="/platform" state={{ scrollTo: "billing-claims" }}>
+  Billing & Claims
+</Link>
+
+<Link to="/platform" state={{ scrollTo: "authorizations" }}>
+  Authorizations
+</Link>
+
+<Link to="/platform" state={{ scrollTo: "payroll" }}>
+  Payroll
+</Link>
+
+<Link to="/platform" state={{ scrollTo: "recipient-tracking" }}>
+  Recipient Tracking
+</Link>
           </div>
 
           <div className="footer__column">
             <h3>Nevada</h3>
 
-            <a href="https://www.adsd.nv.gov/program-policy/" target="_blank" rel="noopener noreferrer">Personal Care Agencies</a>
-            <a href="https://www.adsd.nv.gov/" target="_blank" rel="noopener noreferrer">Home Health Agencies</a>
-            <a href="https://www.adsd.nv.gov/contact/" target="_blank" rel="noopener noreferrer">FE &amp; PD Waiver Providers</a>
-            <a href="https://adsd.nv.gov/programs/intellectual/sla/sla/" target="_blank" rel="noopener noreferrer">Residential &amp; IDD Providers</a>
+            <a href="https://www.adsd.nv.gov/programs/programs-for-persons-with-physical-disabilities/personal-assistance-services-pas/" target="_blank" rel="noopener noreferrer">Personal Care Agencies</a>
+            <a href="https://www.adsd.nv.gov/programs/aging-services-medicare-assistance-program/" target="_blank" rel="noopener noreferrer">Home Health Agencies</a>
+            <a href="https://www.adsd.nv.gov/programs/programs-for-persons-with-physical-disabilities/waiver-for-person-s-with-physical-disabilities-pd/" target="_blank" rel="noopener noreferrer">FE &amp; PD Waiver Providers</a>
+            <a href="https://www.adsd.nv.gov/programs/developmental-services/supported-living-arrangement-sla/" target="_blank" rel="noopener noreferrer">Residential &amp; IDD Providers</a>
           </div>
         </div>
 

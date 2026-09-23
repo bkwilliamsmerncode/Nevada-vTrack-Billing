@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 import {
   ArrowRight,
@@ -19,6 +20,7 @@ import VTrackShowcase from "../components/VTrackShowcase";
 
 const modules = [
   {
+    id: "evv",
     icon: CalendarDays,
     title: "EVV & Scheduling",
     description:
@@ -31,6 +33,7 @@ const modules = [
     ],
   },
   {
+    id: "billing-claims",
     icon: ReceiptText,
     title: "Billing & Claims",
     description:
@@ -43,6 +46,7 @@ const modules = [
     ],
   },
   {
+    id: "authorizations",
     icon: FileCheck2,
     title: "Authorizations",
     description:
@@ -55,6 +59,7 @@ const modules = [
     ],
   },
   {
+    id: "payroll",
     icon: WalletCards,
     title: "Payroll",
     description:
@@ -66,57 +71,42 @@ const modules = [
       "Staff service tracking",
     ],
   },
-  {
-    icon: ClipboardCheck,
-    title: "Approval Reports",
-    description:
-      "Review service activity before billing and payroll so missing or incorrect information can be addressed earlier.",
-    features: [
-      "Service review",
-      "Exception visibility",
-      "Approval workflows",
-      "Billing preparation",
-    ],
+      {
+  id: "recipient-tracking",
+  icon: UsersRound,
+  title: "Recipient Tracking",
+  description:
+    "Keep recipient information, services, locations, appointments, and authorization details organized in one system.",
+  features: [
+    "Recipient records",
+    "Service information",
+    "Location tracking",
+    "Appointment history",
+  ],
   },
-  {
-    icon: UsersRound,
-    title: "Recipient Tracking",
-    description:
-      "Keep recipient information, services, locations, appointments, and authorization details organized in one system.",
-    features: [
-      "Recipient records",
-      "Service information",
-      "Location tracking",
-      "Appointment history",
-    ],
-  },
-  {
-    icon: CircleDollarSign,
-    title: "Collections",
-    description:
-      "Give your billing team better visibility into outstanding claims, payments, and revenue-cycle activity.",
-    features: [
-      "Outstanding claims",
-      "Payment tracking",
-      "Collections workflow",
-      "Revenue visibility",
-    ],
-  },
-  {
-    icon: HeartPulse,
-    title: "Agency Operations",
-    description:
-      "Connect the operational work behind your services instead of managing important information across disconnected systems.",
-    features: [
-      "Multi-program support",
-      "Operational visibility",
-      "Centralized workflows",
-      "Provider-focused tools",
-    ],
-  },
-];
+]
 
 function Platform() {
+
+  const location = useLocation();
+
+  useEffect(() => {
+    const target = location.state?.scrollTo;
+
+    if (target) {
+      setTimeout(() => {
+        const element = document.getElementById(target);
+
+        if (element) {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
+        }
+      }, 100);
+    }
+  }, [location]);
+
   return (
     <div className="platform-page">
   <SEO
@@ -263,10 +253,11 @@ function Platform() {
               const Icon = module.icon;
 
               return (
-                <article
-                  className="platform-module"
-                  key={module.title}
-                >
+              <article
+  id={module.id}
+  className="platform-module"
+  key={module.title}
+>
                   <div className="platform-module__icon">
                     <Icon size={27} strokeWidth={1.8} />
                   </div>
@@ -317,5 +308,6 @@ function Platform() {
     </div>
   );
 }
+
 
 export default Platform;
