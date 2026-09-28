@@ -7,12 +7,7 @@
 
   padding: 100px 20px;
 
-  background:
-    linear-gradient(
-      135deg,
-      #f6faff,
-      #eef5fa
-    );
+  background: linear-gradient(135deg, #f6faff, #eef5fa);
 
   text-align: center;
 }

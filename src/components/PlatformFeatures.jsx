@@ -52,9 +52,6 @@ function PlatformFeatures() {
   return (
     <section className="platform-features">
       <div className="platform-features__container">
-
-        {/* SECTION HEADING */}
-
         <div className="platform-features__heading">
           <span className="platform-features__eyebrow">
             One connected platform
@@ -66,25 +63,19 @@ function PlatformFeatures() {
           </h2>
 
           <p>
-            vTrack connects the operational work behind your agency,
-            from scheduling and EVV through authorizations, service
-            approvals, claims, and payroll. Your team can follow
-            information through one connected workflow instead of
-            managing disconnected systems.
+            vTrack connects the operational work behind your agency, from
+            scheduling and EVV through authorizations, service approvals,
+            claims, and payroll. Your team can follow information through one
+            connected workflow instead of managing disconnected systems.
           </p>
         </div>
-
-        {/* SIX PLATFORM FEATURES */}
 
         <div className="platform-features__grid">
           {features.map((feature) => {
             const Icon = feature.icon;
 
             return (
-              <article
-                className="platform-feature-card"
-                key={feature.title}
-              >
+              <article className="platform-feature-card" key={feature.title}>
                 <div className="platform-feature-card__icon">
                   <Icon size={25} strokeWidth={1.8} />
                 </div>
@@ -98,7 +89,6 @@ function PlatformFeatures() {
             );
           })}
         </div>
-
       </div>
     </section>
   );

@@ -1,7 +1,3 @@
-/* =========================
-   FINAL CALL TO ACTION
-========================= */
-
 .final-cta {
   position: relative;
   width: 100%;
@@ -13,12 +9,7 @@
       rgba(85, 155, 199, 0.22),
       transparent 30%
     ),
-    linear-gradient(
-      135deg,
-      #10294d 0%,
-      #183664 55%,
-      #285783 100%
-    );
+    linear-gradient(135deg, #10294d 0%, #183664 55%, #285783 100%);
 
   overflow: hidden;
 }
@@ -39,10 +30,6 @@
   pointer-events: none;
 }
 
-/* =========================
-   TWO-COLUMN LAYOUT
-========================= */
-
 .final-cta__container {
   position: relative;
   z-index: 1;
@@ -62,10 +49,6 @@
   max-width: 700px;
 }
 
-/* =========================
-   EYEBROW
-========================= */
-
 .final-cta__eyebrow {
   display: block;
   margin-bottom: 16px;
@@ -77,10 +60,6 @@
   letter-spacing: 1.8px;
   line-height: 1.5;
 }
-
-/* =========================
-   MAIN HEADING
-========================= */
 
 .final-cta__content h2 {
   margin: 0;
@@ -98,10 +77,6 @@
   color: #8bc0df;
 }
 
-/* =========================
-   DESCRIPTION
-========================= */
-
 .final-cta__content > p {
   max-width: 640px;
   margin: 24px 0 0;
@@ -111,10 +86,6 @@
   font-size: 17px;
   line-height: 1.75;
 }
-
-/* =========================
-   BENEFITS
-========================= */
 
 .final-cta__benefits {
   display: flex;
@@ -146,10 +117,6 @@
 .final-cta__benefits span {
   min-width: 0;
 }
-
-/* =========================
-   CTA BUTTONS
-========================= */
 
 .final-cta__actions {
   display: flex;
@@ -222,10 +189,6 @@
   outline-offset: 4px;
 }
 
-/* =========================
-   LEGACY OFFER CARD
-========================= */
-
 .final-cta__offer {
   position: relative;
 
@@ -258,10 +221,6 @@
   letter-spacing: 1.6px;
   line-height: 1.6;
 }
-
-/* =========================
-   SIX-MONTH OFFER
-========================= */
 
 .final-cta__offer-number {
   margin-top: 20px;
@@ -311,10 +270,6 @@
   line-height: 1.7;
 }
 
-/* =========================
-   TABLET
-========================= */
-
 @media (max-width: 900px) {
   .final-cta {
     padding: 90px 0;
@@ -334,10 +289,6 @@
     margin: 0;
   }
 }
-
-/* =========================
-   MOBILE
-========================= */
 
 @media (max-width: 600px) {
   .final-cta {
@@ -386,10 +337,6 @@
   }
 }
 
-/* =========================
-   SMALL MOBILE
-========================= */
-
 @media (max-width: 390px) {
   .final-cta__offer {
     padding: 26px 20px;
@@ -399,10 +346,6 @@
     padding: 12px 16px;
   }
 }
-
-/* =========================
-   REDUCED MOTION
-========================= */
 
 @media (prefers-reduced-motion: reduce) {
   .final-cta__button {

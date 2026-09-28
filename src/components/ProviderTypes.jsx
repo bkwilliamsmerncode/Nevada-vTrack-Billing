@@ -61,9 +61,6 @@ function ProviderTypes() {
   return (
     <section className="provider-types">
       <div className="provider-types__container">
-
-        {/* SECTION HEADING */}
-
         <div className="provider-types__heading">
           <span className="provider-types__eyebrow">
             Built for Nevada providers
@@ -75,25 +72,19 @@ function ProviderTypes() {
           </h2>
 
           <p>
-            Whether your agency provides personal care, home health,
-            supported living, day services, or multiple programs,
-            vTrack brings the operational work together. EVV applies
-            to specific provider types and services, not every
-            Nevada provider program.
+            Whether your agency provides personal care, home health, supported
+            living, day services, or multiple programs, vTrack brings the
+            operational work together. EVV applies to specific provider types
+            and services, not every Nevada provider program.
           </p>
         </div>
-
-        {/* PROVIDER CATEGORY CARDS */}
 
         <div className="provider-types__grid">
           {providerTypes.map((provider) => {
             const Icon = provider.icon;
 
             return (
-              <article
-                className="provider-type-card"
-                key={provider.title}
-              >
+              <article className="provider-type-card" key={provider.title}>
                 <div className="provider-type-card__icon">
                   <Icon size={27} strokeWidth={1.8} />
                 </div>
@@ -108,29 +99,21 @@ function ProviderTypes() {
           })}
         </div>
 
-        {/* BOTTOM CTA */}
-
         <div className="provider-types__bottom">
           <div>
-            <strong>
-              Not sure whether vTrack fits your agency?
-            </strong>
+            <strong>Not sure whether vTrack fits your agency?</strong>
 
             <span>
-              Tell us which services you provide. We can discuss
-              your operational needs and the EVV requirements
-              that may apply to your programs.
+              Tell us which services you provide. We can discuss your
+              operational needs and the EVV requirements that may apply to your
+              programs.
             </span>
           </div>
 
-          <Link
-            to="/contact?section=form"
-            className="provider-types__link"
-          >
+          <Link to="/contact?section=form" className="provider-types__link">
             Talk with our team
           </Link>
         </div>
-
       </div>
     </section>
   );

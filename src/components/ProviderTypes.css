@@ -1,7 +1,3 @@
-/* =========================
-   PROVIDER TYPES SECTION
-========================= */
-
 .provider-types {
   width: 100%;
   padding: 110px 0;
@@ -12,10 +8,6 @@
   width: min(1180px, calc(100% - 40px));
   margin: 0 auto;
 }
-
-/* =========================
-   SECTION HEADING
-========================= */
 
 .provider-types__heading {
   max-width: 780px;
@@ -60,10 +52,6 @@
   line-height: 1.75;
 }
 
-/* =========================
-   PROVIDER CARD GRID
-========================= */
-
 .provider-types__grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -83,11 +71,7 @@
   border: 1px solid #e1e7ee;
   border-radius: 16px;
 
-  background: linear-gradient(
-    145deg,
-    #ffffff 0%,
-    #f8fbfd 100%
-  );
+  background: linear-gradient(145deg, #ffffff 0%, #f8fbfd 100%);
 
   box-shadow: 0 8px 25px rgba(24, 54, 100, 0.05);
 
@@ -103,16 +87,10 @@
   box-shadow: 0 18px 40px rgba(24, 54, 100, 0.1);
 }
 
-/* Make the seventh card span the full final row. */
-
 .provider-type-card:last-child:nth-child(3n + 1) {
   grid-column: 1 / -1;
   min-height: auto;
 }
-
-/* =========================
-   CARD ICONS
-========================= */
 
 .provider-type-card__icon {
   width: 54px;
@@ -128,10 +106,6 @@
   background: #e5f0f7;
   color: #397da7;
 }
-
-/* =========================
-   CARD TEXT
-========================= */
 
 .provider-type-card__content {
   min-width: 0;
@@ -155,10 +129,6 @@
   font-size: 14px;
   line-height: 1.7;
 }
-
-/* =========================
-   BOTTOM CTA
-========================= */
 
 .provider-types__bottom {
   margin-top: 42px;
@@ -198,10 +168,6 @@
   font-size: 13px;
   line-height: 1.6;
 }
-
-/* =========================
-   CTA BUTTON
-========================= */
 
 .provider-types__link {
   flex-shrink: 0;
@@ -244,32 +210,20 @@
   outline-offset: 4px;
 }
 
-/* =========================
-   TABLET
-========================= */
-
 @media (max-width: 950px) {
   .provider-types__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  /* Reset the desktop three-column spanning rule. */
-
   .provider-type-card:last-child:nth-child(3n + 1) {
     grid-column: auto;
   }
-
-  /* Seven cards: center the final card across both columns. */
 
   .provider-type-card:last-child:nth-child(odd) {
     grid-column: 1 / -1;
     min-height: auto;
   }
 }
-
-/* =========================
-   MOBILE
-========================= */
 
 @media (max-width: 700px) {
   .provider-types {
@@ -322,8 +276,6 @@
     scroll-snap-stop: always;
   }
 
-  /* All cards occupy one column on mobile. */
-
   .provider-type-card:last-child:nth-child(odd),
   .provider-type-card:last-child:nth-child(3n + 1) {
     grid-column: auto;
@@ -343,10 +295,6 @@
   }
 }
 
-/* =========================
-   SMALL MOBILE
-========================= */
-
 @media (max-width: 390px) {
   .provider-type-card {
     flex-direction: column;
@@ -362,10 +310,6 @@
     padding: 20px;
   }
 }
-
-/* =========================
-   REDUCED MOTION
-========================= */
 
 @media (prefers-reduced-motion: reduce) {
   .provider-type-card,

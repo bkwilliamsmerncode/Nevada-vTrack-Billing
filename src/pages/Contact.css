@@ -1,15 +1,7 @@
-/* =========================
-   CONTACT PAGE
-========================= */
-
 .contact-page {
   width: 100%;
   overflow-x: clip;
 }
-
-/* =========================
-   HERO
-========================= */
 
 .contact-hero {
   position: relative;
@@ -21,12 +13,7 @@
       rgba(74, 142, 184, 0.15),
       transparent 30%
     ),
-    linear-gradient(
-      120deg,
-      #f6faff 0%,
-      #ffffff 50%,
-      #eef5fa 100%
-    );
+    linear-gradient(120deg, #f6faff 0%, #ffffff 50%, #eef5fa 100%);
 
   overflow: hidden;
 }
@@ -139,21 +126,13 @@
   color: #4b8bb4;
 }
 
-/* =========================
-   LEGACY OFFER CARD
-========================= */
-
 .contact-hero__offer {
   min-width: 0;
   padding: 36px;
 
   border-radius: 20px;
 
-  background: linear-gradient(
-    145deg,
-    #183664,
-    #295984
-  );
+  background: linear-gradient(145deg, #183664, #295984);
 
   color: #ffffff;
 
@@ -213,10 +192,6 @@
   line-height: 1.7;
 }
 
-/* =========================
-   MAIN CONTACT AREA
-========================= */
-
 .contact-main {
   padding: 110px 0;
   background: #ffffff;
@@ -244,10 +219,6 @@
 
   box-shadow: 0 18px 45px rgba(24, 54, 100, 0.07);
 }
-
-/* =========================
-   FORM HEADING
-========================= */
 
 .contact-form-heading > span {
   display: block;
@@ -278,10 +249,6 @@
   font-size: 14px;
   line-height: 1.75;
 }
-
-/* =========================
-   SUCCESS AND ERROR MESSAGES
-========================= */
 
 .contact-success,
 .contact-error {
@@ -333,10 +300,6 @@
 .contact-error strong {
   font-weight: 700;
 }
-
-/* =========================
-   FORM
-========================= */
 
 .contact-form {
   margin-top: 32px;
@@ -431,10 +394,6 @@
   cursor: not-allowed;
 }
 
-/* =========================
-   LEGACY INTEREST CHECKBOX
-========================= */
-
 .contact-checkbox {
   position: relative;
 
@@ -513,10 +472,6 @@
   line-height: 1.6;
 }
 
-/* =========================
-   SUBMIT BUTTON
-========================= */
-
 .contact-submit {
   width: 100%;
   min-height: 52px;
@@ -575,10 +530,6 @@
   flex-shrink: 0;
 }
 
-/* =========================
-   FORM PRIVACY NOTE
-========================= */
-
 .contact-form__note {
   margin: 16px 0 0;
 
@@ -605,10 +556,6 @@
   outline: 2px solid #4b8bb4;
   outline-offset: 3px;
 }
-
-/* =========================
-   SIDEBAR
-========================= */
 
 .contact-sidebar {
   min-width: 0;
@@ -678,18 +625,10 @@
   outline-offset: 3px;
 }
 
-/* =========================
-   DARK SIDEBAR CARD
-========================= */
-
 .contact-sidebar__card--dark {
   border: none;
 
-  background: linear-gradient(
-    145deg,
-    #17345f,
-    #285782
-  );
+  background: linear-gradient(145deg, #17345f, #285782);
 
   color: #ffffff;
 }
@@ -721,18 +660,10 @@
   color: #c8d6e1;
 }
 
-/* =========================
-   WHAT HAPPENS NEXT
-========================= */
-
 .contact-next {
   padding: 100px 0;
 
-  background: linear-gradient(
-    180deg,
-    #f6f9fc,
-    #edf4f9
-  );
+  background: linear-gradient(180deg, #f6f9fc, #edf4f9);
 }
 
 .contact-next__container {
@@ -831,10 +762,6 @@
   color: #8ea7b9;
 }
 
-/* =========================
-   TABLET
-========================= */
-
 @media (max-width: 950px) {
   .contact-hero__container {
     grid-template-columns: 1fr;
@@ -871,10 +798,6 @@
     width: 18px;
   }
 }
-
-/* =========================
-   MOBILE
-========================= */
 
 @media (max-width: 700px) {
   .contact-page {
@@ -964,10 +887,6 @@
   }
 }
 
-/* =========================
-   SMALL MOBILE
-========================= */
-
 @media (max-width: 390px) {
   .contact-hero__eyebrow {
     font-size: 10px;
@@ -998,10 +917,6 @@
     padding: 22px;
   }
 }
-
-/* =========================
-   REDUCED MOTION
-========================= */
 
 @media (prefers-reduced-motion: reduce) {
   .contact-submit {

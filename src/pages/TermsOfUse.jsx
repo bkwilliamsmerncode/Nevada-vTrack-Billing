@@ -40,8 +40,8 @@ function TermsOfUse() {
               vtrackbilling.com
             </a>{" "}
             and our other vTrack websites, including our state-specific sites
-            (together, the "Sites"), operated by Vichra Systems, LLC
-            ("vTrack," "we," "us," or "our").
+            (together, the "Sites"), operated by Vichra Systems, LLC ("vTrack,"
+            "we," "us," or "our").
           </p>
 
           <p>
@@ -55,8 +55,8 @@ function TermsOfUse() {
             Use of the vTrack software platform is governed by a separate
             written agreement with each customer agency, which may include a
             Master Services Agreement, order forms, and a Business Associate
-            Agreement. If these Terms conflict with a signed customer
-            agreement, the customer agreement controls.
+            Agreement. If these Terms conflict with a signed customer agreement,
+            the customer agreement controls.
           </p>
 
           <h2>
@@ -71,10 +71,9 @@ function TermsOfUse() {
           </p>
 
           <p>
-            It is not legal, compliance, billing, or professional advice, and
-            it does not create a professional relationship between you and
-            vTrack. Requirements change often and may apply differently to
-            your agency.
+            It is not legal, compliance, billing, or professional advice, and it
+            does not create a professional relationship between you and vTrack.
+            Requirements change often and may apply differently to your agency.
           </p>
 
           <div className="legal-warning">
@@ -88,8 +87,8 @@ function TermsOfUse() {
               agencies and health plans that govern your services, such as
               AHCCCS and the Division of Developmental Disabilities in Arizona,
               or Nevada Medicaid, the Aging and Disability Services Division,
-              and your managed care organizations in Nevada, along with your
-              own legal and compliance advisors.
+              and your managed care organizations in Nevada, along with your own
+              legal and compliance advisors.
             </p>
           </div>
 
@@ -119,9 +118,9 @@ function TermsOfUse() {
 
           <p>
             Our Sites and their contents, including text, graphics, logos, the
-            vTrack name and logo, videos, and documentation, are owned by
-            vTrack or its licensors and protected by copyright, trademark, and
-            other laws.
+            vTrack name and logo, videos, and documentation, are owned by vTrack
+            or its licensors and protected by copyright, trademark, and other
+            laws.
           </p>
 
           <p>
@@ -150,8 +149,8 @@ function TermsOfUse() {
             </li>
 
             <li>
-              Submit protected health information or other sensitive
-              information through our website forms or by unsecured email
+              Submit protected health information or other sensitive information
+              through our website forms or by unsecured email
             </li>
 
             <li>
@@ -182,8 +181,8 @@ function TermsOfUse() {
           <h2>Forms and Communications</h2>
 
           <p>
-            When you submit a form, you confirm the information is accurate
-            and that you are authorized to provide it.
+            When you submit a form, you confirm the information is accurate and
+            that you are authorized to provide it.
           </p>
 
           <p>
@@ -199,42 +198,39 @@ function TermsOfUse() {
           <h2>Promotions</h2>
 
           <p>
-            Any promotional offer described on our Sites, including founding
-            or introductory programs, is subject to availability, eligibility,
-            and a signed customer agreement. Submitting a form does not reserve
-            a spot or create an agreement.
+            Any promotional offer described on our Sites, including founding or
+            introductory programs, is subject to availability, eligibility, and
+            a signed customer agreement. Submitting a form does not reserve a
+            spot or create an agreement.
           </p>
 
           <h2>Links to Other Websites</h2>
 
           <p>
             Our Sites may link to state agency, health plan, and other websites
-            for convenience. We do not control or take responsibility for
-            those websites.
+            for convenience. We do not control or take responsibility for those
+            websites.
           </p>
 
           <h2>Privacy</h2>
 
           <p>
-            Our{" "}
-            <Link to="/privacy-policy">
-              Privacy Policy
-            </Link>{" "}
-            explains how we handle information collected through our Sites and
-            is part of these Terms.
+            Our <Link to="/privacy-policy">Privacy Policy</Link> explains how we
+            handle information collected through our Sites and is part of these
+            Terms.
           </p>
 
           <h2>Disclaimer of Warranties</h2>
 
           <p className="legal-uppercase">
-            Our Sites and their content are provided "as is" and "as
-            available," without warranties of any kind, express or implied, to
-            the fullest extent permitted by law.
+            Our Sites and their content are provided "as is" and "as available,"
+            without warranties of any kind, express or implied, to the fullest
+            extent permitted by law.
           </p>
 
           <p className="legal-uppercase">
-            We do not guarantee that our Sites will be uninterrupted, secure,
-            or error free.
+            We do not guarantee that our Sites will be uninterrupted, secure, or
+            error free.
           </p>
 
           <p>
@@ -247,9 +243,9 @@ function TermsOfUse() {
           <p>
             To the fullest extent permitted by law, vTrack and its owners,
             officers, employees, and agents are not liable for any indirect,
-            incidental, special, consequential, or punitive damages, or for
-            lost profits, revenue, or data, arising from your use of our Sites
-            or reliance on their content.
+            incidental, special, consequential, or punitive damages, or for lost
+            profits, revenue, or data, arising from your use of our Sites or
+            reliance on their content.
           </p>
 
           <p>
@@ -278,8 +274,8 @@ function TermsOfUse() {
 
           <p>
             We may update these Terms at any time. Changes take effect when
-            posted, and we will change the "Last Updated" date above.
-            Continued use of our Sites means you accept the updated Terms.
+            posted, and we will change the "Last Updated" date above. Continued
+            use of our Sites means you accept the updated Terms.
           </p>
 
           <h2>General</h2>
@@ -303,10 +299,7 @@ function TermsOfUse() {
               support@vtrackbilling.com
             </a>
             <br />
-            Phone:{" "}
-            <a href="tel:18338872251">
-              833-887-2251
-            </a>
+            Phone: <a href="tel:18338872251">833-887-2251</a>
           </address>
         </div>
       </section>

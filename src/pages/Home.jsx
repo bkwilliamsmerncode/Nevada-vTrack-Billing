@@ -45,17 +45,13 @@ const stats = [
 
 function Home() {
   return (
-    
     <div className="home">
       <SEO
         title="vTrack Nevada | EVV, Medicaid Billing & Provider Operations"
         description="Vichra Systems has supported Arizona provider agencies since 2006 and is now an enrolled Nevada Medicaid EDI trading partner. Learn about vTrack and our Nevada onboarding process."
         path="/"
       />
-{<LegacyPromo />}
-      {/* =========================
-          HERO
-      ========================= */}
+      <LegacyPromo />
 
       <section className="hero">
         <div className="hero__glow hero__glow--one"></div>
@@ -74,23 +70,21 @@ function Home() {
             </h1>
 
             <p className="hero__description">
-              vTrack has handled EVV, claims, and billing operations
-              for Arizona provider agencies since 2006. We are now
-              enrolled with Nevada Medicaid as a trading partner
-              and are onboarding our first Nevada agencies.
+              vTrack has handled EVV, claims, and billing operations for Arizona
+              provider agencies since 2006. We are now enrolled with Nevada
+              Medicaid as a trading partner and are onboarding our first Nevada
+              agencies.
             </p>
 
             <div className="hero__official">
               <ShieldCheck size={22} />
 
               <p>
-                <strong>
-                  Vichra Systems, LLC
-                </strong>
+                <strong>Vichra Systems, LLC</strong>
                 <br />
-                Nevada Medicaid Trading Partner ID 51488619.
-                EDI compliance testing is in progress;
-                production claim submission is not yet authorized.
+                Nevada Medicaid Trading Partner ID 51488619. EDI compliance
+                testing is in progress; production claim submission is not yet
+                authorized.
               </p>
             </div>
 
@@ -129,15 +123,11 @@ function Home() {
             </div>
           </div>
 
-          {/* ENROLLMENT STATUS CARD */}
-
           <div className="hero__visual">
             <div className="hero__dashboard">
               <div className="hero__dashboard-top">
                 <div>
-                  <span className="hero__dashboard-label">
-                    vTrack Nevada
-                  </span>
+                  <span className="hero__dashboard-label">vTrack Nevada</span>
 
                   <h2>Nevada Enrollment Status</h2>
                 </div>
@@ -157,8 +147,7 @@ function Home() {
                   <div>
                     <strong>Trading Partner ID 51488619</strong>
                     <span>
-                      Enrolled with Nevada Medicaid for
-                      third-party billing
+                      Enrolled with Nevada Medicaid for third-party billing
                     </span>
                   </div>
                 </div>
@@ -170,9 +159,7 @@ function Home() {
 
                   <div>
                     <strong>Connectivity Established</strong>
-                    <span>
-                      Trading partner connectivity is established
-                    </span>
+                    <span>Trading partner connectivity is established</span>
                   </div>
                 </div>
 
@@ -184,8 +171,8 @@ function Home() {
                   <div>
                     <strong>EDI Compliance Testing</strong>
                     <span>
-                      Testing must be completed before production
-                      claim submission
+                      Testing must be completed before production claim
+                      submission
                     </span>
                   </div>
                 </div>
@@ -198,8 +185,8 @@ function Home() {
                   <div>
                     <strong>EVV Vendor Status</strong>
                     <span>
-                      Nevada alternate EVV vendor approval is
-                      a separate, pending process
+                      Nevada alternate EVV vendor approval is a separate,
+                      pending process
                     </span>
                   </div>
                 </div>
@@ -208,10 +195,6 @@ function Home() {
           </div>
         </div>
       </section>
-
-      {/* =========================
-          FOUR-ITEM STAT STRIP
-      ========================= */}
 
       <section
         className="home-stats"
@@ -237,33 +220,17 @@ function Home() {
         </div>
       </section>
 
-      {/* =========================
-          APPROVED HOMEPAGE ORDER
-      ========================= */}
-
-      {/* Legacy Agency offer */}
-    
-
-      {/* Arizona experience and Nevada enrollment */}
       <WhyVTrack />
 
-      {/* Six required EVV elements */}
       <EVVComplianceStrip />
 
-      {/* Nevada provider categories */}
       <ProviderTypes />
 
-      {/* Fee-for-service and managed care */}
       <MultiPayer />
 
-      {/* Six connected platform capabilities */}
       <PlatformFeatures />
 
-      {/* Five-step Nevada onboarding */}
       <OnboardingProcess />
-
-      {/* Final contact invitation */}
-      {/* <FinalCTA /> */}
     </div>
   );
 }

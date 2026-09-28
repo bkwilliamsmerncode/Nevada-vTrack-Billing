@@ -1,22 +1,9 @@
-
-/* =========================
-   WHY VTRACK SECTION
-========================= */
-
 .why-vtrack {
   width: 100%;
   padding: 110px 0;
 
-  background: linear-gradient(
-    180deg,
-    #f6f9fc 0%,
-    #ffffff 100%
-  );
+  background: linear-gradient(180deg, #f6f9fc 0%, #ffffff 100%);
 }
-
-/* =========================
-   MAIN CONTAINER
-========================= */
 
 .why-vtrack__container {
   width: min(1180px, calc(100% - 40px));
@@ -29,19 +16,11 @@
   gap: 70px;
 }
 
-/* =========================
-   LEFT SIDE
-========================= */
-
 .why-vtrack__visual {
   position: relative;
   min-width: 0;
   width: 100%;
 }
-
-/* =========================
-   EXPERIENCE CARD
-========================= */
 
 .why-vtrack__experience {
   position: relative;
@@ -50,11 +29,7 @@
 
   border-radius: 20px;
 
-  background: linear-gradient(
-    145deg,
-    #183664 0%,
-    #285682 100%
-  );
+  background: linear-gradient(145deg, #183664 0%, #285682 100%);
 
   color: #ffffff;
 
@@ -95,10 +70,6 @@
   letter-spacing: 2px;
 }
 
-/* =========================
-   ANIMATED YEAR
-========================= */
-
 .why-vtrack__experience strong.why-vtrack__animated-year {
   position: relative;
   z-index: 2;
@@ -130,10 +101,6 @@
   letter-spacing: inherit;
 }
 
-/* =========================
-   EXPERIENCE TEXT
-========================= */
-
 .why-vtrack__experience h3 {
   position: relative;
   z-index: 2;
@@ -159,10 +126,6 @@
   font-size: 14px;
   line-height: 1.7;
 }
-
-/* =========================
-   CREDENTIAL CARDS
-========================= */
 
 .why-vtrack__mini-grid {
   position: relative;
@@ -237,18 +200,10 @@
   line-height: 1.7;
 }
 
-/* =========================
-   RIGHT SIDE
-========================= */
-
 .why-vtrack__content {
   min-width: 0;
   max-width: 620px;
 }
-
-/* =========================
-   EYEBROW
-========================= */
 
 .why-vtrack__eyebrow {
   display: block;
@@ -262,10 +217,6 @@
 
   letter-spacing: 1.8px;
 }
-
-/* =========================
-   HEADING
-========================= */
 
 .why-vtrack__content h2 {
   margin: 0;
@@ -283,10 +234,6 @@
   color: #4b8bb4;
 }
 
-/* =========================
-   DESCRIPTION
-========================= */
-
 .why-vtrack__description {
   margin: 23px 0 0;
 
@@ -299,10 +246,6 @@
 .why-vtrack__description + .why-vtrack__description {
   margin-top: 18px;
 }
-
-/* =========================
-   CREDENTIAL SUMMARY
-========================= */
 
 .why-vtrack__benefits {
   margin-top: 30px;
@@ -334,10 +277,6 @@
 
   color: #4b8bb4;
 }
-
-/* =========================
-   BUTTON
-========================= */
 
 .why-vtrack__button {
   width: fit-content;
@@ -385,10 +324,6 @@
   outline-offset: 4px;
 }
 
-/* =========================
-   TABLET
-========================= */
-
 @media (max-width: 950px) {
   .why-vtrack {
     padding: 85px 0;
@@ -409,10 +344,6 @@
     margin: 0 auto;
   }
 }
-
-/* =========================
-   MOBILE
-========================= */
 
 @media (max-width: 600px) {
   .why-vtrack {
@@ -466,10 +397,6 @@
   }
 }
 
-/* =========================
-   SMALL MOBILE
-========================= */
-
 @media (max-width: 390px) {
   .why-vtrack__experience {
     padding: 25px 20px;
@@ -483,10 +410,6 @@
     font-size: 2.2rem;
   }
 }
-
-/* =========================
-   REDUCED MOTION
-========================= */
 
 @media (prefers-reduced-motion: reduce) {
   .why-vtrack__mini-card,

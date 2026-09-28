@@ -12,11 +12,7 @@
       rgba(75, 139, 180, 0.15),
       transparent 30%
     ),
-    linear-gradient(
-      135deg,
-      #f6faff,
-      #eef5fa
-    );
+    linear-gradient(135deg, #f6faff, #eef5fa);
 }
 
 .legal-hero__container,

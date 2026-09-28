@@ -1,14 +1,9 @@
-import {
-  CalendarDays,
-  LayoutDashboard,
-  UserRoundCog,
-} from "lucide-react";
+import { CalendarDays, LayoutDashboard, UserRoundCog } from "lucide-react";
 
 import homepage from "../assets/Homepage.png";
 import calendar from "../assets/Calendar.png";
 import hcbsServices from "../assets/hcbs-services.png";
 import "./VTrackShowcase.css";
-
 
 const vTrackFeatures = [
   {
@@ -43,8 +38,6 @@ function VTrackShowcase() {
   return (
     <section className="vtrack-showcase">
       <div className="vtrack-showcase__container">
-
-        {/* SECTION HEADER */}
         <div className="vtrack-showcase__header">
           <span className="vtrack-showcase__eyebrow">
             The vTrack Difference
@@ -63,7 +56,6 @@ function VTrackShowcase() {
           </p>
         </div>
 
-        {/* FEATURE SECTIONS */}
         <div className="vtrack-showcase__grid">
           {vTrackFeatures.map((feature, index) => {
             const Icon = feature.icon;
@@ -72,21 +64,13 @@ function VTrackShowcase() {
               <article
                 key={feature.id}
                 className={`vtrack-showcase__feature ${
-                  index % 2 !== 0
-                    ? "vtrack-showcase__feature--reverse"
-                    : ""
+                  index % 2 !== 0 ? "vtrack-showcase__feature--reverse" : ""
                 }`}
               >
-                {/* TEXT */}
                 <div className="vtrack-showcase__content">
-
                   <div className="vtrack-showcase__icon">
                     {Icon && (
-                      <Icon
-                        size={28}
-                        strokeWidth={1.8}
-                        aria-hidden="true"
-                      />
+                      <Icon size={28} strokeWidth={1.8} aria-hidden="true" />
                     )}
                   </div>
 
@@ -97,10 +81,8 @@ function VTrackShowcase() {
                   <p className="vtrack-showcase__feature-description">
                     {feature.description}
                   </p>
-
                 </div>
 
-                {/* IMAGE */}
                 <div className="vtrack-showcase__image-wrapper">
                   <img
                     className="vtrack-showcase__image"
@@ -113,7 +95,6 @@ function VTrackShowcase() {
             );
           })}
         </div>
-
       </div>
     </section>
   );

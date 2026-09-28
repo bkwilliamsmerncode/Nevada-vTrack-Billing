@@ -17,25 +17,18 @@ function App() {
   return (
     <div className="app">
       <Navbar />
- <ScrollToTop />
+      <ScrollToTop />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/platform" element={<Platform />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route
-  path="/privacy-policy"
-  element={<PrivacyPolicy />}
-/>
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
-<Route
-  path="/terms-of-use"
-  element={<TermsOfUse />}
-/>
+          <Route path="/terms-of-use" element={<TermsOfUse />} />
 
-
-            <Route path="*" element={<NotFound />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
 
