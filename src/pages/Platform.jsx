@@ -5,10 +5,8 @@ import {
   ArrowRight,
   CalendarDays,
   CheckCircle2,
-  CircleDollarSign,
   ClipboardCheck,
   FileCheck2,
-  HeartPulse,
   ReceiptText,
   ShieldCheck,
   UsersRound,
@@ -71,30 +69,29 @@ const modules = [
       "Staff service tracking",
     ],
   },
-      {
-  id: "recipient-tracking",
-  icon: UsersRound,
-  title: "Recipient Tracking",
-  description:
-    "Keep recipient information, services, locations, appointments, and authorization details organized in one system.",
-  features: [
-    "Recipient records",
-    "Service information",
-    "Location tracking",
-    "Appointment history",
-  ],
+  {
+    id: "recipient-tracking",
+    icon: UsersRound,
+    title: "Recipient Tracking",
+    description:
+      "Keep recipient information, services, locations, appointments, and authorization details organized in one system.",
+    features: [
+      "Recipient records",
+      "Service information",
+      "Location tracking",
+      "Appointment history",
+    ],
   },
-]
+];
 
 function Platform() {
-
   const location = useLocation();
 
   useEffect(() => {
     const target = location.state?.scrollTo;
 
     if (target) {
-      setTimeout(() => {
+      const timer = window.setTimeout(() => {
         const element = document.getElementById(target);
 
         if (element) {
@@ -104,25 +101,25 @@ function Platform() {
           });
         }
       }, 100);
+
+      return () => window.clearTimeout(timer);
     }
   }, [location]);
 
   return (
     <div className="platform-page">
-  <SEO
-    title="vTrack Platform | Nevada Provider Management Software"
-    description="Explore vTrack's connected tools for EVV, scheduling, multi-payer billing, claims, payroll, authorizations, recipient tracking and provider operations."
-    path="/platform"
-  />
-      
+      <SEO
+        title="vTrack Platform | Nevada Provider Management Software"
+        description="Explore vTrack's connected tools for EVV, scheduling, multi-payer billing, claims, payroll, authorizations, recipient tracking and provider operations."
+        path="/platform"
+      />
+
       <section className="platform-hero">
         <div className="platform-hero__glow"></div>
 
         <div className="platform-hero__container">
           <div className="platform-hero__content">
-            <span className="platform-hero__eyebrow">
-              The vTrack Platform
-            </span>
+            <span className="platform-hero__eyebrow">The vTrack Platform</span>
 
             <h1>
               The Work Behind Your Agency,
@@ -131,8 +128,8 @@ function Platform() {
 
             <p>
               Go deeper than feature names. vTrack connects scheduled services,
-              visit verification, authorization limits, claim preparation,
-              payer responses, collections and payroll-ready service data.
+              visit verification, authorization limits, claim preparation, payer
+              responses, collections and payroll-ready service data.
             </p>
 
             <div className="platform-hero__actions">
@@ -144,14 +141,12 @@ function Platform() {
                 <ArrowRight size={19} />
               </Link>
 
-
               <Link
                 to="/contact?section=form"
                 className="platform-hero__button platform-hero__button--secondary"
               >
                 Explore the Platform
               </Link>
-
             </div>
           </div>
 
@@ -176,9 +171,7 @@ function Platform() {
                   <span>Create & manage services</span>
                 </div>
 
-                <div className="platform-hero__workflow-arrow">
-                  →
-                </div>
+                <div className="platform-hero__workflow-arrow">→</div>
 
                 <div className="platform-hero__workflow-item">
                   <ShieldCheck size={22} />
@@ -186,9 +179,7 @@ function Platform() {
                   <span>EVV & service data</span>
                 </div>
 
-                <div className="platform-hero__workflow-arrow">
-                  →
-                </div>
+                <div className="platform-hero__workflow-arrow">→</div>
 
                 <div className="platform-hero__workflow-item">
                   <ClipboardCheck size={22} />
@@ -196,9 +187,7 @@ function Platform() {
                   <span>Review activity</span>
                 </div>
 
-                <div className="platform-hero__workflow-arrow">
-                  →
-                </div>
+                <div className="platform-hero__workflow-arrow">→</div>
 
                 <div className="platform-hero__workflow-item">
                   <ReceiptText size={22} />
@@ -228,10 +217,7 @@ function Platform() {
         </div>
       </section>
 
-      <section
-        className="platform-modules"
-        id="modules"
-      >
+      <section className="platform-modules" id="modules">
         <div className="platform-modules__container">
           <div className="platform-modules__heading">
             <span>Built around provider operations</span>
@@ -242,8 +228,8 @@ function Platform() {
             </h2>
 
             <p>
-              Each module supports a defined part of the provider workflow,
-              with visibility into exceptions before they become missed visits,
+              Each module supports a defined part of the provider workflow, with
+              visibility into exceptions before they become missed visits,
               exhausted authorizations or delayed claims.
             </p>
           </div>
@@ -253,11 +239,11 @@ function Platform() {
               const Icon = module.icon;
 
               return (
-              <article
-  id={module.id}
-  className="platform-module"
-  key={module.title}
->
+                <article
+                  id={module.id}
+                  className="platform-module"
+                  key={module.title}
+                >
                   <div className="platform-module__icon">
                     <Icon size={27} strokeWidth={1.8} />
                   </div>
@@ -280,26 +266,21 @@ function Platform() {
           </div>
         </div>
       </section>
-<VTrackShowcase />
+      <VTrackShowcase />
       <section className="platform-cta">
         <div className="platform-cta__container">
           <div>
             <span>Start with a conversation</span>
 
-            <h2>
-              Ready to Put the Work in Better Hands?
-            </h2>
+            <h2>Ready to Put the Work in Better Hands?</h2>
 
             <p>
-              Tell us about your agency, and we'll explain how dedicated
-              vTrack support can take operational work off your team's plate.
+              Tell us about your agency, and we'll explain how dedicated vTrack
+              support can take operational work off your team's plate.
             </p>
           </div>
 
-          <Link
-            to="/contact?section=form"
-            className="platform-cta__button"
-          >
+          <Link to="/contact?section=form" className="platform-cta__button">
             Talk With Our Team
             <ArrowRight size={19} />
           </Link>
@@ -308,6 +289,5 @@ function Platform() {
     </div>
   );
 }
-
 
 export default Platform;

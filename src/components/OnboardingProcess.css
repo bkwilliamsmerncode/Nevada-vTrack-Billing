@@ -1,26 +1,13 @@
-/* =========================
-   NEVADA ONBOARDING
-========================= */
-
 .onboarding {
   position: relative;
 
   width: 100%;
   padding: 130px 24px;
 
-  background: linear-gradient(
-    115deg,
-    #f7faff 0%,
-    #ffffff 48%,
-    #edf5fb 100%
-  );
+  background: linear-gradient(115deg, #f7faff 0%, #ffffff 48%, #edf5fb 100%);
 
   overflow: hidden;
 }
-
-/* =========================
-   BACKGROUND GLOW
-========================= */
 
 .onboarding__glow {
   position: absolute;
@@ -51,10 +38,6 @@
   background: rgba(24, 54, 100, 0.08);
 }
 
-/* =========================
-   CONTAINER
-========================= */
-
 .onboarding__container {
   position: relative;
   z-index: 2;
@@ -63,10 +46,6 @@
   margin: 0 auto;
 }
 
-/* =========================
-   SECTION HEADING
-========================= */
-
 .onboarding__heading {
   max-width: 850px;
 
@@ -74,10 +53,6 @@
 
   text-align: center;
 }
-
-/* =========================
-   EYEBROW
-========================= */
 
 .onboarding__eyebrow {
   width: fit-content;
@@ -104,17 +79,12 @@
   line-height: 1.5;
   letter-spacing: 0.04em;
 
-  box-shadow:
-    0 7px 20px rgba(24, 54, 100, 0.06);
+  box-shadow: 0 7px 20px rgba(24, 54, 100, 0.06);
 }
 
 .onboarding__eyebrow svg {
   flex-shrink: 0;
 }
-
-/* =========================
-   HEADING
-========================= */
 
 .onboarding h2 {
   margin: 0;
@@ -143,24 +113,15 @@
   line-height: 1.85;
 }
 
-/* =========================
-   FIVE-STEP GRID
-========================= */
-
 .onboarding__steps {
   display: grid;
 
-  grid-template-columns:
-    repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
 
   gap: 22px;
 
   text-align: left;
 }
-
-/* =========================
-   STEP CARDS
-========================= */
 
 .onboarding__card {
   position: relative;
@@ -180,8 +141,7 @@
 
   background: rgba(255, 255, 255, 0.97);
 
-  box-shadow:
-    0 12px 35px rgba(24, 54, 100, 0.06);
+  box-shadow: 0 12px 35px rgba(24, 54, 100, 0.06);
 
   transition:
     transform 0.2s ease,
@@ -189,28 +149,19 @@
     border-color 0.2s ease;
 }
 
-/* SECOND ROW: TWO WIDER CARDS */
-
 .onboarding__card:nth-child(4),
 .onboarding__card:nth-child(5) {
   grid-column: span 3;
   min-height: 320px;
 }
 
-/* HOVER */
-
 .onboarding__card:hover {
   transform: translateY(-5px);
 
   border-color: #a8c9df;
 
-  box-shadow:
-    0 20px 45px rgba(24, 54, 100, 0.12);
+  box-shadow: 0 20px 45px rgba(24, 54, 100, 0.12);
 }
-
-/* =========================
-   CARD TOP
-========================= */
 
 .onboarding__card-top {
   display: flex;
@@ -219,10 +170,6 @@
 
   gap: 12px;
 }
-
-/* =========================
-   STEP NUMBER
-========================= */
 
 .onboarding__number {
   color: #d0e2ef;
@@ -233,10 +180,6 @@
   line-height: 1;
   letter-spacing: -2px;
 }
-
-/* =========================
-   STEP LABEL
-========================= */
 
 .onboarding__step-label {
   padding: 7px 10px;
@@ -253,10 +196,6 @@
 
   white-space: nowrap;
 }
-
-/* =========================
-   STEP ICON
-========================= */
 
 .onboarding__icon {
   width: 56px;
@@ -279,10 +218,6 @@
   flex-shrink: 0;
 }
 
-/* =========================
-   STEP TITLE
-========================= */
-
 .onboarding__card h3 {
   margin: 0 0 14px;
 
@@ -295,10 +230,6 @@
   letter-spacing: -0.3px;
 }
 
-/* =========================
-   STEP DESCRIPTION
-========================= */
-
 .onboarding__card > p {
   margin: 0;
 
@@ -307,10 +238,6 @@
   font-size: 14px;
   line-height: 1.8;
 }
-
-/* =========================
-   CARD FOOTER
-========================= */
 
 .onboarding__card-footer {
   display: flex;
@@ -335,10 +262,6 @@
   color: #4b8bb4;
 }
 
-/* =========================
-   CTA PANEL
-========================= */
-
 .onboarding__cta {
   display: flex;
   align-items: center;
@@ -352,19 +275,10 @@
   border: 1px solid #244c7d;
   border-radius: 20px;
 
-  background: linear-gradient(
-    115deg,
-    #183664 0%,
-    #244c7d 100%
-  );
+  background: linear-gradient(115deg, #183664 0%, #244c7d 100%);
 
-  box-shadow:
-    0 20px 45px rgba(24, 54, 100, 0.16);
+  box-shadow: 0 20px 45px rgba(24, 54, 100, 0.16);
 }
-
-/* =========================
-   CTA CONTENT
-========================= */
 
 .onboarding__cta-content {
   max-width: 680px;
@@ -405,10 +319,6 @@
   line-height: 1.8;
 }
 
-/* =========================
-   CTA BUTTON
-========================= */
-
 .onboarding__button {
   min-height: 54px;
 
@@ -436,8 +346,7 @@
   text-align: center;
   text-decoration: none;
 
-  box-shadow:
-    0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 
   transition:
     transform 0.2s ease,
@@ -450,8 +359,7 @@
 
   background: #edf5fb;
 
-  box-shadow:
-    0 14px 32px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.15);
 }
 
 .onboarding__button:focus-visible {
@@ -463,12 +371,7 @@
   flex-shrink: 0;
 }
 
-/* =========================
-   LAPTOP
-========================= */
-
 @media (max-width: 1100px) {
-
   .onboarding__steps {
     gap: 18px;
   }
@@ -481,15 +384,9 @@
     padding: 40px;
     gap: 30px;
   }
-
 }
 
-/* =========================
-   TABLET
-========================= */
-
 @media (max-width: 1000px) {
-
   .onboarding {
     padding: 95px 24px;
   }
@@ -499,8 +396,7 @@
   }
 
   .onboarding__steps {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .onboarding__card,
@@ -509,8 +405,6 @@
     grid-column: auto;
     min-height: 340px;
   }
-
-  /* FIFTH CARD SPANS FINAL ROW */
 
   .onboarding__card:last-child {
     grid-column: 1 / -1;
@@ -523,15 +417,9 @@
 
     gap: 28px;
   }
-
 }
 
-/* =========================
-   MOBILE
-========================= */
-
 @media (max-width: 620px) {
-
   .onboarding {
     padding: 70px 14px;
   }
@@ -620,8 +508,6 @@
     padding-top: 22px;
   }
 
-  /* CTA */
-
   .onboarding__cta {
     margin-top: 40px;
 
@@ -642,15 +528,9 @@
     width: 100%;
     flex: 0 1 auto;
   }
-
 }
 
-/* =========================
-   SMALL MOBILE
-========================= */
-
 @media (max-width: 400px) {
-
   .onboarding h2 {
     font-size: 2.2rem;
   }
@@ -666,15 +546,9 @@
   .onboarding__cta h3 {
     font-size: 24px;
   }
-
 }
 
-/* =========================
-   REDUCED MOTION
-========================= */
-
 @media (prefers-reduced-motion: reduce) {
-
   .onboarding__card,
   .onboarding__button {
     transition: none;
@@ -684,5 +558,4 @@
   .onboarding__button:hover {
     transform: none;
   }
-
 }

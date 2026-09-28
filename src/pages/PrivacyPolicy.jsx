@@ -47,9 +47,7 @@ function PrivacyPolicy() {
 
           <h2>What This Policy Does Not Cover</h2>
 
-          <p>
-            This policy covers our public websites only.
-          </p>
+          <p>This policy covers our public websites only.</p>
 
           <p>
             It does not cover information processed inside the vTrack platform
@@ -102,19 +100,18 @@ function PrivacyPolicy() {
 
             <p>
               If you are a customer with a question involving that kind of
-              information, call us at{" "}
-              <a href="tel:18338872251">833-887-2251</a> or use the secure
-              channels inside the vTrack platform.
+              information, call us at <a href="tel:18338872251">833-887-2251</a>{" "}
+              or use the secure channels inside the vTrack platform.
             </p>
           </div>
 
           <h2>Information Collected Automatically</h2>
 
           <p>
-            Like most websites, our servers automatically record basic
-            technical information when you visit, such as your IP address,
-            browser type, device type, the pages you view, the page that
-            referred you, and the date and time of your visit.
+            Like most websites, our servers automatically record basic technical
+            information when you visit, such as your IP address, browser type,
+            device type, the pages you view, the page that referred you, and the
+            date and time of your visit.
           </p>
 
           <p>
@@ -129,8 +126,8 @@ function PrivacyPolicy() {
           <p>
             Our Sites do not set their own cookies, and we do not use analytics,
             advertising, retargeting, or session recording tools. We do not
-            allow third parties to track your activity on our Sites over time
-            or across other websites.
+            allow third parties to track your activity on our Sites over time or
+            across other websites.
           </p>
 
           <p>
@@ -152,9 +149,9 @@ function PrivacyPolicy() {
             </li>
 
             <li>
-              <strong>EmailJS.</strong> Some of our forms use EmailJS to
-              deliver your submission to our team. EmailJS receives the
-              information you enter in the form in order to send it.
+              <strong>EmailJS.</strong> Some of our forms use EmailJS to deliver
+              your submission to our team. EmailJS receives the information you
+              enter in the form in order to send it.
             </li>
           </ul>
 
@@ -167,24 +164,24 @@ function PrivacyPolicy() {
           <h2>Do Not Track</h2>
 
           <p>
-            Some browsers send a "Do Not Track" signal. Because our Sites do
-            not use tracking or advertising technologies, we do not respond
+            Some browsers send a "Do Not Track" signal. Because our Sites do not
+            use tracking or advertising technologies, we do not respond
             differently to that signal.
           </p>
 
           <h2>Who We Share Information With</h2>
 
           <p>
-            We do not sell, rent, or trade the information collected through
-            our Sites.
+            We do not sell, rent, or trade the information collected through our
+            Sites.
           </p>
 
           <p>We share it only in these limited situations:</p>
 
           <ul>
             <li>
-              <strong>Service providers.</strong> Service providers that help
-              us run our Sites and business, such as website hosting, form
+              <strong>Service providers.</strong> Service providers that help us
+              run our Sites and business, such as website hosting, form
               delivery, and email providers, only for that purpose.
             </li>
 
@@ -229,17 +226,17 @@ function PrivacyPolicy() {
             <a href="mailto:support@vtrackbilling.com">
               support@vtrackbilling.com
             </a>{" "}
-            or calling <a href="tel:18338872251">833-887-2251</a>. Depending
-            on where you live, you may have additional rights under your
-            state's privacy laws, and we will honor them where they apply.
+            or calling <a href="tel:18338872251">833-887-2251</a>. Depending on
+            where you live, you may have additional rights under your state's
+            privacy laws, and we will honor them where they apply.
           </p>
 
           <h2>Nevada Residents</h2>
 
           <p>
-            We do not sell covered information as defined by Nevada law.
-            Nevada residents may still submit a verified request directing us
-            not to sell their covered information by emailing{" "}
+            We do not sell covered information as defined by Nevada law. Nevada
+            residents may still submit a verified request directing us not to
+            sell their covered information by emailing{" "}
             <a href="mailto:support@vtrackbilling.com">
               support@vtrackbilling.com
             </a>{" "}
@@ -250,8 +247,8 @@ function PrivacyPolicy() {
           <h2>Children</h2>
 
           <p>
-            Our Sites are intended for provider agencies and their staff and
-            are not directed to children. We do not knowingly collect personal
+            Our Sites are intended for provider agencies and their staff and are
+            not directed to children. We do not knowingly collect personal
             information from children. If you believe a child has submitted
             information, contact us and we will delete it.
           </p>
@@ -277,10 +274,7 @@ function PrivacyPolicy() {
               support@vtrackbilling.com
             </a>
             <br />
-            Phone:{" "}
-            <a href="tel:18338872251">
-              833-887-2251
-            </a>
+            Phone: <a href="tel:18338872251">833-887-2251</a>
           </address>
         </div>
       </section>

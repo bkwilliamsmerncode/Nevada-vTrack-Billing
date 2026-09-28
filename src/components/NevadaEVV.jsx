@@ -27,11 +27,11 @@ function NevadaEVV() {
           </h2>
 
           <p className="nevada-evv__intro">
-            Vichra Systems is enrolled with Nevada Medicaid as a trading
-            partner for third-party billing, Trading Partner ID 51488619.
-            Connectivity is established with Nevada Medicaid's fiscal agent,
-            and EDI certification testing is in progress. Production claim
-            submission is pending successful completion of that testing.
+            Vichra Systems is enrolled with Nevada Medicaid as a trading partner
+            for third-party billing, Trading Partner ID 51488619. Connectivity
+            is established with Nevada Medicaid's fiscal agent, and EDI
+            certification testing is in progress. Production claim submission is
+            pending successful completion of that testing.
           </p>
 
           <div className="nevada-evv__benefits">
@@ -78,10 +78,7 @@ function NevadaEVV() {
             </div>
           </div>
 
-          <Link
-            to="/contact?section=form"
-            className="nevada-evv__button"
-          >
+          <Link to="/contact?section=form" className="nevada-evv__button">
             Talk With Our Nevada Team
             <ArrowRight size={19} />
           </Link>
@@ -128,8 +125,7 @@ function NevadaEVV() {
               <strong>Gainwell Technologies</strong>
 
               <p>
-                Connectivity is established for compliance test-file
-                submission.
+                Connectivity is established for compliance test-file submission.
               </p>
             </div>
 

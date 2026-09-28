@@ -19,9 +19,7 @@ function NotFound() {
 
         <h1>Looks Like This Page Got Lost.</h1>
 
-        <p>
-          The page you're looking for doesn't exist or may have been moved.
-        </p>
+        <p>The page you're looking for doesn't exist or may have been moved.</p>
 
         <Link to="/">
           <ArrowLeft size={18} />

@@ -2,23 +2,13 @@
   width: 100%;
   padding: 110px 0;
 
-  background:
-    linear-gradient(
-      180deg,
-      #f7faff 0%,
-      #ffffff 35%,
-      #ffffff 100%
-    );
+  background: linear-gradient(180deg, #f7faff 0%, #ffffff 35%, #ffffff 100%);
 }
 
 .vtrack-showcase__container {
   width: min(1240px, calc(100% - 40px));
   margin: 0 auto;
 }
-
-/* =========================
-   HEADING
-========================= */
 
 .vtrack-showcase__heading {
   max-width: 800px;
@@ -65,10 +55,6 @@
   line-height: 1.75;
 }
 
-/* =========================
-   ROWS
-========================= */
-
 .vtrack-showcase__list {
   display: flex;
   flex-direction: column;
@@ -89,19 +75,13 @@
   grid-template-columns: 1.28fr 0.72fr;
 }
 
-.vtrack-showcase__item--reverse
-  .vtrack-showcase__visual {
+.vtrack-showcase__item--reverse .vtrack-showcase__visual {
   order: 1;
 }
 
-.vtrack-showcase__item--reverse
-  .vtrack-showcase__content {
+.vtrack-showcase__item--reverse .vtrack-showcase__content {
   order: 2;
 }
-
-/* =========================
-   COPY
-========================= */
 
 .vtrack-showcase__content {
   max-width: 470px;
@@ -234,7 +214,9 @@
   border-radius: 16px;
   background: #fff;
   box-shadow: 0 28px 70px rgba(24, 54, 100, 0.14);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .vtrack-showcase__image-wrapper:hover {

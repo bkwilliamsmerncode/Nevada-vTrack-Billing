@@ -3,22 +3,12 @@
   overflow: hidden;
 }
 
-/* =========================
-   HERO
-========================= */
-
 .about-hero {
   position: relative;
 
   padding: 110px 0;
 
-  background:
-    linear-gradient(
-      120deg,
-      #f7faff 0%,
-      #ffffff 52%,
-      #eef5fa 100%
-    );
+  background: linear-gradient(120deg, #f7faff 0%, #ffffff 52%, #eef5fa 100%);
 
   overflow: hidden;
 }
@@ -152,8 +142,6 @@
   background: #f7fafc;
 }
 
-/* HERO VISUAL */
-
 .about-hero__visual {
   position: relative;
 }
@@ -163,12 +151,7 @@
 
   border-radius: 22px;
 
-  background:
-    linear-gradient(
-      145deg,
-      #17345f,
-      #295984
-    );
+  background: linear-gradient(145deg, #17345f, #295984);
 
   color: #ffffff;
 
@@ -258,10 +241,6 @@
   font-size: 11px;
 }
 
-/* =========================
-   STORY
-========================= */
-
 .about-story {
   padding: 110px 0;
 
@@ -286,12 +265,7 @@
   border: 1px solid #dfe7ed;
   border-radius: 18px;
 
-  background:
-    linear-gradient(
-      145deg,
-      #f8fbfd,
-      #ffffff
-    );
+  background: linear-gradient(145deg, #f8fbfd, #ffffff);
 
   box-shadow: 0 18px 45px rgba(24, 54, 100, 0.08);
 }
@@ -434,19 +408,10 @@
   line-height: 1.6;
 }
 
-/* =========================
-   VALUES
-========================= */
-
 .about-values {
   padding: 110px 0;
 
-  background:
-    linear-gradient(
-      180deg,
-      #f6f9fc,
-      #eef5f9
-    );
+  background: linear-gradient(180deg, #f6f9fc, #eef5f9);
 }
 
 .about-values__container {
@@ -545,19 +510,10 @@
   line-height: 1.7;
 }
 
-/* =========================
-   NEVADA
-========================= */
-
 .about-nevada {
   padding: 95px 0;
 
-  background:
-    linear-gradient(
-      135deg,
-      #112c51,
-      #24527e
-    );
+  background: linear-gradient(135deg, #112c51, #24527e);
 }
 
 .about-nevada__container {
@@ -692,10 +648,6 @@
   font-weight: 700;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-
 @media (max-width: 950px) {
   .about-hero__container,
   .about-story__container,
@@ -755,11 +707,6 @@
   }
 }
 
-
-/* =========================================
-   ANIMATED EXPERIENCE YEAR
-========================================= */
-
 .about-hero__experience strong.about-hero__animated-year {
   display: block;
 
@@ -789,23 +736,17 @@
   letter-spacing: inherit;
 }
 
-/* MOBILE */
-
 @media (max-width: 650px) {
   .about-hero__experience strong.about-hero__animated-year {
     font-size: 5.5rem;
   }
 }
 
-/* SMALL MOBILE */
-
 @media (max-width: 390px) {
   .about-hero__experience strong.about-hero__animated-year {
     font-size: 4.5rem;
   }
 }
-
-/* ACCESSIBILITY */
 
 @media (prefers-reduced-motion: reduce) {
   .about-hero__animated-year {
@@ -814,12 +755,7 @@
   }
 }
 
-/* =========================================
-   WHAT GUIDES US - HORIZONTAL MOBILE SCROLL
-========================================= */
-
 @media (max-width: 950px) {
-
   .about-values__grid {
     display: flex;
     flex-wrap: nowrap;
@@ -836,8 +772,6 @@
     overscroll-behavior-x: contain;
 
     padding: 8px 2px 24px;
-
-    /* Hide scrollbar */
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
@@ -857,10 +791,7 @@
   }
 }
 
-/* MOBILE PHONES */
-
 @media (max-width: 650px) {
-
   .about-values__heading {
     margin-bottom: 32px;
   }

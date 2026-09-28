@@ -1,17 +1,11 @@
 import { useEffect } from "react";
 
-function SEO({
-  title,
-  description,
-  path = "/",
-}) {
+function SEO({ title, description, path = "/" }) {
   useEffect(() => {
     document.title = title;
 
     const setMeta = (attribute, key, content) => {
-      let tag = document.querySelector(
-        `meta[${attribute}="${key}"]`
-      );
+      let tag = document.head.querySelector(`meta[${attribute}="${key}"]`);
 
       if (!tag) {
         tag = document.createElement("meta");
@@ -32,10 +26,7 @@ function SEO({
     setMeta("name", "twitter:title", title);
     setMeta("name", "twitter:description", description);
 
-    document.documentElement.setAttribute(
-      "data-current-path",
-      path
-    );
+    document.documentElement.setAttribute("data-current-path", path);
   }, [title, description, path]);
 
   return null;
