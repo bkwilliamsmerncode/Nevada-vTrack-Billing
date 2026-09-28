@@ -814,3 +814,68 @@
   }
 }
 
+/* =========================================
+   WHAT GUIDES US - HORIZONTAL MOBILE SCROLL
+========================================= */
+
+@media (max-width: 950px) {
+
+  .about-values__grid {
+    display: flex;
+    flex-wrap: nowrap;
+
+    gap: 16px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 2px;
+
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+
+    padding: 8px 2px 24px;
+
+    /* Hide scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .about-values__grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .about-value-card {
+    flex: 0 0 calc(50% - 8px);
+    min-width: 0;
+
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+
+    box-sizing: border-box;
+  }
+}
+
+/* MOBILE PHONES */
+
+@media (max-width: 650px) {
+
+  .about-values__heading {
+    margin-bottom: 32px;
+  }
+
+  .about-values__grid {
+    gap: 14px;
+    align-items: stretch;
+  }
+
+  .about-value-card {
+    flex: 0 0 84%;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 240px;
+  }
+}
