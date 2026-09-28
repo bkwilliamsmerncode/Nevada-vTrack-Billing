@@ -754,3 +754,63 @@
     font-size: 5.5rem;
   }
 }
+
+
+/* =========================================
+   ANIMATED EXPERIENCE YEAR
+========================================= */
+
+.about-hero__experience strong.about-hero__animated-year {
+  display: block;
+
+  margin-top: 8px;
+
+  color: #ffffff;
+
+  font-size: 7rem;
+  font-weight: 800;
+
+  line-height: 0.9;
+  letter-spacing: -7px;
+
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+
+  white-space: nowrap;
+}
+
+.about-hero__animated-year > span {
+  display: inline-block;
+
+  color: inherit;
+  font: inherit;
+
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+  .about-hero__experience strong.about-hero__animated-year {
+    font-size: 5.5rem;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 390px) {
+  .about-hero__experience strong.about-hero__animated-year {
+    font-size: 4.5rem;
+  }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .about-hero__animated-year {
+    animation: none;
+    transition: none;
+  }
+}
+

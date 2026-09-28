@@ -1,3 +1,6 @@
+
+import { useEffect, useRef, useState } from "react";
+
 import {
   ArrowRight,
   CheckCircle2,
@@ -32,6 +35,84 @@ const credentials = [
 ];
 
 function WhyVTrack() {
+  const currentYear = new Date().getFullYear();
+
+  const [displayYear, setDisplayYear] = useState(currentYear);
+
+  const yearRef = useRef(null);
+  const hasAnimated = useRef(false);
+
+  useEffect(() => {
+    const element = yearRef.current;
+
+    if (!element) return;
+
+    let animationFrame;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting || hasAnimated.current) return;
+
+        hasAnimated.current = true;
+        observer.disconnect();
+
+        // Respect reduced-motion accessibility settings
+        if (
+          window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+          ).matches
+        ) {
+          setDisplayYear(2006);
+          return;
+        }
+
+        const duration = 1800;
+        const startYear = currentYear;
+        const endYear = 2006;
+
+        let startTime = null;
+
+        const animate = (timestamp) => {
+          if (startTime === null) {
+            startTime = timestamp;
+          }
+
+          const progress = Math.min(
+            (timestamp - startTime) / duration,
+            1
+          );
+
+          // Smooth ease-out
+          const eased = 1 - Math.pow(1 - progress, 3);
+
+          const year = Math.round(
+            startYear - (startYear - endYear) * eased
+          );
+
+          setDisplayYear(year);
+
+          if (progress < 1) {
+            animationFrame = requestAnimationFrame(animate);
+          } else {
+            setDisplayYear(endYear);
+          }
+        };
+
+        animationFrame = requestAnimationFrame(animate);
+      },
+      {
+        threshold: 0.4,
+      }
+    );
+
+    observer.observe(element);
+
+    return () => {
+      observer.disconnect();
+      cancelAnimationFrame(animationFrame);
+    };
+  }, [currentYear]);
+
   return (
     <section className="why-vtrack">
       <div className="why-vtrack__container">
@@ -40,10 +121,21 @@ function WhyVTrack() {
 
         <div className="why-vtrack__visual">
 
+          {/* ANIMATED EXPERIENCE CARD */}
+
           <div className="why-vtrack__experience">
+
             <span>SINCE</span>
 
-            <strong>2006</strong>
+            <strong
+              ref={yearRef}
+              className="why-vtrack__animated-year"
+              aria-label="Since 2006"
+            >
+              <span aria-hidden="true">
+                {displayYear}
+              </span>
+            </strong>
 
             <h3>Arizona Provider Experience</h3>
 
@@ -51,6 +143,7 @@ function WhyVTrack() {
               EVV and Medicaid billing operations
               for Arizona provider agencies.
             </p>
+
           </div>
 
           {/* THREE CREDENTIAL CARDS */}

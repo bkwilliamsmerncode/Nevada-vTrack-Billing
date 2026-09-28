@@ -1,5 +1,9 @@
+
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+
 import OnboardingProcess from "../components/OnboardingProcess";
+
 import {
   ArrowRight,
   BadgeCheck,
@@ -13,6 +17,7 @@ import {
 
 import "./About.css";
 import SEO from "../components/SEO";
+
 const values = [
   {
     icon: HeartHandshake,
@@ -41,22 +46,103 @@ const values = [
 ];
 
 function About() {
+  const currentYear = new Date().getFullYear();
+
+  const [displayYear, setDisplayYear] = useState(currentYear);
+
+  const yearRef = useRef(null);
+  const hasAnimated = useRef(false);
+
+  useEffect(() => {
+    const element = yearRef.current;
+
+    if (!element) return;
+
+    let animationFrame;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting || hasAnimated.current) return;
+
+        hasAnimated.current = true;
+        observer.disconnect();
+
+        // Respect accessibility preferences
+        if (
+          window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+          ).matches
+        ) {
+          setDisplayYear(2006);
+          return;
+        }
+
+        const duration = 1800;
+        const startYear = currentYear;
+        const endYear = 2006;
+
+        let startTime = null;
+
+        const animate = (timestamp) => {
+          if (startTime === null) {
+            startTime = timestamp;
+          }
+
+          const progress = Math.min(
+            (timestamp - startTime) / duration,
+            1
+          );
+
+          // Smooth ease-out animation
+          const eased = 1 - Math.pow(1 - progress, 3);
+
+          const year = Math.round(
+            startYear - (startYear - endYear) * eased
+          );
+
+          setDisplayYear(year);
+
+          if (progress < 1) {
+            animationFrame = requestAnimationFrame(animate);
+          } else {
+            setDisplayYear(endYear);
+          }
+        };
+
+        animationFrame = requestAnimationFrame(animate);
+      },
+      {
+        threshold: 0.4,
+      }
+    );
+
+    observer.observe(element);
+
+    return () => {
+      observer.disconnect();
+      cancelAnimationFrame(animationFrame);
+    };
+  }, [currentYear]);
+
   return (
-     
     <div className="about-page">
 
-  <SEO
-  
-    title="About Vichra | Supporting Provider Agencies Since 2006"
-    description="Learn about Vichra and vTrack, a provider management platform built from 20 years of experience supporting provider agency operations."
-    path="/about"
-  />
-  
+      <SEO
+        title="About Vichra | Supporting Provider Agencies Since 2006"
+        description="Learn about Vichra and vTrack, a provider management platform built from 20 years of experience supporting provider agency operations."
+        path="/about"
+      />
+
+      {/* =========================
+          HERO
+      ========================= */}
+
       <section className="about-hero">
         <div className="about-hero__glow"></div>
 
         <div className="about-hero__container">
           <div className="about-hero__content">
+
             <span className="about-hero__eyebrow">
               About Vichra
             </span>
@@ -88,14 +174,25 @@ function About() {
                 Explore vTrack
               </Link>
             </div>
-            
+
           </div>
+
+          {/* ANIMATED EXPERIENCE CARD */}
 
           <div className="about-hero__visual">
             <div className="about-hero__experience">
+
               <span>SINCE</span>
 
-              <strong>2006</strong>
+              <strong
+                ref={yearRef}
+                className="about-hero__animated-year"
+                aria-label="Since 2006"
+              >
+                <span aria-hidden="true">
+                  {displayYear}
+                </span>
+              </strong>
 
               <h2>Provider Experience</h2>
 
@@ -116,13 +213,26 @@ function About() {
               </div>
             </div>
           </div>
+
         </div>
       </section>
-<OnboardingProcess />
+
+      {/* =========================
+          ONBOARDING PROCESS
+      ========================= */}
+
+      <OnboardingProcess />
+
+      {/* =========================
+          OUR STORY
+      ========================= */}
+
       <section className="about-story">
         <div className="about-story__container">
+
           <div className="about-story__visual">
             <div className="about-story__card">
+
               <Building2 size={34} />
 
               <span>VICHRA</span>
@@ -162,10 +272,12 @@ function About() {
                   Recipient Tracking
                 </div>
               </div>
+
             </div>
           </div>
 
           <div className="about-story__content">
+
             <span className="about-story__eyebrow">
               Our approach
             </span>
@@ -201,12 +313,18 @@ function About() {
                 </span>
               </div>
             </div>
+
           </div>
         </div>
       </section>
 
+      {/* =========================
+          OUR VALUES
+      ========================= */}
+
       <section className="about-values">
         <div className="about-values__container">
+
           <div className="about-values__heading">
             <span>What guides us</span>
 
@@ -241,11 +359,17 @@ function About() {
               );
             })}
           </div>
+
         </div>
       </section>
 
+      {/* =========================
+          NEVADA
+      ========================= */}
+
       <section className="about-nevada">
         <div className="about-nevada__container">
+
           <div>
             <span className="about-nevada__eyebrow">
               vTrack in Nevada
@@ -281,6 +405,7 @@ function About() {
           </div>
 
           <div className="about-nevada__offer">
+
             <span>Nevada enrollment</span>
 
             <strong>51488619</strong>
@@ -295,9 +420,12 @@ function About() {
               Learn About the Offer
               <ArrowRight size={18} />
             </Link>
+
           </div>
+
         </div>
       </section>
+
     </div>
   );
 }

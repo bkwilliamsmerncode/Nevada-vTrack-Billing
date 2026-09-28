@@ -1,4 +1,7 @@
 
+/* =========================
+   WHY VTRACK SECTION
+========================= */
 
 .why-vtrack {
   width: 100%;
@@ -78,7 +81,7 @@
   pointer-events: none;
 }
 
-.why-vtrack__experience span {
+.why-vtrack__experience > span {
   position: relative;
   z-index: 2;
 
@@ -92,7 +95,11 @@
   letter-spacing: 2px;
 }
 
-.why-vtrack__experience strong {
+/* =========================
+   ANIMATED YEAR
+========================= */
+
+.why-vtrack__experience strong.why-vtrack__animated-year {
   position: relative;
   z-index: 2;
 
@@ -107,7 +114,25 @@
 
   line-height: 1;
   letter-spacing: -6px;
+
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+
+  white-space: nowrap;
 }
+
+.why-vtrack__animated-year > span {
+  display: inline-block;
+
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+
+/* =========================
+   EXPERIENCE TEXT
+========================= */
 
 .why-vtrack__experience h3 {
   position: relative;
@@ -170,8 +195,6 @@
     box-shadow 0.2s ease,
     border-color 0.2s ease;
 }
-
-/* Third card spans both columns */
 
 .why-vtrack__mini-card:last-child {
   grid-column: 1 / -1;
@@ -405,7 +428,7 @@
     padding: 30px 25px;
   }
 
-  .why-vtrack__experience strong {
+  .why-vtrack__experience strong.why-vtrack__animated-year {
     font-size: 5rem;
   }
 
@@ -452,7 +475,7 @@
     padding: 25px 20px;
   }
 
-  .why-vtrack__experience strong {
+  .why-vtrack__experience strong.why-vtrack__animated-year {
     font-size: 4.5rem;
   }
 
